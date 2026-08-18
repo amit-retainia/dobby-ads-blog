@@ -1,0 +1,25 @@
+# Files here are never uploaded to the host.
+# Read by Cloudflare Workers static assets from the assets directory.
+# gitignore syntax.
+
+# Build machinery — recreated by the host after the build command runs,
+# so it cannot be removed there. workerd alone is a 144 MiB binary and
+# breaks the 25 MiB per-asset limit.
+node_modules
+.git
+.github
+bun.lock
+package.json
+package-lock.json
+wrangler.jsonc
+wrangler.toml
+
+# Local tooling, not part of the site
+scripts
+.env.example
+
+# Internal docs — no reason to serve these publicly
+*.md
+
+# Over the 25 MiB per-asset limit. Move to R2 or compress to restore it.
+Video Commercials Page/UGC/GTV UGC NN.mp4
