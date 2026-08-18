@@ -15,7 +15,8 @@
 /3d-renders              /animation-3d           301
 /real-estate             /animation-3d           301
 /youtube-editing         /video-commercials      301
-/branding                /branding               301
+# removed: /branding -> /branding was a self-redirect. Netlify ignored it;
+# Cloudflare follows it literally and the page loops forever.
 
 # --- Old utility/tool pages → Homepage ---
 /synthesia               /                       301
@@ -24,7 +25,8 @@
 # --- Old standard pages → Best match ---
 /contact-us              /#contact               301
 /contact                 /#contact               301
-/blog                    /blog                   301
+# removed: /blog -> /blog was a self-redirect. Netlify ignored it;
+# Cloudflare follows it literally and the page loops forever.
 
 # --- Old Wix internal paths that may be indexed ---
 /_functions/llms_txt     /llms.txt               301
