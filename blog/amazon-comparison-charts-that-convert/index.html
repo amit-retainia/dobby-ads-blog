@@ -1,1 +1,327 @@
-REPLACE_ME
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="../../favicon.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to Design Amazon Comparison Charts That Actually Help Shoppers Decide | Dobby Ads Blog</title>
+<meta name="description" content="Amazon comparison charts often overwhelm shoppers instead of guiding them. Here's how to design charts that clarify the decision instead of complicating it.">
+<link rel="canonical" href="https://www.dobbyads.com/blog/amazon-comparison-charts-that-convert">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Design Amazon Comparison Charts That Actually Help Shoppers Decide">
+<meta property="og:description" content="Amazon comparison charts often overwhelm shoppers instead of guiding them. Here's how to design charts that clarify the decision instead of complicating it.">
+<meta property="og:image" content="https://pub-84274c16b4a142b79bdf716a4f21ed81.r2.dev/blog/amazon-comparison-charts-that-convert.webp">
+<meta property="og:url" content="https://www.dobbyads.com/blog/amazon-comparison-charts-that-convert">
+<meta property="og:site_name" content="Dobby Ads">
+<meta property="article:published_time" content="2026-08-18">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LDBEMQM3ZW"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LDBEMQM3ZW');</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+:root{--bg:#000;--acc:#FFCC33;--acc-dim:rgba(255,204,51,.07);--acc-bdr:rgba(255,204,51,.25);--t:#fff;--bdr:rgba(255,255,255,.06);--bdr2:rgba(255,255,255,.11);--max:1160px;--ff:'Urbanist',sans-serif;--fn:'Urbanist',sans-serif;--fs-h1:clamp(2rem,3.2vw,3rem);--fs-h2:1.625rem;--fs-body:1.25rem}
+body{background:var(--bg);color:var(--t);font-family:var(--ff);font-size:16px;line-height:1.7;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+.post-wrap{max-width:720px;margin:0 auto;padding:0 1.5rem}
+.r{opacity:0;transform:translateY(20px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+.r.vis{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.r{opacity:1!important;transform:none!important}}
+nav{position:sticky;top:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;background:rgba(0,0,0,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr)}
+.logo-img{height:44px;width:auto;display:block}
+.nav-links{display:flex;list-style:none;gap:2rem;align-items:center}
+.nav-links a{font-family:var(--fn);font-size:14px;font-weight:500;letter-spacing:.04em;color:#fff;transition:color .18s}
+.nav-links a:hover{color:var(--acc)}
+.nav-right{display:flex;align-items:center;gap:.625rem}
+.nav-cta{font-family:var(--fn);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#000;color:#fff;border:1.5px solid #fff;padding:10px 22px;border-radius:3px;cursor:pointer;transition:background .18s,color .18s,border-color .18s;text-decoration:none;display:inline-flex;align-items:center}
+.nav-cta:hover{background:var(--acc);color:#000;border-color:var(--acc)}
+.nav-login{font-family:var(--fn);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:transparent;color:rgba(255,255,255,.7);border:1.5px solid rgba(255,255,255,.2);padding:10px 22px;border-radius:3px;cursor:pointer;transition:background .18s,color .18s,border-color .18s;text-decoration:none;display:inline-flex;align-items:center}
+.nav-login:hover{color:#fff;border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.05)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all .28s ease}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#mob-menu{display:none;flex-direction:column;position:fixed;inset:0;background:#000;z-index:90;padding:80px 2rem 2.5rem;opacity:0;pointer-events:none;transition:opacity .28s ease}
+#mob-menu.open{opacity:1;pointer-events:all}
+#mob-menu a{padding:1rem 0;font-size:1.6rem;font-family:var(--ff);font-weight:700;color:var(--t);border-bottom:1px solid var(--bdr);transition:color .18s}
+#mob-menu a:hover{color:var(--acc)}
+#mob-menu .btn-primary{margin-top:2rem;justify-content:center}
+.btn-primary{background:#000;color:#fff;border:1.5px solid #fff;padding:14px 32px;border-radius:3px;font-family:var(--fn);font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:background .18s,color .18s,border-color .18s,transform .12s}
+.btn-primary:hover{background:var(--acc);color:#000;border-color:var(--acc);transform:translateY(-1px)}
+.post-header{padding:120px 0 40px}
+.post-breadcrumb{font-size:.8rem;font-weight:500;color:rgba(255,255,255,.5);margin-bottom:1.5rem}
+.post-breadcrumb a{color:rgba(255,255,255,.5);transition:color .15s}
+.post-breadcrumb a:hover{color:var(--acc)}
+.post-date{font-size:.85rem;font-weight:600;color:var(--acc);letter-spacing:.06em;text-transform:uppercase;margin-bottom:1rem}
+.post-title{font-size:var(--fs-h1);font-weight:800;line-height:1.1;letter-spacing:-.025em;color:var(--t);margin-bottom:1rem}
+.post-hero{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:top;border-radius:12px;border:1px solid var(--bdr2);margin-top:2rem}
+article{padding:3rem 0 4rem}
+article p{font-size:var(--fs-body);font-weight:300;color:#fff;line-height:1.8;margin-bottom:1.25rem}
+article h2{font-size:var(--fs-h2);font-weight:700;color:var(--t);margin-top:2.5rem;margin-bottom:1rem;line-height:1.3}
+article h3{font-size:1.25rem;font-weight:700;color:var(--acc);margin-top:2rem;margin-bottom:.75rem}
+article ul{padding-left:1.5rem;list-style:disc;margin-bottom:1.25rem}
+article ul li::marker{color:var(--acc)}
+article ul li{margin-bottom:.5rem;color:#fff;font-weight:300;font-size:var(--fs-body);line-height:1.7}
+article ol{padding-left:1.5rem;list-style:decimal;margin-bottom:1.25rem}
+article ol li{margin-bottom:.5rem;color:#fff;font-weight:300;font-size:var(--fs-body);line-height:1.7}
+article strong{font-weight:600;color:#fff}
+article a{color:var(--acc)}
+article a:hover{text-decoration:underline}
+.post-cta{background:var(--acc-dim);border:1px solid var(--acc-bdr);border-radius:12px;padding:2.5rem;margin:4rem 0;text-align:center}
+.post-cta h2{font-size:var(--fs-h2);font-weight:700;color:var(--t);margin-bottom:.75rem}
+.post-cta p{font-size:1rem;font-weight:300;color:rgba(255,255,255,.8);margin-bottom:1.5rem}
+.related{padding:4rem 0 80px;border-top:1px solid var(--bdr)}
+.related-label{font-family:var(--fn);font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:2rem}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.blog-card{background:linear-gradient(145deg,#141414 0%,#0e0e0e 100%);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;transition:border-color .22s,transform .22s;display:block;position:relative}
+.blog-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--acc);opacity:0;transition:opacity .22s}
+.blog-card:hover{border-color:rgba(255,204,51,.35);transform:translateY(-4px)}
+.blog-card:hover::before{opacity:1}
+.blog-card-img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top;background:#111}
+.blog-card-body{padding:1.25rem 1.5rem 1.5rem}
+.blog-card-date{font-size:.8rem;font-weight:500;color:var(--acc);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem}
+.blog-card-title{font-size:1.1rem;font-weight:700;color:var(--t);line-height:1.3}
+footer{background:#000;border-top:1px solid var(--bdr);padding:60px 0 32px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.foot-logo{display:block;margin-bottom:.75rem}
+.foot-tagline{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);display:block;margin-bottom:.75rem}
+.foot-desc{font-size:.9rem;font-weight:300;color:rgba(255,255,255,.5);line-height:1.6}
+.foot-heading{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.25rem}
+.foot-links{list-style:none;display:flex;flex-direction:column;gap:.625rem}
+.foot-links a{font-size:.9rem;font-weight:400;color:rgba(255,255,255,.6);transition:color .15s}
+.foot-links a:hover{color:var(--acc)}
+.foot-bottom{border-top:1px solid var(--bdr);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.foot-copy{font-size:.8rem;color:rgba(255,255,255,.3)}
+@media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:600px){.foot-grid{grid-template-columns:1fr}.blog-grid{grid-template-columns:1fr}.nav-links,.nav-right{display:none}.hamburger{display:flex}#mob-menu{display:flex}.post-header{padding:90px 0 30px}}
+.quick-answer{background:var(--acc-dim);border-left:4px solid var(--acc);border-radius:0 8px 8px 0;padding:1.5rem 1.75rem;margin:2rem 0}
+.quick-answer strong{color:var(--acc);font-weight:700;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:.5rem}
+.quick-answer p{margin-bottom:0;font-size:1rem}
+.compare-table{width:100%;border-collapse:collapse;margin:2rem 0;font-size:.9rem}
+.compare-table th{background:#141414;color:var(--acc);font-weight:700;letter-spacing:.04em;text-align:left;padding:.75rem 1rem;border-bottom:2px solid var(--acc-bdr)}
+.compare-table td{padding:.75rem 1rem;border-bottom:1px solid var(--bdr);color:rgba(255,255,255,.85);vertical-align:top}
+.compare-table tr:hover td{background:rgba(255,255,255,.02)}
+.agency-block{background:linear-gradient(145deg,#111 0%,#0a0a0a 100%);border:1px solid var(--bdr2);border-radius:12px;padding:2rem;margin:2.5rem 0}
+.agency-block h3{margin-top:0;margin-bottom:.75rem}
+.agency-meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+.agency-tag{font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:20px;border:1px solid var(--acc-bdr);color:var(--acc)}
+.agency-block p{margin-bottom:.75rem}
+.agency-block ul{margin-bottom:.75rem}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Design Amazon Comparison Charts That Actually Help Shoppers Decide",
+  "description": "Amazon comparison charts often overwhelm shoppers instead of guiding them. Here's how to design charts that clarify the decision instead of complicating it.",
+  "image": "https://pub-84274c16b4a142b79bdf716a4f21ed81.r2.dev/blog/amazon-comparison-charts-that-convert.webp",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-18",
+  "publisher": {"@type": "Organization","name": "Dobby Ads","logo": {"@type": "ImageObject","url": "https://www.dobbyads.com/All%20Visuals/Dobby%20Logo.webp"}},
+  "mainEntityOfPage": {"@type": "WebPage","@id": "https://www.dobbyads.com/blog/amazon-comparison-charts-that-convert"},
+  "keywords": "Amazon comparison chart, product comparison table, Amazon A+ content comparison chart, comparison chart design, Amazon multi-variant comparison, Amazon PDP comparison chart"
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="../../" aria-label="Dobby Ads home">
+    <img src="../../All%20Visuals/Dobby%20Logo.webp" alt="Dobby Ads" class="logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../">Home</a></li>
+    <li><a href="../" aria-current="page">Blog</a></li>
+    <li><a href="../../#services">Services</a></li>
+    <li><a href="../../#work">Work</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="../../#contact" class="nav-login">Contact</a>
+    <a href="../../#contact" class="nav-cta">Get Started</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mob-menu">
+  <a href="../../">Home</a>
+  <a href="../">Blog</a>
+  <a href="../../#services">Services</a>
+  <a href="../../#work">Work</a>
+  <a href="../../#contact" class="btn-primary">Get Started</a>
+</div>
+
+<div class="post-header">
+  <div class="post-wrap">
+    <div class="post-breadcrumb r"><a href="../">Blog</a> / Amazon Comparison Charts</div>
+    <div class="post-date r">August 18, 2026</div>
+    <h1 class="post-title r">How to Design Amazon Comparison Charts That Actually Help Shoppers Decide</h1>
+    <img
+      src="https://pub-84274c16b4a142b79bdf716a4f21ed81.r2.dev/blog/amazon-comparison-charts-that-convert.webp"
+      alt="How to Design Amazon Comparison Charts That Actually Help Shoppers Decide"
+      class="post-hero r"
+      width="1200" height="675"
+    >
+  </div>
+</div>
+
+<article>
+  <div class="post-wrap">
+
+<p>Comparison charts get added to Amazon listings because they seem like an obvious win &mdash; put every option side by side, let the shopper see the data, and the right choice becomes clear. In practice, most comparison charts do the opposite. They cram in every spec the brand has on file, give each column identical visual weight, and leave the shopper more uncertain about which one is theirs than before they scrolled down to the chart. A comparison that takes effort to parse loses the sale before it makes the case.</p>
+
+<h2>Why most comparison charts confuse instead of clarify</h2>
+<p>The failure pattern is consistent across categories. A chart gets built as a spec sheet rather than a decision tool &mdash; every attribute the team has on the product page gets a row, whether or not it changes anyone&rsquo;s decision. Every column gets the same visual treatment, so nothing in the layout tells the shopper which option is right for them; that judgment gets left entirely to the reader. Rows get filled with numbers and technical terms shoppers don&rsquo;t have the vocabulary to weigh against each other &mdash; a wattage figure, a denier count, a frequency range &mdash; without any translation into what it actually means for them. The chart answers &ldquo;what are the specifications&rdquo; when the shopper is asking &ldquo;which one should I buy.&rdquo;</p>
+
+<h2>Decide which job the chart is doing before you design it</h2>
+<p>Amazon comparison charts are usually asked to do one of two different jobs, and most of the confusion comes from trying to do both at once with the same layout.</p>
+<ul>
+<li><strong>Helping a shopper choose between your own variants.</strong> Sizes, capacities, feature tiers, bundle options. The question here is &ldquo;which one is right for me,&rdquo; and every option in the chart is a sale for you. The chart&rsquo;s job is to sort shoppers into the correct variant quickly, not to make every option look equally good.</li>
+<li><strong>Positioning your product against competitors or your own previous generation.</strong> The question here is &ldquo;why this one instead of that one.&rdquo; Every row needs to hold up to scrutiny, and only genuine, factual differences belong in the chart &mdash; Amazon removes A+ content that makes comparative claims it can&rsquo;t substantiate, and shoppers who are already comparison-shopping will spot a stacked deck immediately.</li>
+</ul>
+<p>These two jobs need different rows, different tone, and usually a different number of columns. Deciding which one a given chart is doing, before laying out a single column, prevents most of the downstream confusion.</p>
+
+<h2>Choose the fewest attributes that actually change the decision</h2>
+<p>A good working rule is four to six rows. Beyond that, a chart stops helping and starts testing the shopper&rsquo;s patience. For every row under consideration, the useful question is simple: would a shopper who saw only this one row change their choice? If the answer is no, the row can go.</p>
+<ul>
+<li><strong>Translate specs into outcomes.</strong> A raw number rarely means anything on its own. &ldquo;300W motor&rdquo; tells a shopper nothing they can act on; &ldquo;powers through frozen fruit in one pass&rdquo; does. Every row should answer a real question, not just report a measurement.</li>
+<li><strong>Drop anything identical across every column.</strong> A row where every option says the same thing does no work &mdash; it just adds height to the chart and dilutes the rows that actually matter.</li>
+<li><strong>Order rows by how much they matter to the decision, not by how the spec sheet lists them.</strong> The row most likely to determine the choice goes first, while the reader still has attention to give it.</li>
+</ul>
+
+<h2>Structure the chart so the eye lands on the difference</h2>
+<p>Once the rows are chosen, the layout has one job: make the differences visible at a glance, without the shopper needing to read every cell in every row.</p>
+<ul>
+<li><strong>Use one clear visual signal per meaningful difference</strong> &mdash; a short phrase, an icon, a checkmark &mdash; rather than restating full sentences in every cell. The eye should be able to scan a row and immediately see which column stands out.</li>
+<li><strong>Don&rsquo;t highlight everything.</strong> A chart where every cell is bolded, checked, or colored has highlighted nothing. Reserve emphasis for the rows and cells that actually separate the options.</li>
+<li><strong>Name the recommended option if there is one.</strong> If your own-variant chart has a default that fits most buyers, say so directly &mdash; &ldquo;Most popular for daily use&rdquo; tied to a real reason, not left as an inference the shopper has to make on their own.</li>
+</ul>
+
+<h2>Design rules for a chart that has to work at phone width</h2>
+<p>Most Amazon traffic reads this chart on a phone screen inside an A+ content module a few hundred pixels wide, not on a monitor. A layout that looks clean at desktop width regularly turns into a cramped, unreadable grid once it&rsquo;s scaled down.</p>
+<ul>
+<li><strong>Cap it at three columns for anything designed as an image module.</strong> A fourth column usually means every column gets squeezed until the text is illegible.</li>
+<li><strong>Write cells as short phrases, not sentences.</strong> A cell that needs three lines of text at mobile width has already lost the shopper's attention before it makes its point.</li>
+<li><strong>Use large, high-contrast text.</strong> Comparison charts get skimmed, not studied &mdash; text sized for careful reading on a desktop often disappears at thumbnail scale on a phone.</li>
+<li><strong>Review the actual export at true mobile size,</strong> not a zoomed-out desktop preview. What looks fine shrunk down on a monitor is often unreadable at the size it will actually be viewed.</li>
+</ul>
+
+<h2>The recommendation is where most charts lose their nerve</h2>
+<p>A common instinct is to make every column look equally attractive, out of a worry that steering shoppers toward one option will seem like the brand is discouraging the others. The result is a chart with no clear guidance at all &mdash; and a shopper with no clear guidance either defaults to the cheapest option or leaves without deciding.</p>
+<p>The fix is a genuine, specific &ldquo;best for&rdquo; framing tied to a real use case for each option &mdash; &ldquo;best for daily commuting,&rdquo; &ldquo;best for heavy outdoor use,&rdquo; &ldquo;best for gifting.&rdquo; That framing lets a shopper self-select with confidence instead of treating every column as an unranked list of features. Vague labels like &ldquo;most popular&rdquo; or &ldquo;best value&rdquo; with nothing concrete behind them read as manipulative to exactly the shoppers who are reading the chart most carefully, and they tend to discount the whole thing once they spot it.</p>
+
+<h2>Common mistakes that turn a comparison chart into noise</h2>
+<ul>
+<li><strong>Comparing on an attribute the product loses.</strong> If a row exists only because it was on last year&rsquo;s template, and the honest answer favors a competitor or an older SKU, that row is actively working against the sale.</li>
+<li><strong>Repeating the same marketing phrase in every column.</strong> If &ldquo;premium quality&rdquo; appears in three columns, it isn&rsquo;t a differentiator &mdash; it&rsquo;s filler that crowds out the row that would have actually helped.</li>
+<li><strong>No default recommendation anywhere in the chart.</strong> Equal weight everywhere isn&rsquo;t neutral; it just moves the decision burden entirely onto the shopper.</li>
+<li><strong>Shipping the chart as a flat image with tiny embedded text.</strong> There&rsquo;s no way to zoom or resize text baked into an image, and it can&rsquo;t be picked up by anything reading the page&rsquo;s content, including Amazon&rsquo;s own AI-driven shopping tools.</li>
+<li><strong>Bare numbers with no unit or context.</strong> A number a shopper can&rsquo;t evaluate &mdash; is 40 a lot or a little? &mdash; is worse than no number at all, because it implies precision without delivering understanding.</li>
+</ul>
+
+<h2>Frequently Asked Questions</h2>
+<h3>How many products should one comparison chart include?</h3>
+<p>Three to four is the practical ceiling for a chart designed to be read quickly, especially on mobile. Beyond that, shoppers tend to skim past the chart entirely rather than work through every column.</p>
+<h3>Should a comparison chart name competitors directly?</h3>
+<p>Generally no. Amazon&rsquo;s policies restrict disparaging or unsubstantiated claims about named competitors, and most successful comparison content positions against a generic alternative or the brand&rsquo;s own previous generation rather than naming another seller's product.</p>
+<h3>Is a comparison chart better suited to A+ content or the image gallery?</h3>
+<p>A+ content, almost always. It sits further down the page where a shopper has already shown intent to evaluate the product seriously, and it has more room to lay out multiple columns clearly than a single gallery image slot does.</p>
+<h3>Should every comparison chart point to one recommended option?</h3>
+<p>For an own-variant chart, yes &mdash; a clear default for the most common buyer speeds up the decision. For a competitive positioning chart, the goal is closer to making your product look like the obviously right choice through the rows themselves, rather than a single labeled recommendation.</p>
+<h3>How do you know if a comparison chart is actually helping?</h3>
+<p>Watch unit session percentage and conversion rate on the specific ASINs the chart appears on, before and after it goes live. For brand-registered sellers, Amazon&rsquo;s Manage Your Experiments tool can A/B test a page with and without the chart directly, which is the clearest way to confirm it's helping rather than just adding scroll length.</p>
+
+  </div>
+</article>
+
+<div class="post-cta">
+  <div class="post-wrap">
+    <h2>Want a comparison chart that actually moves shoppers to buy?</h2>
+    <p>Dobby Ads designs A+ content comparison charts around the one decision a shopper is actually trying to make, not every spec on the sheet, built to read clearly on the phone screen where most of your traffic lives.</p>
+    <a href="../../#contact" class="btn-primary">Talk to us</a>
+  </div>
+</div>
+
+<div class="related">
+  <div class="wrap">
+    <div class="related-label">Related articles</div>
+    <div class="blog-grid">
+      <a href="../how-to-optimize-amazon-listing-images-2026/index.html" class="blog-card r">
+        <img class="blog-card-img" src="../images/how-to-optimize-amazon-listing-images-2026.webp" alt="How to Optimize Amazon Listing Images 2026" loading="lazy">
+        <div class="blog-card-body">
+          <div class="blog-card-date">June 11, 2026</div>
+          <div class="blog-card-title">How to Optimize Your Amazon Listing Images for 2026: The Complete Guide</div>
+        </div>
+      </a>
+      <a href="../amazon-listing-image-mistakes/index.html" class="blog-card r">
+        <img class="blog-card-img" src="../images/amazon-listing-image-mistakes.webp" alt="7 Amazon Listing Image Mistakes" loading="lazy">
+        <div class="blog-card-body">
+          <div class="blog-card-date">May 4, 2026</div>
+          <div class="blog-card-title">The 7 Amazon Listing Image Mistakes Killing Your Conversion Rate</div>
+        </div>
+      </a>
+      <a href="../product-images-videos-that-convert/index.html" class="blog-card r">
+        <img class="blog-card-img" src="../images/product-images-videos-that-convert.webp" alt="Product Images and Videos That Convert" loading="lazy">
+        <div class="blog-card-body">
+          <div class="blog-card-date">April 8, 2026</div>
+          <div class="blog-card-title">How to Create Product Images &amp; Videos That Convert (With AI + Examples)</div>
+        </div>
+      </a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="foot-logo"><img src="../../All%20Visuals/Dobby%20Logo.webp" alt="Dobby Ads" class="logo-img" style="height:36px"></span>
+        <span class="foot-tagline">Where AI meets creative direction.</span>
+        <p class="foot-desc">Creative systems for e-commerce brands that refuse to look generic.</p>
+      </div>
+      <div>
+        <div class="foot-heading">Services</div>
+        <ul class="foot-links">
+          <li><a href="../../#services">Listing Images</a></li>
+          <li><a href="../../#services">A+ Content</a></li>
+          <li><a href="../../#services">Product Video</a></li>
+          <li><a href="../../#services">3D Creative</a></li>
+          <li><a href="../../#services">Brand Stores</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-heading">Company</div>
+        <ul class="foot-links">
+          <li><a href="../../#work">Our Work</a></li>
+          <li><a href="../">Blog</a></li>
+          <li><a href="../../#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-heading">Contact</div>
+        <ul class="foot-links">
+          <li><a href="../../#contact">Get Started</a></li>
+          <li><a href="mailto:hello@dobbyads.com">hello@dobbyads.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="foot-copy">&copy; 2026 Dobby Ads. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+const ham=document.getElementById('hamburger'),mob=document.getElementById('mob-menu');
+if(ham&&mob){ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open')});mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');mob.classList.remove('open')}))}
+</script>
+</body>
+</html>
