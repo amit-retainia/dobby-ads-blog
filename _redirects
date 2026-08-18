@@ -1,0 +1,35 @@
+# ============================================
+# Dobby Ads — Netlify Redirects
+# ============================================
+# Maps old Wix site URLs to new site pages.
+# Place this file in the root of your Netlify deploy.
+# 301 = permanent redirect (tells Google to update its index)
+# ============================================
+
+# --- Old service pages → New service pages ---
+/amazon-creatives        /ecommerce-creative     301
+/ai-ad-creatives         /ecommerce-creative     301
+/ai-creatives            /ecommerce-creative     301
+/ai-videos               /video-commercials      301
+/3d-video                /animation-3d           301
+/3d-renders              /animation-3d           301
+/real-estate             /animation-3d           301
+/youtube-editing         /video-commercials      301
+/branding                /branding               301
+
+# --- Old utility/tool pages → Homepage ---
+/synthesia               /                       301
+/retainia                /                       301
+
+# --- Old standard pages → Best match ---
+/contact-us              /#contact               301
+/contact                 /#contact               301
+/blog                    /blog                   301
+
+# --- Old Wix internal paths that may be indexed ---
+/_functions/llms_txt     /llms.txt               301
+
+# --- Catch any other old paths → Homepage ---
+# (Uncomment the line below if you want ALL unknown URLs to go to homepage
+#  instead of showing a 404. Recommended while Google re-indexes.)
+# /*                     /                       302

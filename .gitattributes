@@ -1,0 +1,4 @@
+# Deploy files byte-for-byte as they are on disk.
+# Disables Git's automatic CRLF/LF rewriting, which on Windows can alter
+# files between commit and deploy. Static site: what we commit is what ships.
+* -text

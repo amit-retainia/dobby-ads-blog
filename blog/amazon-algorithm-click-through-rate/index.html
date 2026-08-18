@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="../../favicon.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How Amazon's Algorithm Uses Click-Through Rate | Dobby Ads Blog</title>
+<meta name="description" content="Your thumbnail isn't just a design choice. Amazon's algorithm treats click-through rate as a direct ranking signal, and most sellers are leaving clicks on the table.">
+<link rel="canonical" href="https://www.dobbyads.com/blog/amazon-algorithm-click-through-rate">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How Amazon's Algorithm Uses Click-Through Rate, And Why Your Thumbnail Decides More Than You Think">
+<meta property="og:description" content="Your thumbnail isn't just a design choice. Amazon's algorithm treats click-through rate as a direct ranking signal.">
+<meta property="og:image" content="https://www.dobbyads.com/blog/images/amazon-algorithm-click-through-rate.webp">
+<meta property="og:url" content="https://www.dobbyads.com/blog/amazon-algorithm-click-through-rate">
+<meta property="og:site_name" content="Dobby Ads">
+<meta property="article:published_time" content="2026-05-19">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LDBEMQM3ZW"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LDBEMQM3ZW');</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+:root{--bg:#000;--acc:#FFCC33;--acc-dim:rgba(255,204,51,.07);--acc-bdr:rgba(255,204,51,.25);--t:#fff;--bdr:rgba(255,255,255,.06);--bdr2:rgba(255,255,255,.11);--max:1160px;--ff:'Urbanist',sans-serif;--fn:'Urbanist',sans-serif;--fs-h1:clamp(2rem,3.2vw,3rem);--fs-h2:1.625rem;--fs-body:1.25rem}
+body{background:var(--bg);color:var(--t);font-family:var(--ff);font-size:16px;line-height:1.7;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+.post-wrap{max-width:720px;margin:0 auto;padding:0 1.5rem}
+.r{opacity:0;transform:translateY(20px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+.r.vis{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.r{opacity:1!important;transform:none!important}}
+nav{position:sticky;top:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;background:rgba(0,0,0,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr)}
+.logo-img{height:44px;width:auto;display:block}
+.nav-links{display:flex;list-style:none;gap:2rem;align-items:center}
+.nav-links a{font-family:var(--fn);font-size:14px;font-weight:500;letter-spacing:.04em;color:#fff;transition:color .18s}
+.nav-links a:hover{color:var(--acc)}
+.nav-right{display:flex;align-items:center;gap:.625rem}
+.nav-cta{font-family:var(--fn);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#000;color:#fff;border:1.5px solid #fff;padding:10px 22px;border-radius:3px;cursor:pointer;transition:background .18s,color .18s,border-color .18s;text-decoration:none;display:inline-flex;align-items:center}
+.nav-cta:hover{background:var(--acc);color:#000;border-color:var(--acc)}
+.nav-login{font-family:var(--fn);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:transparent;color:rgba(255,255,255,.7);border:1.5px solid rgba(255,255,255,.2);padding:10px 22px;border-radius:3px;cursor:pointer;transition:background .18s,color .18s,border-color .18s;text-decoration:none;display:inline-flex;align-items:center}
+.nav-login:hover{color:#fff;border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.05)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all .28s ease}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#mob-menu{display:none;flex-direction:column;position:fixed;inset:0;background:#000;z-index:90;padding:80px 2rem 2.5rem;opacity:0;pointer-events:none;transition:opacity .28s ease}
+#mob-menu.open{opacity:1;pointer-events:all}
+#mob-menu a{padding:1rem 0;font-size:1.6rem;font-family:var(--ff);font-weight:700;color:var(--t);border-bottom:1px solid var(--bdr);transition:color .18s}
+#mob-menu a:hover{color:var(--acc)}
+#mob-menu .btn-primary{margin-top:2rem;justify-content:center}
+.btn-primary{background:#000;color:#fff;border:1.5px solid #fff;padding:14px 32px;border-radius:3px;font-family:var(--fn);font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:background .18s,color .18s,border-color .18s,transform .12s}
+.btn-primary:hover{background:var(--acc);color:#000;border-color:var(--acc);transform:translateY(-1px)}
+.post-header{padding:120px 0 40px}
+.post-breadcrumb{font-size:.8rem;font-weight:500;color:rgba(255,255,255,.5);margin-bottom:1.5rem}
+.post-breadcrumb a{color:rgba(255,255,255,.5);transition:color .15s}
+.post-breadcrumb a:hover{color:var(--acc)}
+.post-date{font-size:.85rem;font-weight:600;color:var(--acc);letter-spacing:.06em;text-transform:uppercase;margin-bottom:1rem}
+.post-title{font-size:var(--fs-h1);font-weight:800;line-height:1.1;letter-spacing:-.025em;color:var(--t);margin-bottom:1rem}
+.post-author{font-size:.9rem;font-weight:400;color:rgba(255,255,255,.6);margin-bottom:2rem}
+.post-hero{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:top;border-radius:12px;border:1px solid var(--bdr2);margin-top:2rem}
+article{padding:3rem 0 4rem}
+article p{font-size:var(--fs-body);font-weight:300;color:#fff;line-height:1.8;margin-bottom:1.25rem}
+article h2{font-size:var(--fs-h2);font-weight:700;color:var(--t);margin-top:2.5rem;margin-bottom:1rem;line-height:1.3}
+article h3{font-size:1.25rem;font-weight:700;color:var(--acc);margin-top:2rem;margin-bottom:.75rem}
+article ul{padding-left:1.5rem;list-style:disc;margin-bottom:1.25rem}
+article ul li::marker{color:var(--acc)}
+article ul li{margin-bottom:.5rem;color:#fff;font-weight:300;font-size:var(--fs-body);line-height:1.7}
+article ol{padding-left:1.5rem;list-style:decimal;margin-bottom:1.25rem}
+article ol li{margin-bottom:.5rem;color:#fff;font-weight:300;font-size:var(--fs-body);line-height:1.7}
+article strong{font-weight:600;color:#fff}
+article a{color:var(--acc)}
+article a:hover{text-decoration:underline}
+.post-cta{background:var(--acc-dim);border:1px solid var(--acc-bdr);border-radius:12px;padding:2.5rem;margin:4rem 0;text-align:center}
+.post-cta h2{font-size:var(--fs-h2);font-weight:700;color:var(--t);margin-bottom:.75rem}
+.post-cta p{font-size:1rem;font-weight:300;color:rgba(255,255,255,.8);margin-bottom:1.5rem}
+.related{padding:4rem 0 80px;border-top:1px solid var(--bdr)}
+.related-label{font-family:var(--fn);font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:2rem}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.blog-card{background:linear-gradient(145deg,#141414 0%,#0e0e0e 100%);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;transition:border-color .22s,transform .22s;display:block;position:relative}
+.blog-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--acc);opacity:0;transition:opacity .22s}
+.blog-card:hover{border-color:rgba(255,204,51,.35);transform:translateY(-4px)}
+.blog-card:hover::before{opacity:1}
+.blog-card-img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top;background:#111}
+.blog-card-body{padding:1.25rem 1.5rem 1.5rem}
+.blog-card-date{font-size:.8rem;font-weight:500;color:var(--acc);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem}
+.blog-card-title{font-size:1.1rem;font-weight:700;color:var(--t);line-height:1.3}
+footer{background:#000;border-top:1px solid var(--bdr);padding:4rem 0 0}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem}
+.foot-tagline{font-family:var(--ff);font-style:normal;font-size:.875rem;color:#fff;margin-bottom:1rem;display:block}
+.foot-desc{font-size:.875rem;color:#fff;line-height:1.85;font-weight:300;max-width:280px;margin-bottom:1rem}
+.foot-contact{font-size:.875rem;color:#fff;line-height:1.85;font-weight:300}
+.foot-contact a{color:var(--t);transition:color .15s}
+.foot-contact a:hover{color:var(--acc)}
+.foot-col-label{font-family:var(--fn);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#fff;font-weight:600;margin-bottom:1rem}
+.foot-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.foot-list a{font-size:.875rem;color:#fff;font-weight:300;transition:color .15s}
+.foot-list a:hover{color:rgba(255,255,255,.7)}
+.foot-certs{margin-top:1rem}
+.foot-cert-img{height:40px;width:auto;opacity:.8}
+.foot-bottom{border-top:1px solid var(--bdr);padding:1.25rem 0;display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:#fff}
+.foot-bottom a{color:#fff;transition:color .15s}
+.foot-bottom a:hover{color:rgba(255,255,255,.6)}
+@media(max-width:860px){.nav-links,.nav-login,.nav-cta{display:none}.hamburger{display:flex}#mob-menu{display:flex}.blog-grid{grid-template-columns:1fr 1fr}.foot-grid{grid-template-columns:1fr 1fr;gap:2rem}.foot-bottom{flex-direction:column;gap:.4rem;text-align:center}}
+@media(max-width:640px){.blog-grid{grid-template-columns:1fr}.post-title{font-size:1.8rem}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo"><img src="../../All%20Visuals/Dobby%20Logo.webp" alt="Dobby Ads" class="logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="/#work">Work</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#engine">Engine</a></li>
+    <li><a href="/#testimonials">Clients</a></li>
+    <li><a href="/#awards">Awards</a></li>
+    <li><a href="../">Blog</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="https://brand.dobbyads.com/login" class="nav-login">Login</a>
+    <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="nav-cta">Book a Call</a>
+    <button class="hamburger" id="hb" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div id="mob-menu">
+  <a href="/#work">Work</a><a href="/#services">Services</a><a href="/#engine">Engine</a><a href="/#testimonials">Clients</a><a href="/#awards">Awards</a><a href="../">Blog</a><a href="/#faq">FAQ</a><a href="https://brand.dobbyads.com/login">Login</a>
+  <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="btn-primary">Book a Call &rarr;</a>
+</div>
+
+<div class="post-header">
+  <div class="post-wrap">
+    <nav class="post-breadcrumb" aria-label="Breadcrumb"><a href="../">Blog</a> &rsaquo; How Amazon's Algorithm Uses Click-Through Rate</nav>
+    <div class="post-date"><time datetime="2026-05-19">May 19, 2026</time></div>
+    <h1 class="post-title r">How Amazon's Algorithm Uses Click-Through Rate, And Why Your Thumbnail Decides More Than You Think</h1>
+    <picture style="display:contents"><source type="image/avif" srcset="../images/amazon-algorithm-click-through-rate-800.avif 800w, ../images/amazon-algorithm-click-through-rate-1200.avif 1200w" sizes="(max-width:900px) 92vw, 760px"><img class="post-hero r" src="../images/amazon-algorithm-click-through-rate.webp" alt="How Amazon's Algorithm Uses Click-Through Rate" loading="eager"></picture>
+  </div>
+</div>
+
+<div class="post-wrap">
+<article>
+<p>Most Amazon sellers think their thumbnail is a design choice. It's a ranking signal.</p>
+<p>Every click your listing earns, and every click it loses, feeds directly into Amazon's algorithm. The product that gets clicked more rises. The one that gets ignored sinks. And the single biggest factor controlling whether shoppers click is the small image they see in search results — the same image you probably haven't updated in a year.</p>
+<p>This post breaks down how Amazon's algorithm actually works in 2026, why click-through rate has become one of the highest-leverage signals on the platform, and what to do about your thumbnail before competitors figure it out.</p>
+
+<h2>How Amazon's Algorithm Has Changed</h2>
+<p>Amazon's search system has evolved significantly over the last few years. Most sellers are still optimizing for a version of the algorithm that no longer exists.</p>
+<p>The original A9 algorithm was blunt. Sales velocity ruled. The product that sold the most units for a given keyword ranked first. Sellers who mastered keyword stuffing, aggressive launch sequences, and external traffic dumps dominated the top of the page.</p>
+<p>What the seller community calls A10 — while never officially confirmed by Amazon — represents a meaningful shift. Conversion rate started outweighing raw volume. A listing converting at 18% on 500 sessions began outranking one converting at 12% on 800 sessions. Click-through rate, customer engagement, seller authority, and external traffic quality became serious ranking factors.</p>
+<p>The system continues to evolve. Amazon now uses machine learning models that layer behavioral signals on top of everything that came before. Session depth, add-to-cart rates, return signals, and Rufus AI interactions all feed into predictions about whether a specific shopper will be satisfied with a specific product. The system isn't asking "did this sell?" anymore. It's asking "will this satisfy?"</p>
+<p>Two things matter for sellers. First, conversion rate now matters more than sales volume. A 5% conversion rate will bury a listing regardless of how many keywords are packed into the title. Second, every signal that predicts conversion has become a ranking factor. And the earliest signal in that chain — the one that controls whether anyone clicks at all — is your thumbnail.</p>
+
+<h2>Why Click-Through Rate Became the Critical Signal</h2>
+<p>Click-through rate is the percentage of shoppers who see your listing in search results and click on it. For Amazon's algorithm, CTR is the first prediction signal it has access to. Before a shopper sees your title in detail, before they read your bullets, before they scroll your image stack, they make a decision in under one second based on a small image and a price.</p>
+<p>That decision tells Amazon something the algorithm cares deeply about. If a listing in position 3 gets clicked more than the listings in positions 1 and 2, the algorithm reads that as a signal that position 3 is more relevant to the shopper's intent. Over time, that listing rises.</p>
+<p>CTR has become more weighted under the current algorithm because Amazon is no longer a marketplace where the loudest seller wins. It's a marketplace where the most relevant seller wins, and CTR is one of the cleanest signals of relevance.</p>
+<p>This creates a compounding effect most sellers underestimate. A listing with a 20% better thumbnail earns more clicks. More clicks send a positive signal to the algorithm. The algorithm pushes the listing higher in search. Higher placement means more impressions. More impressions at the same CTR means even more clicks. The cycle accelerates.</p>
+<p>The opposite is also true. A weak thumbnail bleeds clicks. The algorithm interprets the low CTR as low relevance. The listing drops in rank. Lower placement means fewer impressions. The product slowly disappears.</p>
+
+<h2>What Your Thumbnail Is Actually Doing</h2>
+<p>The thumbnail is the version of your hero image that appears in Amazon search results. On mobile, where over half of Amazon traffic now happens, that thumbnail is roughly 200 pixels wide on a phone screen.</p>
+<p>Most sellers never see their thumbnail this way. They review their listings on desktop monitors at full resolution, where the image looks clean and clear. They miss the fact that the version a real shopper sees — on a phone at 11pm — is a tiny rectangle next to four competitor rectangles, and the shopper has roughly three seconds to make a choice.</p>
+<p>In those three seconds, the thumbnail is doing four jobs simultaneously:</p>
+<ul>
+  <li><strong>Identifying the product.</strong> Can the shopper tell what this is at a glance, without zooming?</li>
+  <li><strong>Communicating quality.</strong> Does the lighting, framing, and color signal "professional brand" or "cheap reseller"?</li>
+  <li><strong>Differentiating from competitors.</strong> Sitting in a grid of 5 products, does this one look meaningfully different, or does it blend in?</li>
+  <li><strong>Telegraphing the value proposition.</strong> Even before the shopper reads the title, what feature, scale, or use case does the image suggest?</li>
+</ul>
+<p>Thumbnails that fail any one of these jobs lose the click. Thumbnails that fail two or three lose the click consistently, and the algorithm notices.</p>
+
+<h2>The Mistakes That Tank Thumbnail Performance</h2>
+<p>Most thumbnail problems trace back to the same root cause: sellers design hero images for desktop and never look at them on a phone.</p>
+<ul>
+  <li><strong>Products that disappear at thumbnail size.</strong> Items shot from too far away. Products where texture or finish is the selling point but turns into a blur when shrunk. Color choices that contrast on a calibrated monitor and merge on a low-brightness phone display.</li>
+  <li><strong>Hero images that look identical to a competitor's.</strong> White-label products, generic supplier photos, or near-duplicate compositions across a category. If five listings use a similar shot from a similar angle, the shopper has no reason to pick yours.</li>
+  <li><strong>Visual hierarchy that doesn't survive shrinking.</strong> Multi-piece products where relative scale becomes unclear. Bundle photos where the contents look chaotic at small sizes.</li>
+  <li><strong>Color-grading that flattens at thumbnail compression.</strong> Subtle muted palettes look elegant at full resolution and lifeless at 200px wide. Higher-contrast images cut through better in search.</li>
+  <li><strong>Backgrounds that aren't pure white.</strong> Amazon requires the main image background to be RGB 255, 255, 255. Off-white thumbnails risk listing suppression and visually merge with adjacent listings, reducing the separation that helps a listing stand out.</li>
+</ul>
+
+<h2>What a High-Performing Thumbnail Actually Does</h2>
+<p>The strongest thumbnails on Amazon share a few traits, regardless of product category.</p>
+<ul>
+  <li><strong>They fill the frame.</strong> The product takes up 85% or more of the image. Tight cropping makes the product look substantial in a search grid.</li>
+  <li><strong>They use high contrast.</strong> Even with a white background, the product uses colors and lighting that read clearly at small sizes.</li>
+  <li><strong>They communicate scale.</strong> Either the product is shot in a way that makes its size obvious, or there's a distinctive design choice that signals scale at a glance.</li>
+  <li><strong>They differentiate visually.</strong> A unique angle, a distinctive composition, a specific styling choice that no competitor is using.</li>
+  <li><strong>They survive compression.</strong> Whatever makes the image work at 200 pixels wide also makes it work at 2000. The reverse isn't always true.</li>
+</ul>
+
+<h2>The Compounding Math of a Better Thumbnail</h2>
+<p>Imagine two listings competing for the same keyword. Both have similar pricing, similar reviews, and comparable A+ content. The only meaningful difference is the thumbnail.</p>
+<p>Listing A has a stronger thumbnail and earns a 15% CTR. Listing B earns 10%. In the short term, that's a 50% click advantage for Listing A. But the compounding effect is much larger over time.</p>
+<p>Listing A's higher CTR signals relevance. The algorithm pushes it up in search. As it climbs from position 5 to position 2, it earns dramatically more impressions. Those impressions at the same 15% CTR multiply the click advantage. More clicks means more sales velocity, which feeds back as a positive ranking signal. The listing accelerates.</p>
+<p>Six months later, Listing A is on page one and Listing B is on page three. The only thing that changed was a thumbnail. This is why investing in your hero image is one of the highest-leverage decisions a seller can make.</p>
+
+<h2>What to Do This Week</h2>
+<ol>
+  <li><strong>Audit your top 5 ASINs on mobile.</strong> Search for each primary keyword on a phone. Find your listing. Look at the thumbnail next to its 4 nearest competitors. Is yours earning your eye?</li>
+  <li><strong>Pull your CTR data.</strong> In Brand Analytics → Search Catalog Performance, look at CTR for your top ASINs against category averages. If you're below the median, your thumbnail is bleeding ranking.</li>
+  <li><strong>Identify the specific failure mode.</strong> Is the product too small? Does it merge into adjacent thumbnails? Is the color washed out at compression?</li>
+  <li><strong>Rebuild the hero image with mobile-first design.</strong> Tight crop, high contrast, distinctive composition, white RGB 255 background, no text or badges. Test the new version at 200 pixels wide before uploading at full resolution.</li>
+  <li><strong>Run an A/B test if your category supports it.</strong> Amazon's Manage Your Experiments tool lets brand-registered sellers test image variants and read results in days.</li>
+  <li><strong>Watch the rank movement.</strong> A meaningfully better thumbnail typically shows up in search rank changes within 2 to 4 weeks.</li>
+</ol>
+
+<h2>How Dobby Ads Can Help</h2>
+<p>Dobby Ads is an AI creative agency built for e-commerce brands selling on Amazon, Shopify, and DTC channels. We produce hero images, A+ content, lifestyle imagery, and variant-specific creative at the speed and scale modern sellers need — using AI tools where they earn their keep and human direction where they matter most.</p>
+<p>We offer hero image audits for your top ASINs, mobile-first creative production designed to win the click in search results, variant-specific image stacks for product lines with multiple SKUs, and strategic image stack design that addresses real buyer objections rather than recycling generic angles.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>What is click-through rate (CTR) on Amazon?</h3>
+<p>Click-through rate is the percentage of shoppers who see your listing in search results and click on it. If your listing appeared 1,000 times and was clicked 100 times, your CTR is 10%. Amazon uses CTR as a ranking signal, with higher CTR generally pushing listings to better search positions over time.</p>
+<h3>Does Amazon's algorithm really use CTR as a ranking factor?</h3>
+<p>Yes. While Amazon doesn't publish exact signal weightings, listings with above-average CTR consistently rise in search rankings, and listings with below-average CTR sink. CTR has become more heavily weighted under the current algorithm because it's one of the cleanest signals of relevance.</p>
+<h3>What's a good Amazon CTR?</h3>
+<p>CTR varies by category, price point, and search query. Anything above 0.5% is generally acceptable, above 1% is solid, and 2% or higher is strong. The more important comparison is to your category average, visible in Brand Analytics.</p>
+<h3>How can I check my Amazon listing's CTR?</h3>
+<p>Brand-registered sellers can find CTR data in Brand Analytics under the Search Catalog Performance report. The data shows impressions, clicks, and CTR per ASIN per query.</p>
+<h3>Will improving my hero image actually improve my Amazon ranking?</h3>
+<p>Yes, indirectly. A better hero image lifts CTR. Higher CTR sends positive signals to Amazon's algorithm. Over weeks, this typically translates into improved search rank, which generates more impressions, which generates more total clicks and sales. The compounding effect is significant, though it usually takes 2 to 6 weeks to fully show up in rank movement.</p>
+<h3>Should I A/B test my hero image?</h3>
+<p>If you have Brand Registry and your listing has enough traffic to reach statistical significance, yes. Amazon's Manage Your Experiments tool allows testing of images, titles, and A+ content. For listings without enough native traffic, off-Amazon tools like PickFu can provide audience feedback in hours.</p>
+</article>
+
+<div class="post-cta r">
+  <h2>Ready to upgrade your Amazon creative?</h2>
+  <p>Book a free discovery call to see how Dobby Ads can help.</p>
+  <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="btn-primary">Book a Call &rarr;</a>
+</div>
+</div>
+
+<div class="related">
+  <div class="wrap">
+    <div class="related-label">More from the blog</div>
+    <div class="blog-grid">
+      <a href="../amazon-listing-image-mistakes/index.html" class="blog-card r">
+        <picture style="display:contents"><source type="image/avif" srcset="../images/amazon-listing-image-mistakes-800.avif 800w, ../images/amazon-listing-image-mistakes-1200.avif 1200w" sizes="(max-width:700px) 45vw, 280px"><img class="blog-card-img" src="../images/amazon-listing-image-mistakes.webp" alt="7 Amazon Listing Image Mistakes" loading="lazy"></picture>
+        <div class="blog-card-body">
+          <div class="blog-card-date">May 4, 2026</div>
+          <div class="blog-card-title">The 7 Amazon Listing Image Mistakes Killing Your Conversion Rate</div>
+        </div>
+      </a>
+      <a href="../amazon-prime-day-2026-listing-prep/index.html" class="blog-card r">
+        <picture style="display:contents"><source type="image/avif" srcset="../images/amazon-prime-day-2026-listing-prep-800.avif 800w, ../images/amazon-prime-day-2026-listing-prep-1200.avif 1200w" sizes="(max-width:700px) 45vw, 280px"><img class="blog-card-img" src="../images/amazon-prime-day-2026-listing-prep.webp" alt="Prime Day 2026 Prep" loading="lazy"></picture>
+        <div class="blog-card-body">
+          <div class="blog-card-date">May 4, 2026</div>
+          <div class="blog-card-title">How to Prepare Your Amazon Listings for Prime Day 2026</div>
+        </div>
+      </a>
+      <a href="../amazon-rufus-ai-listing-optimization/index.html" class="blog-card r">
+        <picture style="display:contents"><source type="image/avif" srcset="../images/amazon-rufus-ai-listing-optimization-800.avif 800w, ../images/amazon-rufus-ai-listing-optimization-1200.avif 1200w" sizes="(max-width:700px) 45vw, 280px"><img class="blog-card-img" src="../images/amazon-rufus-ai-listing-optimization.webp" alt="Amazon Rufus AI" loading="lazy"></picture>
+        <div class="blog-card-body">
+          <div class="blog-card-date">May 19, 2026</div>
+          <div class="blog-card-title">What Amazon Rufus AI Wants From Your Listings (And How to Optimize for It)</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="foot-logo"><img src="../../All%20Visuals/Dobby%20Logo.webp" alt="Dobby Ads" class="logo-img" style="height:36px"></span>
+        <span class="foot-tagline">Where AI meets creative direction.</span>
+        <p class="foot-desc">Creative systems for e-commerce brands that refuse to look generic.</p>
+        <div class="foot-contact">
+          <div>Dobby Ads Inc</div><div>8 The Green, Dover,</div><div>Delaware, U.S. 19901</div>
+          <div style="margin-top:.6rem"><a href="tel:+15076665552">+1 507 6665552</a></div>
+          <div><a href="mailto:contact@dobbyads.com">contact@dobbyads.com</a></div>
+        </div>
+        <div class="foot-certs"><img loading="lazy" src="../../All%20Visuals/Synthesia.webp" alt="Synthesia Marketing Certified Partner" class="foot-cert-img"></div>
+      </div>
+      <div>
+        <div class="foot-col-label">Company</div>
+        <ul class="foot-list">
+          <li><a href="/">Home</a></li><li><a href="/#services">Services</a></li><li><a href="/#work">Our Work</a></li><li><a href="../">Blog</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li><li><a href="/accessibility.html">Accessibility</a></li>
+          <li><a href="/terms-and-conditions.html">Terms and Conditions</a></li><li><a href="/refunds-and-cancellations.html">Refunds and Cancellations</a></li><li><a href="/cookie-notice.html">Cookie Notice</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-col-label">Social</div>
+        <ul class="foot-list">
+          <li><a href="https://www.instagram.com/dobbyads/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/dobbyads/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.facebook.com/dobbyads" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://twitter.com/DobbyAds" target="_blank" rel="noopener">X</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-col-label">Get Started</div>
+        <ul class="foot-list">
+          <li><a href="https://brand.dobbyads.com/login">Client Login</a></li>
+          <li><a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener">Book a Call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; Dobby Ads. All rights reserved.</span>
+      <span><a href="/privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="/terms-and-conditions.html">Terms of Service</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.r').forEach(function(el){obs.observe(el);});
+  var hb=document.getElementById('hb'),mob=document.getElementById('mob-menu');
+  if(hb&&mob){hb.addEventListener('click',function(){hb.classList.toggle('open');mob.classList.toggle('open');});}
+})();
+</script>
+</body>
+</html>

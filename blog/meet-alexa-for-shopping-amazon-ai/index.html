@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="../../favicon.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meet Alexa for Shopping: Amazon's New AI That Decides Which Products Get Recommended | Dobby Ads Blog</title>
+<meta name="description" content="How Amazon's AI shopping assistant evaluates your listing creative, and what sellers need to do differently now that it sits inside every search bar.">
+<link rel="canonical" href="https://www.dobbyads.com/blog/meet-alexa-for-shopping-amazon-ai">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Meet Alexa for Shopping: Amazon's New AI That Decides Which Products Get Recommended">
+<meta property="og:description" content="How Amazon's AI shopping assistant evaluates your listing creative, and what sellers need to do differently now that it sits inside every search bar.">
+<meta property="og:image" content="https://www.dobbyads.com/blog/images/meet-alexa-for-shopping-amazon-ai.webp">
+<meta property="og:url" content="https://www.dobbyads.com/blog/meet-alexa-for-shopping-amazon-ai">
+<meta property="og:site_name" content="Dobby Ads">
+<meta property="article:published_time" content="2026-06-13">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LDBEMQM3ZW"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LDBEMQM3ZW');</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+:root{--bg:#000;--acc:#FFCC33;--acc-dim:rgba(255,204,51,.07);--acc-bdr:rgba(255,204,51,.25);--t:#fff;--bdr:rgba(255,255,255,.06);--bdr2:rgba(255,255,255,.11);--max:1160px;--ff:'Urbanist',sans-serif;--fn:'Urbanist',sans-serif;--fs-h1:clamp(2rem,3.2vw,3rem);--fs-h2:1.625rem;--fs-body:1.25rem}
+body{background:var(--bg);color:var(--t);font-family:var(--ff);font-size:16px;line-height:1.7;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+.post-wrap{max-width:720px;margin:0 auto;padding:0 1.5rem}
+.r{opacity:0;transform:translateY(20px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+.r.vis{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.r{opacity:1!important;transform:none!important}}
+nav{position:sticky;top:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;background:rgba(0,0,0,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr)}
+.logo-img{height:44px;width:auto;display:block}
+.nav-links{display:flex;list-style:none;gap:2rem;align-items:center}
+.nav-links a{font-family:var(--fn);font-size:14px;font-weight:500;letter-spacing:.04em;color:#fff;transition:color .18s}
+.nav-links a:hover{color:var(--acc)}
+.nav-right{display:flex;align-items:center;gap:.625rem}
+.nav-cta{font-family:var(--fn);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#000;color:#fff;border:1.5px solid #fff;padding:10px 22px;border-radius:3px;cursor:pointer;transition:background .18s,color .18s,border-color .18s;text-decoration:none;display:inline-flex;align-items:center}
+.nav-cta:hover{background:var(--acc);color:#000;border-color:var(--acc)}
+.nav-login{font-family:var(--fn);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:transparent;color:rgba(255,255,255,.7);border:1.5px solid rgba(255,255,255,.2);padding:10px 22px;border-radius:3px;cursor:pointer;transition:background .18s,color .18s,border-color .18s;text-decoration:none;display:inline-flex;align-items:center}
+.nav-login:hover{color:#fff;border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.05)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all .28s ease}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#mob-menu{display:none;flex-direction:column;position:fixed;inset:0;background:#000;z-index:90;padding:80px 2rem 2.5rem;opacity:0;pointer-events:none;transition:opacity .28s ease}
+#mob-menu.open{opacity:1;pointer-events:all}
+#mob-menu a{padding:1rem 0;font-size:1.6rem;font-family:var(--ff);font-weight:700;color:var(--t);border-bottom:1px solid var(--bdr);transition:color .18s}
+#mob-menu a:hover{color:var(--acc)}
+#mob-menu .btn-primary{margin-top:2rem;justify-content:center}
+.btn-primary{background:#000;color:#fff;border:1.5px solid #fff;padding:14px 32px;border-radius:3px;font-family:var(--fn);font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:background .18s,color .18s,border-color .18s,transform .12s}
+.btn-primary:hover{background:var(--acc);color:#000;border-color:var(--acc);transform:translateY(-1px)}
+.post-header{padding:120px 0 40px}
+.post-breadcrumb{font-size:.8rem;font-weight:500;color:rgba(255,255,255,.5);margin-bottom:1.5rem}
+.post-breadcrumb a{color:rgba(255,255,255,.5);transition:color .15s}
+.post-breadcrumb a:hover{color:var(--acc)}
+.post-date{font-size:.85rem;font-weight:600;color:var(--acc);letter-spacing:.06em;text-transform:uppercase;margin-bottom:1rem}
+.post-title{font-size:var(--fs-h1);font-weight:800;line-height:1.1;letter-spacing:-.025em;color:var(--t);margin-bottom:1rem}
+.post-hero{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:top;border-radius:12px;border:1px solid var(--bdr2);margin-top:2rem}
+article{padding:3rem 0 4rem}
+article p{font-size:var(--fs-body);font-weight:300;color:#fff;line-height:1.8;margin-bottom:1.25rem}
+article h2{font-size:var(--fs-h2);font-weight:700;color:var(--t);margin-top:2.5rem;margin-bottom:1rem;line-height:1.3}
+article h3{font-size:1.25rem;font-weight:700;color:var(--acc);margin-top:2rem;margin-bottom:.75rem}
+article ul{padding-left:1.5rem;list-style:disc;margin-bottom:1.25rem}
+article ul li::marker{color:var(--acc)}
+article ul li{margin-bottom:.5rem;color:#fff;font-weight:300;font-size:var(--fs-body);line-height:1.7}
+article ol{padding-left:1.5rem;list-style:decimal;margin-bottom:1.25rem}
+article ol li{margin-bottom:.5rem;color:#fff;font-weight:300;font-size:var(--fs-body);line-height:1.7}
+article strong{font-weight:600;color:#fff}
+article a{color:var(--acc)}
+article a:hover{text-decoration:underline}
+.post-cta{background:var(--acc-dim);border:1px solid var(--acc-bdr);border-radius:12px;padding:2.5rem;margin:4rem 0;text-align:center}
+.post-cta h2{font-size:var(--fs-h2);font-weight:700;color:var(--t);margin-bottom:.75rem}
+.post-cta p{font-size:1rem;font-weight:300;color:rgba(255,255,255,.8);margin-bottom:1.5rem}
+.related{padding:4rem 0 80px;border-top:1px solid var(--bdr)}
+.related-label{font-family:var(--fn);font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:2rem}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.blog-card{background:linear-gradient(145deg,#141414 0%,#0e0e0e 100%);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;transition:border-color .22s,transform .22s;display:block;position:relative}
+.blog-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--acc);opacity:0;transition:opacity .22s}
+.blog-card:hover{border-color:rgba(255,204,51,.35);transform:translateY(-4px)}
+.blog-card:hover::before{opacity:1}
+.blog-card-img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top;background:#111}
+.blog-card-body{padding:1.25rem 1.5rem 1.5rem}
+.blog-card-date{font-size:.8rem;font-weight:500;color:var(--acc);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem}
+.blog-card-title{font-size:1.1rem;font-weight:700;color:var(--t);line-height:1.3}
+footer{background:#000;border-top:1px solid var(--bdr);padding:60px 0 32px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.foot-logo{display:block;margin-bottom:.75rem}
+.foot-tagline{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);display:block;margin-bottom:.75rem}
+.foot-desc{font-size:.9rem;font-weight:300;color:rgba(255,255,255,.5);line-height:1.6}
+.foot-heading{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.25rem}
+.foot-links{list-style:none;display:flex;flex-direction:column;gap:.625rem}
+.foot-links a{font-size:.9rem;font-weight:400;color:rgba(255,255,255,.6);transition:color .15s}
+.foot-links a:hover{color:var(--acc)}
+.foot-bottom{border-top:1px solid var(--bdr);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.foot-copy{font-size:.8rem;color:rgba(255,255,255,.3)}
+@media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:600px){.foot-grid{grid-template-columns:1fr}.blog-grid{grid-template-columns:1fr}.nav-links,.nav-right{display:none}.hamburger{display:flex}#mob-menu{display:flex}.post-header{padding:90px 0 30px}}
+.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:2rem 0}
+.stat-box{background:linear-gradient(145deg,#111 0%,#0a0a0a 100%);border:1px solid var(--acc-bdr);border-radius:12px;padding:1.5rem;text-align:center}
+.stat-num{font-size:2.2rem;font-weight:800;color:var(--acc);line-height:1;margin-bottom:.4rem}
+.stat-label{font-size:.85rem;font-weight:400;color:rgba(255,255,255,.6);line-height:1.4}
+.mistake-block{background:linear-gradient(145deg,#111 0%,#0a0a0a 100%);border:1px solid var(--bdr2);border-left:3px solid var(--acc);border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin:1rem 0}
+.mistake-block h3{margin-top:0;margin-bottom:.4rem;font-size:1rem;color:#fff}
+.mistake-block p{margin-bottom:0;font-size:.95rem;color:rgba(255,255,255,.7)}
+.callout{background:var(--acc-dim);border-left:4px solid var(--acc);border-radius:0 8px 8px 0;padding:1.25rem 1.5rem;margin:2rem 0}
+.callout p{margin-bottom:0;font-size:1rem}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Meet Alexa for Shopping: Amazon's New AI That Decides Which Products Get Recommended",
+  "description": "How Amazon's AI shopping assistant evaluates your listing creative, and what sellers need to do differently now that it sits inside every search bar.",
+  "image": "https://www.dobbyads.com/blog/images/meet-alexa-for-shopping-amazon-ai.webp",
+  "datePublished": "2026-06-13",
+  "dateModified": "2026-06-13",
+  "publisher": {"@type": "Organization","name": "Dobby Ads","logo": {"@type": "ImageObject","url": "https://www.dobbyads.com/All%20Visuals/Dobby%20Logo.webp"}},
+  "mainEntityOfPage": {"@type": "WebPage","@id": "https://www.dobbyads.com/blog/meet-alexa-for-shopping-amazon-ai"},
+  "keywords": "Alexa for Shopping, Amazon AI shopping assistant, Amazon Rufus replacement, Amazon AI product discovery, Visual Label Tagging"
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="../../" aria-label="Dobby Ads home">
+    <img src="../../All%20Visuals/Dobby%20Logo.webp" alt="Dobby Ads" class="logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../">Home</a></li>
+    <li><a href="../" aria-current="page">Blog</a></li>
+    <li><a href="../../#services">Services</a></li>
+    <li><a href="../../#work">Work</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="../../#contact" class="nav-login">Contact</a>
+    <a href="../../#contact" class="nav-cta">Get Started</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mob-menu">
+  <a href="../../">Home</a>
+  <a href="../">Blog</a>
+  <a href="../../#services">Services</a>
+  <a href="../../#work">Work</a>
+  <a href="../../#contact" class="btn-primary">Get Started</a>
+</div>
+
+<div class="post-header">
+  <div class="post-wrap">
+    <div class="post-breadcrumb r"><a href="../">Blog</a> / Meet Alexa for Shopping</div>
+    <div class="post-date r">June 13, 2026</div>
+    <h1 class="post-title r">Meet Alexa for Shopping: Amazon&rsquo;s New AI That Decides Which Products Get Recommended</h1>
+    <picture style="display:contents"><source type="image/avif" srcset="../images/meet-alexa-for-shopping-amazon-ai-800.avif 800w, ../images/meet-alexa-for-shopping-amazon-ai-1200.avif 1200w" sizes="(max-width:900px) 92vw, 760px"><img
+      src="../images/meet-alexa-for-shopping-amazon-ai.webp"
+      alt="Meet Alexa for Shopping — Amazon's New AI Shopping Assistant"
+      class="post-hero r"
+      width="1200" height="675"
+    ></picture>
+  </div>
+</div>
+
+<article>
+  <div class="post-wrap">
+
+    <p>Something changed on Amazon on May 13, 2026, and most sellers missed it. Amazon retired Rufus, the AI shopping assistant it launched in 2024, and replaced it with something bigger. The new product is called Alexa for Shopping.</p>
+
+    <p>The technology behind it is largely the same. But the reach is not. Rufus lived in a separate chat window that shoppers had to choose to open. Alexa for Shopping lives inside the main Amazon search bar. It is the default for every signed-in US customer on the Amazon Shopping app, on amazon.com, and on Echo Show devices. No Prime membership required. No Echo device required. Just Amazon &mdash; which means hundreds of millions of shoppers globally now have an AI assistant actively involved in every product discovery session, whether they chose to engage with it or not.</p>
+
+    <p>For sellers, this is not a minor interface update. It is a structural change to how Amazon decides which products get recommended and which ones get ignored. And here is the part that most listing optimization guides are not yet covering: <strong>your images are part of what the AI evaluates.</strong></p>
+
+    <h2>The Scale of What Changed</h2>
+
+    <div class="stat-grid">
+      <div class="stat-box">
+        <div class="stat-num">250M</div>
+        <div class="stat-label">customers used Rufus in 2025</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">149%</div>
+        <div class="stat-label">year-over-year growth in monthly active users</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">60%</div>
+        <div class="stat-label">more likely to purchase after engaging with the assistant</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">$12B</div>
+        <div class="stat-label">in incremental sales driven in 2025</div>
+      </div>
+    </div>
+
+    <p>As of early 2026, approximately 13 to 14 percent of Amazon searches involve the AI assistant directly, with that number growing every quarter. Traditional keyword search still drives the majority of Amazon traffic. But the share going through AI-mediated discovery is compounding, and the products that get recommended through that channel convert at materially higher rates.</p>
+
+    <h2>What Alexa for Shopping Actually Does</h2>
+
+    <p>Traditional Amazon search works on keyword matching. A shopper types &ldquo;insulated water bottle&rdquo; and Amazon&rsquo;s algorithm surfaces products with those terms in the title, bullets, and backend fields. Your job as a seller was to put the right words in the right places.</p>
+
+    <p>Alexa for Shopping works differently. When a shopper asks &ldquo;what is the best water bottle for hiking that fits in a car cup holder?&rdquo;, the assistant does not search for listings that contain those exact words. It interprets the intent behind the question, then synthesizes information from across your entire listing to evaluate whether your product is genuinely a good answer.</p>
+
+    <p>It reads your title. It reads your bullets. It reads your A+ content. It reads your customer reviews and Q&amp;A. It reads your backend attributes. And then it reads your images.</p>
+
+    <p>That last part is the one most sellers have not thought through yet.</p>
+
+    <h2>Why Your Images Are Now Being Read, Not Just Seen</h2>
+
+    <p>Amazon&rsquo;s AI system uses a technology called <strong>Visual Label Tagging</strong>. In practical terms, this means the assistant can extract meaning from product photography and infographic content, not just from text fields.</p>
+
+    <p>When your images show the product being used outdoors, the AI can infer use-case context. When your infographics include text overlays stating dimensions, materials, or compatibility information, the AI can read that text and map it to shopper queries. When your lifestyle photography places the product in a specific setting, that context feeds into how the assistant categorizes and recommends your listing.</p>
+
+    <div class="callout">
+      <p>A white-background hero image and five plain lifestyle shots are no longer enough. They were enough for the old keyword-matching algorithm. They are not enough for an AI that is trying to understand your product semantically and decide whether it is the right answer to a specific shopper question.</p>
+    </div>
+
+    <p>The brands that win in Alexa for Shopping recommendations are the ones whose images tell the same story as their copy. The brands that lose are the ones whose images look fine but contain no useful information for an AI trying to understand what the product actually does and who it is for.</p>
+
+    <h2>The Four Creative Mistakes That Hurt Your AI Visibility</h2>
+
+    <div class="mistake-block">
+      <h3>Images that show the product without explaining it</h3>
+      <p>A lifestyle image of a water bottle sitting on a rocky trail looks good. An infographic that says &ldquo;Leak-proof lid, fits 99% of car cup holders, keeps drinks cold for 24 hours&rdquo; gives the AI explicit attribute data it can match to shopper queries. Listings that have one and not the other are leaving visibility on the table.</p>
+    </div>
+
+    <div class="mistake-block">
+      <h3>A+ content that reads as a brochure rather than information</h3>
+      <p>Alexa for Shopping processes A+ content as a data source. Modules built around beautiful photography and minimal text, while visually impressive, give the AI very little to work with. Modules that include specific use-case callouts, feature explanations, and benefit-driven copy give the AI the structured information it needs to recommend your product confidently.</p>
+    </div>
+
+    <div class="mistake-block">
+      <h3>No visual consistency across the listing</h3>
+      <p>The AI evaluates your listing as a whole, not slot by slot. When your hero image, your gallery, your A+ content, and your storefront all tell different visual stories, the semantic picture the AI builds is fragmented. Consistent creative across the full listing creates a stronger, clearer signal for AI evaluation than individually strong assets that do not connect.</p>
+    </div>
+
+    <div class="mistake-block">
+      <h3>Missing or generic alt text on A+ modules</h3>
+      <p>Alt text on A+ images is a direct text input that the AI can read. Leaving it blank or filling it with generic descriptions like &ldquo;product image 1&rdquo; wastes one of the simplest optimization opportunities available. Descriptive, context-rich alt text on every module is the equivalent of labelling your images for the AI in plain language.</p>
+    </div>
+
+    <h2>What Has Actually Changed Since the Rufus Rebrand</h2>
+
+    <p>The underlying recommendation logic did not change when Rufus became Alexa for Shopping. The signals the AI uses to evaluate listings are the same. What changed is the scale and the placement.</p>
+
+    <p>When Rufus was a separate chat window, a shopper had to actively choose to engage with it. Alexa for Shopping is embedded into the search bar, which means it is now part of the default shopping flow. AI-mediated product discovery is no longer an edge case. It is happening in the main stream of Amazon traffic.</p>
+
+    <h2>What Sellers Should Do Right Now</h2>
+
+    <p>The good news is that most of the changes needed to perform well in Alexa for Shopping are changes that also improve conversion for human shoppers. The AI rewards the same things that shoppers reward: clarity, specificity, and usefulness.</p>
+
+    <ol>
+      <li><strong>Audit your infographics for information density.</strong> Look at each image in your gallery and ask what factual information it communicates &mdash; dimensions, materials, compatibility, use cases, certifications. If an image is purely aesthetic with no informational content, it is doing less work than it could.</li>
+      <li><strong>Review your A+ content for text density.</strong> Modules with heavy photography and minimal copy are visually strong but informationally thin. Adding specific use-case callouts, feature explanations, and comparison data makes the content more useful both for shoppers and for the AI processing it.</li>
+      <li><strong>Add descriptive alt text to every A+ image.</strong> This is a five-minute task that most sellers have never done. Descriptive alt text on each module gives the AI a direct, readable description of what each image shows.</li>
+      <li><strong>Check that your images and copy tell the same story.</strong> When the AI processes your listing, it is building a picture of your product from multiple sources simultaneously. Inconsistencies between your images and your text create noise in that picture. Consistency creates a clearer, more confident recommendation signal.</li>
+      <li><strong>Prioritize your top ASINs first.</strong> Not every listing needs to be overhauled immediately. Start with the products that drive the most revenue and work outward from there.</li>
+    </ol>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What is Alexa for Shopping?</h3>
+    <p>Alexa for Shopping is Amazon&rsquo;s AI shopping assistant, launched on May 13, 2026, replacing the earlier Rufus chatbot. It is embedded directly in Amazon&rsquo;s main search bar and available to every signed-in US customer by default. It answers product questions in natural language, compares products, shows price history, and can schedule or automate purchases on a shopper&rsquo;s behalf.</p>
+
+    <h3>Does Alexa for Shopping evaluate product images?</h3>
+    <p>Yes. Amazon&rsquo;s system uses Visual Label Tagging and can read text overlays in infographics via optical character recognition. Image content &mdash; including use-case context in lifestyle photography and factual information in infographics &mdash; feeds into how the AI understands and recommends your listing.</p>
+
+    <h3>Does keyword optimization still matter?</h3>
+    <p>Yes. Keyword-based search still drives the majority of Amazon traffic. Alexa for Shopping and traditional search run in parallel. The smart approach is to optimize for both, since the same listing content that helps the AI also tends to serve human shoppers well.</p>
+
+    <h3>How do I know if Alexa for Shopping is surfacing my products?</h3>
+    <p>Amazon is beginning to surface AI attribution data in Brand Analytics for brand-registered sellers. Check your Search Query Performance reports for changes in impression share on longer, conversational queries, as these are often driven by the AI assistant.</p>
+
+    <h3>What is the single most important thing to change in my listing creative?</h3>
+    <p>Information density. Make sure your infographics and A+ content communicate specific, factual information about your product rather than being purely aesthetic. The AI needs readable content &mdash; in text fields and in images &mdash; to accurately recommend your listing to shoppers asking relevant questions.</p>
+
+    <h2>The Bottom Line</h2>
+
+    <p>Amazon&rsquo;s AI shopping assistant is no longer a feature that sellers can monitor from the sidelines. With Alexa for Shopping now embedded in the default search experience for hundreds of millions of shoppers, the way listings are discovered, evaluated, and recommended has fundamentally changed.</p>
+
+    <p>Your images are part of that evaluation. Your A+ content is part of that evaluation. The consistency between your creative assets is part of that evaluation.</p>
+
+    <p>The brands adapting their creative strategy to this reality now are building a visibility advantage that will compound over the next twelve to eighteen months. The brands that treat this as a future concern are ceding ground today.</p>
+
+  </div>
+</article>
+
+<div class="post-cta">
+  <div class="post-wrap">
+    <h2>Is your listing ready for Alexa for Shopping?</h2>
+    <p>Dobby Ads builds listing creative &mdash; images, A+ content, video, and storefronts &mdash; designed to communicate clearly to both human shoppers and Amazon&rsquo;s AI.</p>
+    <a href="../../#contact" class="btn-primary">Talk to us</a>
+  </div>
+</div>
+
+<div class="related">
+  <div class="wrap">
+    <div class="related-label">Related articles</div>
+    <div class="blog-grid">
+      <a href="../how-to-optimize-amazon-listing-images-2026/index.html" class="blog-card r">
+        <picture style="display:contents"><source type="image/avif" srcset="../images/how-to-optimize-amazon-listing-images-2026-800.avif 800w, ../images/how-to-optimize-amazon-listing-images-2026-1200.avif 1200w" sizes="(max-width:700px) 45vw, 280px"><img class="blog-card-img" src="../images/how-to-optimize-amazon-listing-images-2026.webp" alt="How to Optimize Amazon Listing Images for 2026" loading="lazy"></picture>
+        <div class="blog-card-body">
+          <div class="blog-card-date">June 11, 2026</div>
+          <div class="blog-card-title">How to Optimize Your Amazon Listing Images for 2026: The Complete Guide</div>
+        </div>
+      </a>
+      <a href="../top-7-amazon-a-plus-content-agencies-2026/index.html" class="blog-card r">
+        <picture style="display:contents"><source type="image/avif" srcset="../images/top-7-amazon-a-plus-content-agencies-2026-800.avif 800w, ../images/top-7-amazon-a-plus-content-agencies-2026-1200.avif 1200w" sizes="(max-width:700px) 45vw, 280px"><img class="blog-card-img" src="../images/top-7-amazon-a-plus-content-agencies-2026.webp" alt="Top 7 Amazon A+ Content Agencies 2026" loading="lazy"></picture>
+        <div class="blog-card-body">
+          <div class="blog-card-date">June 16, 2026</div>
+          <div class="blog-card-title">Top 7 Amazon A+ Content Agencies That Actually Improve Conversion Rates (2026)</div>
+        </div>
+      </a>
+      <a href="../amazon-rufus-ai-listing-optimization/index.html" class="blog-card r">
+        <picture style="display:contents"><source type="image/avif" srcset="../images/amazon-rufus-ai-listing-optimization-800.avif 800w, ../images/amazon-rufus-ai-listing-optimization-1200.avif 1200w" sizes="(max-width:700px) 45vw, 280px"><img class="blog-card-img" src="../images/amazon-rufus-ai-listing-optimization.webp" alt="What Amazon Rufus AI Wants From Your Listings" loading="lazy"></picture>
+        <div class="blog-card-body">
+          <div class="blog-card-date">May 19, 2026</div>
+          <div class="blog-card-title">What Amazon Rufus AI Wants From Your Listings (And How to Optimize for It)</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="foot-logo"><img src="../../All%20Visuals/Dobby%20Logo.webp" alt="Dobby Ads" class="logo-img" style="height:36px"></span>
+        <span class="foot-tagline">Where AI meets creative direction.</span>
+        <p class="foot-desc">Creative systems for e-commerce brands that refuse to look generic.</p>
+      </div>
+      <div>
+        <div class="foot-heading">Services</div>
+        <ul class="foot-links">
+          <li><a href="../../#services">Listing Images</a></li>
+          <li><a href="../../#services">A+ Content</a></li>
+          <li><a href="../../#services">Product Video</a></li>
+          <li><a href="../../#services">3D Creative</a></li>
+          <li><a href="../../#services">Brand Stores</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-heading">Company</div>
+        <ul class="foot-links">
+          <li><a href="../../#work">Our Work</a></li>
+          <li><a href="../">Blog</a></li>
+          <li><a href="../../#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-heading">Contact</div>
+        <ul class="foot-links">
+          <li><a href="../../#contact">Get Started</a></li>
+          <li><a href="mailto:hello@dobbyads.com">hello@dobbyads.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="foot-copy">&copy; 2026 Dobby Ads. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+const ham=document.getElementById('hamburger'),mob=document.getElementById('mob-menu');
+if(ham&&mob){ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open')});mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');mob.classList.remove('open')}))}
+</script>
+</body>
+</html>

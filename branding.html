@@ -1,0 +1,1058 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LDBEMQM3ZW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LDBEMQM3ZW');
+</script>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Branding &amp; Marketing | Dobby Ads</title>
+<meta name="description" content="Brand identity, logo design, and packaging built to own the shelf and the screen. Creative systems for e-commerce and DTC brands.">
+<link rel="canonical" href="https://www.dobbyads.com/branding">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Branding &amp; Marketing | Dobby Ads">
+<meta property="og:description" content="Brand identity, logo design, and packaging built to own the shelf and the screen.">
+<meta property="og:url" content="https://www.dobbyads.com/branding">
+<meta property="og:site_name" content="Dobby Ads">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+:root{
+  --bg:#000;--acc:#FFCC33;--acc-dim:rgba(255,204,51,.07);--acc-bdr:rgba(255,204,51,.25);
+  --t:#FFFFFF;--t2:#fff;--t3:#fff;--bdr:rgba(255,255,255,.06);--bdr2:rgba(255,255,255,.11);
+  --max:1160px;--ff:'Urbanist',sans-serif;--fn:'Urbanist',sans-serif;
+  --fs-title:clamp(2.8rem,4.2vw,5rem);
+  --fs-h1:clamp(2rem,3.2vw,3rem);
+  --fs-h2:1.625rem;
+  --fs-body:1.25rem;
+}
+
+body{background:var(--bg);color:var(--t);font-family:var(--ff);font-size:16px;line-height:1.7;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+*{-webkit-tap-highlight-color:transparent}
+a{text-decoration:none;color:inherit}
+a,button{touch-action:manipulation}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 2rem;position:relative;z-index:1}
+.logo-img{height:44px;width:auto;display:block}
+
+/* ── Scroll Reveal ── */
+.r{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+.r.vis{opacity:1;transform:none}
+.r.d1{transition-delay:.1s}.r.d2{transition-delay:.2s}.r.d3{transition-delay:.3s}.r.d4{transition-delay:.4s}.r.d5{transition-delay:.5s}
+.r-fade{opacity:0;transition:opacity .9s cubic-bezier(.16,1,.3,1)}
+.r-fade.vis{opacity:1}
+
+/* Word reveal */
+.wr-outer{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.2em;margin-bottom:-.2em}
+.wr-inner{display:inline-block;transform:translateY(110%);transition:transform .68s cubic-bezier(.16,1,.3,1)}
+.anim-words.in-view .wr-inner{transform:none}
+
+/* Pricing cards stagger */
+.pricing-card{opacity:0;transform:translateY(24px);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1),border-color .2s,background .2s}
+.pricing-grid.pricing-vis .pricing-card:nth-child(1){opacity:1;transform:none;transition-delay:.05s}
+.pricing-grid.pricing-vis .pricing-card:nth-child(2){opacity:1;transform:none;transition-delay:.12s}
+.pricing-grid.pricing-vis .pricing-card:nth-child(3){opacity:1;transform:none;transition-delay:.19s}
+
+/* Process steps stagger */
+.ph-step{opacity:0;transform:translateY(20px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+.process-steps-horiz.steps-vis .ph-step:nth-child(1){opacity:1;transform:none;transition-delay:.05s}
+.process-steps-horiz.steps-vis .ph-step:nth-child(2){opacity:1;transform:none;transition-delay:.15s}
+.process-steps-horiz.steps-vis .ph-step:nth-child(3){opacity:1;transform:none;transition-delay:.25s}
+.process-steps-horiz.steps-vis .ph-step:nth-child(4){opacity:1;transform:none;transition-delay:.35s}
+
+/* Card grid stagger */
+.svc-sec-card{opacity:0;transform:translateY(16px);transition:opacity .55s cubic-bezier(.16,1,.3,1),transform .55s cubic-bezier(.16,1,.3,1)}
+.sec-cards-vis .svc-sec-card:nth-child(1){opacity:1;transform:none;transition-delay:.05s}
+.sec-cards-vis .svc-sec-card:nth-child(2){opacity:1;transform:none;transition-delay:.1s}
+.sec-cards-vis .svc-sec-card:nth-child(3){opacity:1;transform:none;transition-delay:.15s}
+.sec-cards-vis .svc-sec-card:nth-child(4){opacity:1;transform:none;transition-delay:.2s}
+.sec-cards-vis .svc-sec-card:nth-child(5){opacity:1;transform:none;transition-delay:.25s}
+.sec-cards-vis .svc-sec-card:nth-child(6){opacity:1;transform:none;transition-delay:.3s}
+.sec-cards-vis .svc-sec-card:nth-child(7){opacity:1;transform:none;transition-delay:.35s}
+.sec-cards-vis .svc-sec-card:nth-child(8){opacity:1;transform:none;transition-delay:.4s}
+
+@media(prefers-reduced-motion:reduce){
+  .r,.r-fade,.ph-step,.pricing-card,.svc-sec-card{
+    opacity:1!important;transform:none!important;transition:none!important
+  }
+  .wr-inner{transform:none!important;transition:none!important}
+}
+
+/* ── Shared ── */
+.sec-label{font-family:var(--fn);font-size:var(--fs-body);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:10px;line-height:1}
+.sec-label::before{content:'';width:12px;height:12px;flex-shrink:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFCC33' fill-rule='evenodd' d='M25%2C0 L75%2C0 L100%2C25 L100%2C75 L75%2C100 L25%2C100 L0%2C75 L0%2C25 Z M36%2C22 L64%2C22 L78%2C36 L78%2C64 L64%2C78 L36%2C78 L22%2C64 L22%2C36 Z'/%3E%3C/svg%3E") center/contain no-repeat}
+.btn-primary{background:#000;color:#fff;border:1.5px solid #fff;padding:14px 32px;border-radius:3px;font-family:var(--fn);font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:background .18s,color .18s,border-color .18s,transform .12s}
+.btn-primary:hover{background:var(--acc);color:#000;border-color:var(--acc);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--acc);border:1px solid var(--acc-bdr);padding:12px 22px;border-radius:3px;font-family:var(--fn);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:all .15s}
+.btn-ghost:hover{border-color:rgba(255,255,255,.3);color:#fff}
+
+/* ══ NAV ═══════════════════════════════════════════════════════ */
+nav{position:sticky;top:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;background:rgba(0,0,0,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr)}
+.nav-links{display:flex;list-style:none;gap:2rem;align-items:center}
+.nav-links a{font-family:var(--fn);font-size:14px;font-weight:500;letter-spacing:.04em;color:#fff;transition:color .18s}
+.nav-links a:hover{color:var(--acc)}
+.nav-right{display:flex;align-items:center;gap:.75rem}
+.nav-cta{font-family:var(--fn);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#000;color:#fff;border:1.5px solid #fff;padding:10px 22px;border-radius:3px;transition:background .18s,color .18s,border-color .18s;text-decoration:none;display:inline-flex;align-items:center}
+.nav-cta:hover{background:var(--acc);color:#000;border-color:var(--acc)}
+.nav-login{font-family:var(--fn);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.2);padding:10px 22px;border-radius:3px;transition:all .18s;text-decoration:none;display:inline-flex;align-items:center}
+.nav-login:hover{color:#fff;border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.05)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:transparent;border:none;cursor:pointer;padding:4px}
+.hamburger span{width:22px;height:2px;background:#fff;border-radius:2px;display:block;transition:transform .25s,opacity .25s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#mob-menu{display:none;flex-direction:column;position:fixed;inset:0;background:#000;z-index:90;padding:80px 2rem 2.5rem;opacity:0;pointer-events:none;transition:opacity .28s ease}
+#mob-menu.open{opacity:1;pointer-events:all}
+#mob-menu a{padding:1rem 0;font-size:1.6rem;font-family:var(--ff);font-weight:700;color:var(--t);border-bottom:1px solid var(--bdr);transition:color .18s}
+#mob-menu a:hover{color:var(--acc)}
+
+/* ══ HERO ══════════════════════════════════════════════════════ */
+.svc-hero{padding:80px 0 72px;text-align:center}
+.svc-hero-inner{max-width:var(--max);margin:0 auto;padding:0 2rem}
+.svc-hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--fn);font-size:var(--fs-body);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc-bdr);border-radius:2px;padding:6px 14px;margin-bottom:2rem;background:var(--acc-dim)}
+.svc-hero-h1{font-family:var(--ff);font-size:var(--fs-title);font-weight:800;line-height:1.05;letter-spacing:-.04em;color:#fff;margin-bottom:1.5rem}
+.svc-hero-h1 .acc{color:var(--acc)}
+.svc-hero-sub{font-size:var(--fs-body);color:#fff;font-weight:300;line-height:1.75;max-width:600px;margin:0 auto 2.25rem}
+.svc-hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+
+/* ══ STATS ═════════════════════════════════════════════════════ */
+.stats-divider{border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);display:grid;grid-template-columns:repeat(4,1fr)}
+.sd-stat{padding:2rem 1.5rem;border-right:1px solid var(--bdr);text-align:center}
+.sd-stat:last-child{border-right:none}
+.sd-num{font-family:var(--ff);font-size:clamp(2.2rem,3.5vw,3rem);font-weight:800;color:var(--t);line-height:1;letter-spacing:-.04em;display:block;margin-bottom:.3rem}
+.sd-num span{color:var(--acc)}
+.sd-label{font-family:var(--fn);font-size:var(--fs-body);font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff;display:block}
+
+/* ══ SERVICE SECTIONS (new layout) ════════════════════════════ */
+.svc-section{border-top:1px solid var(--bdr)}
+.svc-sec-head{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;padding:3.5rem 0 3rem;border-bottom:1px solid var(--bdr)}
+
+.svc-sec-title{font-family:var(--ff);font-size:var(--fs-h1);font-weight:800;letter-spacing:-.04em;color:#fff;line-height:1}
+.svc-sec-desc{font-size:var(--fs-body);color:#fff;font-weight:300;line-height:1.75}
+
+/* ── Brand guide cards ── */
+.bg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bdr);border-bottom:1px solid var(--bdr)}
+.bg-card{position:relative;cursor:pointer;overflow:hidden;aspect-ratio:3/2;background:#060606}
+.bg-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .65s cubic-bezier(.16,1,.3,1)}
+.bg-card:hover img{transform:scale(1.06)}
+.bg-card-over{position:absolute;inset:0;background:rgba(0,0,0,.85);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;opacity:0;transition:opacity .3s}
+.bg-card:hover .bg-card-over{opacity:1}
+.bg-card-name{font-family:var(--ff);font-size:clamp(1.6rem,2.5vw,2.25rem);font-weight:800;color:#fff;letter-spacing:-.03em;text-align:center}
+.bg-card-cta{font-family:var(--fn);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc-bdr);padding:7px 18px;border-radius:2px}
+
+/* ── Logo grid ── */
+.logo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bdr);border-bottom:1px solid var(--bdr)}
+.logo-tile{background:#060606;aspect-ratio:1;display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer;position:relative;transition:background .22s}
+.logo-tile:hover{background:#0e0e0e}
+.logo-tile img{width:68%;height:68%;object-fit:contain;display:block;transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.logo-tile:hover img{transform:scale(1.1)}
+.logo-tile-cta{background:var(--acc-dim);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.625rem;aspect-ratio:1;cursor:pointer;transition:background .22s;text-decoration:none}
+.logo-tile-cta:hover{background:rgba(255,204,51,.13)}
+.logo-tile-cta-label{font-family:var(--fn);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}
+.logo-tile-cta-sub{font-size:.75rem;color:#fff;font-weight:300;text-align:center;max-width:110px;line-height:1.45;padding:0 .5rem}
+
+/* ── Packaging scroll ── */
+.pack-section{border-top:1px solid var(--bdr)}
+.pack-scroll{overflow:hidden;position:relative;border-bottom:1px solid var(--bdr);padding:28px 0}
+.pack-scroll::before,.pack-scroll::after{display:none}
+.pack-track{display:flex;gap:14px;padding:0 14px;width:max-content;align-items:center;animation:packScroll 38s linear infinite}
+.pack-scroll:hover .pack-track{animation-play-state:paused}
+.pack-item{height:320px;width:auto;border-radius:6px;overflow:hidden;cursor:pointer;flex-shrink:0;background:#050505}
+.pack-item img{height:100%;width:auto;display:block;transition:opacity .3s}
+.pack-item:hover img{opacity:.85}
+@keyframes packScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ── Form (CTA section) ── */
+.fcta-form{max-width:560px;margin:2rem auto 0;display:flex;flex-direction:column;gap:.75rem}
+.fcta-form-row{display:flex;gap:.75rem}
+.fcta-input{flex:1;background:rgba(255,255,255,.04);border:1px solid var(--bdr2);border-radius:4px;padding:14px 16px;font-family:var(--fn);font-size:14px;font-weight:400;color:#fff;outline:none;transition:border-color .15s}
+.fcta-input::placeholder{color:rgba(255,255,255,.4);font-weight:300}
+.fcta-input:focus{border-color:var(--acc-bdr)}
+.fcta-select{appearance:none;-webkit-appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='rgba(255,255,255,.4)' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-color:rgba(255,255,255,.04)}
+.fcta-select option{background:#111;color:#fff}
+.fcta-textarea{resize:vertical;min-height:80px}
+.fcta-micro{font-family:var(--fn);font-size:var(--fs-body);color:#fff;margin-top:1.25rem;letter-spacing:.04em}
+@media(max-width:640px){.fcta-form-row{flex-direction:column}}
+
+/* ══ PULL-QUOTE ════════════════════════════════════════════════ */
+.sys-quote{padding:52px 0;border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
+.sys-quote-text{font-family:var(--ff);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:300;font-style:normal;color:#fff;text-align:center;line-height:1.5;max-width:700px;margin:0 auto}
+
+/* ══ PRICING ═══════════════════════════════════════════════════ */
+.pricing-section{padding:80px 0;border-top:1px solid var(--bdr)}
+.pricing-header{margin-bottom:2.5rem}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.pricing-card{background:var(--bg);border:1px solid var(--bdr2);border-radius:10px;padding:2rem 1.75rem;display:flex;flex-direction:column}
+.pricing-card:hover{border-color:rgba(255,255,255,.16);background:#0a0a0a}
+.pc-popular{border-color:var(--acc-bdr);position:relative}
+.pc-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-family:var(--fn);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#000;background:var(--acc);padding:4px 14px;border-radius:20px;white-space:nowrap}
+.pc-price{font-family:var(--ff);font-size:clamp(2rem,3vw,2.5rem);font-weight:800;color:#fff;letter-spacing:-.03em;margin-bottom:.25rem}
+.pc-contact{font-size:clamp(1.6rem,2.5vw,2rem);letter-spacing:-.01em}
+.pc-per{font-family:var(--fn);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:1rem}
+.pc-name{font-family:var(--ff);font-size:var(--fs-h2);font-weight:700;color:#fff;margin-bottom:.5rem;letter-spacing:-.01em}
+.pc-desc{font-size:.875rem;color:#fff;font-weight:300;line-height:1.65;margin-bottom:1.25rem}
+.pc-includes{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.5rem;flex:1}
+.pc-includes li{font-size:.875rem;color:#fff;font-weight:300;padding-left:1.25rem;position:relative;line-height:1.5}
+.pc-includes li::before{content:'✓';position:absolute;left:0;color:var(--acc);font-weight:700;font-size:.75rem}
+.pc-cta{font-family:var(--fn);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc-bdr);padding:10px 0;border-radius:3px;text-align:center;display:block;transition:all .18s;margin-top:auto}
+.pc-cta:hover{background:var(--acc);color:#000;border-color:var(--acc)}
+
+/* ══ PROCESS (horizontal) ══════════════════════════════════════ */
+.process-section{padding:80px 0;border-top:1px solid var(--bdr)}
+.process-head-row{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;padding-bottom:2.5rem;border-bottom:1px solid var(--bdr);margin-bottom:0}
+.process-steps-horiz{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--bdr);border-top:none;overflow:hidden}
+.ph-step{padding:2.5rem 2rem;border-right:1px solid var(--bdr);position:relative;overflow:hidden;background:#000}
+.ph-step:last-child{border-right:none}
+.ph-accent{position:absolute;top:0;left:0;right:0;height:2px;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.ph-step:hover .ph-accent{transform:scaleX(1)}
+.ph-num{font-family:var(--ff);font-size:clamp(3rem,5vw,4.5rem);font-weight:800;color:#fff;line-height:1;letter-spacing:-.04em;margin-bottom:1.25rem;user-select:none}
+.ph-title{font-family:var(--ff);font-size:var(--fs-h2);font-weight:800;color:#fff;margin-bottom:.5rem;letter-spacing:-.02em;line-height:1.2}
+.ph-desc{font-size:var(--fs-body);color:#fff;font-weight:300;line-height:1.65}
+
+/* ══ MORE SERVICES ═════════════════════════════════════════════ */
+.more-section{padding:64px 0;border-top:1px solid var(--bdr)}
+.more-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:2rem;gap:1rem}
+.more-head h2{font-family:var(--ff);font-size:var(--fs-h1);font-weight:800;letter-spacing:-.025em;color:#fff}
+.more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.more-card{border:1px solid var(--bdr2);border-radius:8px;overflow:hidden;background:#000;transition:border-color .2s,transform .2s;display:block}
+.more-card:hover{border-color:rgba(255,255,255,.2);transform:translateY(-2px)}
+.more-thumb{aspect-ratio:16/9;overflow:hidden;background:#0a0a0a}
+.more-thumb img,.more-thumb video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.more-card:hover .more-thumb img,.more-card:hover .more-thumb video{transform:scale(1.04)}
+.more-body{padding:1.25rem}
+.more-title{font-family:var(--ff);font-size:1.125rem;font-weight:700;color:#fff;margin-bottom:.35rem}
+.more-desc{font-size:var(--fs-body);color:#fff;font-weight:300;line-height:1.5}
+
+/* ══ FAQ ════════════════════════════════════════════════════════ */
+.faq-section{padding:80px 0;border-top:1px solid var(--bdr)}
+.faq-inner{display:grid;grid-template-columns:280px 1fr;gap:4rem;align-items:start}
+.faq-label-col p{font-size:var(--fs-body);color:#fff;font-weight:300;line-height:1.7}
+.faq-list{display:flex;flex-direction:column}
+.faq-item{border-bottom:1px solid var(--bdr)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{width:100%;background:transparent;border:none;color:#fff;font-family:var(--ff);font-size:var(--fs-h2);font-weight:700;text-align:left;padding:1.25rem 0;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;letter-spacing:-.01em}
+.faq-q h3{font-size:inherit;font-weight:inherit;letter-spacing:inherit;margin:0}
+.faq-toggle{font-family:var(--fn);font-size:1.5rem;font-weight:300;color:var(--acc);flex-shrink:0;line-height:1;transition:transform .25s cubic-bezier(.16,1,.3,1)}
+.faq-item.open .faq-toggle{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.16,1,.3,1),padding .3s}
+.faq-item.open .faq-a{max-height:500px;padding:0 0 1.25rem 0}
+.faq-a p{font-size:var(--fs-body);color:#fff;line-height:1.75;font-weight:300}
+
+/* ══ FINAL CTA ═════════════════════════════════════════════════ */
+.final-cta{padding:120px 0;text-align:center;position:relative;overflow:hidden;background:#000;border-top:1px solid var(--bdr)}
+.final-cta::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.final-cta::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:500px;background:radial-gradient(ellipse,rgba(255,204,51,.05) 0%,transparent 65%);pointer-events:none}
+.fcta-inner{position:relative;z-index:1;max-width:680px;margin:0 auto;padding:0 2rem}
+.fcta-h2{font-family:var(--ff);font-size:var(--fs-h1);font-weight:800;line-height:1.1;letter-spacing:-.03em;color:#fff;margin-bottom:1.5rem}
+.fcta-h2 em{font-family:var(--ff);font-style:normal;font-weight:800;color:var(--acc)}
+.fcta-sub{font-size:var(--fs-body);color:#fff;font-weight:300;line-height:1.7;max-width:500px;margin:0 auto 2rem}
+.fcta-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem}
+.fcta-note{font-family:var(--fn);font-size:.875rem;color:#fff;margin-top:1.5rem;letter-spacing:.04em}
+
+/* ══ FOOTER ════════════════════════════════════════════════════ */
+footer{border-top:1px solid var(--bdr);padding:64px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem}
+.foot-tagline{font-family:var(--ff);font-size:.875rem;color:#fff;margin-bottom:1rem;display:block}
+.foot-desc{font-size:.875rem;color:#fff;line-height:1.85;font-weight:300;max-width:280px;margin-bottom:1rem}
+.foot-contact{font-size:.875rem;color:#fff;line-height:1.85;font-weight:300}
+.foot-contact a{color:#fff;transition:color .15s}
+.foot-contact a:hover{color:var(--acc)}
+.foot-col-label{font-family:var(--fn);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#fff;font-weight:600;margin-bottom:1rem}
+.foot-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.foot-list a{font-size:.875rem;color:#fff;font-weight:300;transition:color .15s}
+.foot-list a:hover{color:#fff}
+.foot-bottom{border-top:1px solid var(--bdr);padding:1.25rem 0;display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:#fff}
+.foot-bottom a{color:#fff;transition:color .15s}
+.foot-bottom a:hover{color:#fff}
+
+/* ══ IMAGE LIGHTBOX ════════════════════════════════════════════ */
+.gl-overlay{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.96);display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity .22s}
+.gl-overlay.open{opacity:1;pointer-events:all}
+.gl-close{position:fixed;top:1.5rem;right:1.5rem;background:none;border:1px solid rgba(255,255,255,.2);color:#fff;width:40px;height:40px;border-radius:50%;font-size:1.25rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .15s,color .15s;z-index:301;font-family:var(--fn);line-height:1}
+.gl-close:hover{border-color:var(--acc);color:var(--acc)}
+#gl-content img{max-width:90vw;max-height:88vh;object-fit:contain;border-radius:4px;display:block}
+
+/* ══ RESPONSIVE ════════════════════════════════════════════════ */
+@media(max-width:1100px){
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .faq-inner{grid-template-columns:220px 1fr;gap:2.5rem}
+}
+@media(max-width:960px){
+  .stats-divider{grid-template-columns:1fr 1fr}
+  .sd-stat:nth-child(2){border-right:none}
+  .sd-stat:nth-child(3){border-top:1px solid var(--bdr);border-right:1px solid var(--bdr)}
+  .sd-stat:nth-child(4){border-top:1px solid var(--bdr)}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-cta{display:none}
+  .nav-login{display:none}
+  .svc-sec-head{grid-template-columns:1fr;gap:1.25rem;padding:2.5rem 0 2rem}
+  .process-head-row{grid-template-columns:1fr;gap:1.25rem}
+  .process-steps-horiz{grid-template-columns:1fr 1fr}
+  .ph-step:nth-child(2){border-right:none}
+  .ph-step:nth-child(3){border-top:1px solid var(--bdr);border-right:1px solid var(--bdr)}
+  .ph-step:nth-child(4){border-top:1px solid var(--bdr);border-right:none}
+  .pricing-grid{grid-template-columns:1fr 1fr;gap:1rem}
+  .more-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media(max-width:768px){
+  .bg-grid{grid-template-columns:1fr 1fr}
+  .logo-grid{grid-template-columns:repeat(4,1fr)}
+}
+@media(max-width:600px){
+  :root{--fs-body:1rem;--fs-h2:1.375rem}
+  .svc-hero{padding:56px 0 48px}
+  .svc-hero-h1{font-size:clamp(1.9rem,8.5vw,2.8rem)}
+  .sd-stat{padding:1rem .75rem}
+  .sd-num{font-size:1.6rem}
+  .sd-label{font-size:.7rem;letter-spacing:.07em}
+  .bg-grid{grid-template-columns:1fr}
+  .logo-grid{grid-template-columns:repeat(2,1fr)}
+  .svc-sec-title{font-size:1.75rem}
+  .process-section{padding:56px 0}
+  .process-steps-horiz{grid-template-columns:1fr}
+  .ph-step{border-right:none!important;border-top:1px solid var(--bdr);padding:1.25rem 1.25rem}
+  .ph-step:first-child{border-top:none}
+  .ph-num{font-size:2rem;margin-bottom:.6rem}
+  .ph-title{font-size:1rem}
+  .ph-desc{font-size:.9rem}
+  .pricing-section{padding:56px 0}
+  .pricing-grid{grid-template-columns:1fr;padding-top:14px}
+  .faq-section{padding:56px 0}
+  .faq-inner{grid-template-columns:1fr}
+  .more-section{padding:48px 0}
+  .final-cta{padding:72px 0}
+  .foot-grid{grid-template-columns:1fr}
+  .pack-item{width:180px;height:240px}
+}
+@media(max-width:400px){
+  .wrap{padding:0 1.25rem}
+  .svc-hero-inner{padding:0 1.25rem}
+  .sd-stat{padding:1.25rem .75rem}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Branding & Marketing",
+  "provider": {"@type": "ProfessionalService","name": "Dobby Ads","url": "https://www.dobbyads.com"},
+  "description": "Brand identity, logo design, and packaging built for e-commerce and DTC brands.",
+  "url": "https://www.dobbyads.com/branding"
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html"><img src="All%20Visuals/Dobby%20Logo.webp" alt="Dobby Ads" class="logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="index.html#work">Work</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#engine">Engine</a></li>
+    <li><a href="index.html#testimonials">Clients</a></li>
+    <li><a href="index.html#awards">Awards</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="https://brand.dobbyads.com/login" class="nav-login">Login</a>
+    <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="nav-cta">Book a Call</a>
+    <button class="hamburger" id="hb" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div id="mob-menu">
+  <a href="index.html#work">Work</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#engine">Engine</a>
+  <a href="index.html#testimonials">Clients</a>
+  <a href="index.html#awards">Awards</a>
+  <a href="index.html#faq">FAQ</a>
+  <a href="https://brand.dobbyads.com/login">Login</a>
+  <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="btn-primary">Book a Call →</a>
+</div>
+
+<!-- 1. HERO -->
+<section class="svc-hero">
+  <div class="svc-hero-inner">
+    <div class="svc-hero-eyebrow r">Branding &amp; Marketing</div>
+    <h1 class="svc-hero-h1 r d1">
+      <span class="anim-words">The brand they see</span><br>
+      <span class="anim-words acc">before they read a word.</span>
+    </h1>
+    <p class="svc-hero-sub r d2">Identity systems, logo design, and packaging built to convert at shelf and screen. The visual language your product needs to own its category from day one.</p>
+    <div class="svc-hero-ctas r d3">
+      <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="btn-primary">Book a Call →</a>
+      <a href="#brand-identity" class="btn-ghost">See Our Work</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- 2. STATS -->
+<div class="stats-divider">
+  <div class="sd-stat r"><span class="sd-num" data-target="20" data-suffix="K+">20<span>K+</span></span><span class="sd-label">Projects Delivered</span></div>
+  <div class="sd-stat r d1"><span class="sd-num" data-target="450" data-suffix="+">450<span>+</span></span><span class="sd-label">Brands Served</span></div>
+  <div class="sd-stat r d2"><span class="sd-num" data-target="5" data-suffix=" Yrs">5 <span>Yrs</span></span><span class="sd-label">Category Data</span></div>
+  <div class="sd-stat r d3"><span class="sd-num">3 <span>Disciplines</span></span><span class="sd-label">Identity Services</span></div>
+</div>
+
+<!-- 3. BRAND IDENTITY -->
+<section class="svc-section" id="brand-identity">
+  <div class="wrap">
+    <div class="svc-sec-head r">
+      <div>
+        <div class="sec-label" style="margin-bottom:1rem">Branding</div>
+        <h2 class="svc-sec-title">The system behind<br>the brand.</h2>
+      </div>
+      <p class="svc-sec-desc">Complete visual identities built from positioning to production-ready guidelines. Color system, typography, brand mark, usage rules, and every asset your team needs to stay consistent across every surface.</p>
+    </div>
+  </div>
+  <div class="bg-grid" id="bg-grid">
+    <div class="bg-card svc-sec-card" data-lightbox="Branding%20%26%20Marketing/Brand%20Guide/Melvvi.png" role="button" tabindex="0" aria-label="View Melvvi brand guide">
+      <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Brand%20Guide/Melvvi%20Thumbnail-619.avif 619w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Brand%20Guide/Melvvi%20Thumbnail-619.avif 619w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Brand%20Guide/Melvvi%20Thumbnail.jpg" alt="Melvvi Brand Identity" loading="lazy"></picture></picture>
+      <div class="bg-card-over">
+        <div class="bg-card-name">Melvvi</div>
+        <div class="bg-card-cta">View Full Guide</div>
+      </div>
+    </div>
+    <div class="bg-card svc-sec-card" data-lightbox="Branding%20%26%20Marketing/Brand%20Guide/NOOP.png" role="button" tabindex="0" aria-label="View NOOP brand guide">
+      <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Brand%20Guide/NOOP%20Thumbnail-416.avif 416w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Brand%20Guide/NOOP%20Thumbnail-416.avif 416w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Brand%20Guide/NOOP%20Thumbnail.jpg" alt="NOOP Brand Identity" loading="lazy"></picture></picture>
+      <div class="bg-card-over">
+        <div class="bg-card-name">NOOP</div>
+        <div class="bg-card-cta">View Full Guide</div>
+      </div>
+    </div>
+    <div class="bg-card svc-sec-card" data-lightbox="Branding%20%26%20Marketing/Brand%20Guide/OS%20tech.png" role="button" tabindex="0" aria-label="View OS tech brand guide">
+      <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Brand%20Guide/OS%20tech%20thumbnail-542.avif 542w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Brand%20Guide/OS%20tech%20thumbnail-542.avif 542w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Brand%20Guide/OS%20tech%20thumbnail.jpg" alt="OS Tech Brand Identity" loading="lazy"></picture></picture>
+      <div class="bg-card-over">
+        <div class="bg-card-name">OS Tech</div>
+        <div class="bg-card-cta">View Full Guide</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. LOGO DESIGN -->
+<section class="svc-section" id="logos">
+  <div class="wrap">
+    <div class="svc-sec-head r">
+      <div>
+        <div class="sec-label" style="margin-bottom:1rem">Logo Design</div>
+        <h2 class="svc-sec-title">A mark built on<br>geometry, not trend.</h2>
+      </div>
+      <p class="svc-sec-desc">Scales from favicon to billboard without breaking. Delivered in every format your team will ever need: SVG, EPS, PNG, and light and dark variants for every application.</p>
+    </div>
+  </div>
+  <div class="logo-grid" id="logo-grid">
+    <div class="logo-tile svc-sec-card" data-lightbox="Branding%20%26%20Marketing/Logo%20design/1.jpg" role="button" tabindex="0" aria-label="View logo">
+      <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Logo%20design/1-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Logo%20design/1-800.avif 800w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Logo%20design/1.jpg" alt="Logo Design" loading="lazy"></picture></picture>
+    </div>
+    <div class="logo-tile svc-sec-card" data-lightbox="Branding%20%26%20Marketing/Logo%20design/2.jpg" role="button" tabindex="0" aria-label="View logo">
+      <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Logo%20design/2-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Logo%20design/2-800.avif 800w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Logo%20design/2.jpg" alt="Logo Design" loading="lazy"></picture></picture>
+    </div>
+    <div class="logo-tile svc-sec-card" data-lightbox="Branding%20%26%20Marketing/Logo%20design/3.jpg" role="button" tabindex="0" aria-label="View logo">
+      <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Logo%20design/3-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Logo%20design/3-800.avif 800w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Logo%20design/3.jpg" alt="Logo Design" loading="lazy"></picture></picture>
+    </div>
+    <div class="logo-tile svc-sec-card" data-lightbox="Branding%20%26%20Marketing/Logo%20design/4.jpg" role="button" tabindex="0" aria-label="View logo">
+      <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Logo%20design/4-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Logo%20design/4-800.avif 800w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Logo%20design/4.jpg" alt="Logo Design" loading="lazy"></picture></picture>
+    </div>
+    <div class="logo-tile svc-sec-card" data-lightbox="Branding%20%26%20Marketing/Logo%20design/5.jpg" role="button" tabindex="0" aria-label="View logo">
+      <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Logo%20design/5-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Logo%20design/5-800.avif 800w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Logo%20design/5.jpg" alt="Logo Design" loading="lazy"></picture></picture>
+    </div>
+    <div class="logo-tile svc-sec-card" data-lightbox="Branding%20%26%20Marketing/Logo%20design/6.jpg" role="button" tabindex="0" aria-label="View logo">
+      <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Logo%20design/6-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Logo%20design/6-800.avif 800w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Logo%20design/6.jpg" alt="Logo Design" loading="lazy"></picture></picture>
+    </div>
+    <div class="logo-tile svc-sec-card" data-lightbox="Branding%20%26%20Marketing/Logo%20design/Untitled%20design.jpg" role="button" tabindex="0" aria-label="View logo">
+      <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Logo%20design/Untitled%20design-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Logo%20design/Untitled%20design-800.avif 800w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Logo%20design/Untitled%20design.jpg" alt="Logo Design" loading="lazy"></picture></picture>
+    </div>
+    <div class="logo-tile svc-sec-card" style="cursor:default;background:#060606">
+      <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="btn-primary" style="font-size:12px;padding:12px 20px">Book a Call →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PULL-QUOTE -->
+<div class="sys-quote">
+  <div class="wrap">
+    <p class="sys-quote-text r">A great brand is not designed to impress designers. It is designed to win customers.</p>
+  </div>
+</div>
+
+<!-- 5. PACKAGING -->
+<section class="pack-section" id="packaging">
+  <div class="wrap">
+    <div class="svc-sec-head r">
+      <div>
+        <div class="sec-label" style="margin-bottom:1rem">Packaging</div>
+        <h2 class="svc-sec-title">Shelf presence that<br>converts first.</h2>
+      </div>
+      <p class="svc-sec-desc">Structural layout, color hierarchy, and typography designed around how the eye moves at point of purchase. Built for print production from day one, delivered CMYK-ready with bleed and crop marks included.</p>
+    </div>
+  </div>
+  <div class="pack-scroll r-fade">
+    <div class="pack-track">
+      <div class="pack-item" data-lightbox="Branding%20%26%20Marketing/Packaging/1763550241040-Untitled_design_(2).png">
+        <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1763550241040-Untitled_design_(2)-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1763550241040-Untitled_design_%282%29-800.avif 800w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Packaging/1763550241040-Untitled_design_(2).png" alt="Packaging Design" loading="lazy"></picture></picture>
+      </div>
+      <div class="pack-item" data-lightbox="Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design.png">
+        <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design-800.avif 800w, Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design-2000.avif 2000w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design-800.avif 800w, Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design-2000.avif 2000w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design.png" alt="Packaging Design" loading="lazy"></picture></picture>
+      </div>
+      <div class="pack-item" data-lightbox="Branding%20%26%20Marketing/Packaging/1768200764492%20copys.png">
+        <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1768200764492%20copys-800.avif 800w, Branding%20%26%20Marketing/Packaging/1768200764492%20copys-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/1768200764492%20copys-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/1768200764492%20copys-2000.avif 2000w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1768200764492%20copys-800.avif 800w, Branding%20%26%20Marketing/Packaging/1768200764492%20copys-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/1768200764492%20copys-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/1768200764492%20copys-2000.avif 2000w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Packaging/1768200764492%20copys.png" alt="Packaging Design" loading="lazy"></picture></picture>
+      </div>
+      <div class="pack-item" data-lightbox="Branding%20%26%20Marketing/Packaging/1771863143225.png">
+        <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1771863143225-800.avif 800w, Branding%20%26%20Marketing/Packaging/1771863143225-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/1771863143225-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/1771863143225-2000.avif 2000w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1771863143225-800.avif 800w, Branding%20%26%20Marketing/Packaging/1771863143225-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/1771863143225-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/1771863143225-2000.avif 2000w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Packaging/1771863143225.png" alt="Packaging Design" loading="lazy"></picture></picture>
+      </div>
+      <div class="pack-item" data-lightbox="Branding%20%26%20Marketing/Packaging/1772197125565%20copy.jpg">
+        <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1772197125565%20copy-800.avif 800w, Branding%20%26%20Marketing/Packaging/1772197125565%20copy-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/1772197125565%20copy-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/1772197125565%20copy-2000.avif 2000w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1772197125565%20copy-800.avif 800w, Branding%20%26%20Marketing/Packaging/1772197125565%20copy-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/1772197125565%20copy-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/1772197125565%20copy-2000.avif 2000w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Packaging/1772197125565%20copy.jpg" alt="Packaging Design" loading="lazy"></picture></picture>
+      </div>
+      <div class="pack-item" data-lightbox="Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3.jpg">
+        <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3-800.avif 800w, Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3-2000.avif 2000w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3-800.avif 800w, Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3-2000.avif 2000w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3.jpg" alt="Packaging Design" loading="lazy"></picture></picture>
+      </div>
+      <!-- Duplicate for seamless loop -->
+      <div class="pack-item">
+        <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1763550241040-Untitled_design_(2)-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1763550241040-Untitled_design_%282%29-800.avif 800w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Packaging/1763550241040-Untitled_design_(2).png" alt="Packaging Design" loading="lazy"></picture></picture>
+      </div>
+      <div class="pack-item">
+        <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design-800.avif 800w, Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design-2000.avif 2000w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design-800.avif 800w, Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design-2000.avif 2000w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Packaging/1763550248582-Untitled_design.png" alt="Packaging Design" loading="lazy"></picture></picture>
+      </div>
+      <div class="pack-item">
+        <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1768200764492%20copys-800.avif 800w, Branding%20%26%20Marketing/Packaging/1768200764492%20copys-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/1768200764492%20copys-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/1768200764492%20copys-2000.avif 2000w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1768200764492%20copys-800.avif 800w, Branding%20%26%20Marketing/Packaging/1768200764492%20copys-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/1768200764492%20copys-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/1768200764492%20copys-2000.avif 2000w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Packaging/1768200764492%20copys.png" alt="Packaging Design" loading="lazy"></picture></picture>
+      </div>
+      <div class="pack-item">
+        <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1771863143225-800.avif 800w, Branding%20%26%20Marketing/Packaging/1771863143225-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/1771863143225-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/1771863143225-2000.avif 2000w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1771863143225-800.avif 800w, Branding%20%26%20Marketing/Packaging/1771863143225-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/1771863143225-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/1771863143225-2000.avif 2000w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Packaging/1771863143225.png" alt="Packaging Design" loading="lazy"></picture></picture>
+      </div>
+      <div class="pack-item">
+        <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1772197125565%20copy-800.avif 800w, Branding%20%26%20Marketing/Packaging/1772197125565%20copy-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/1772197125565%20copy-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/1772197125565%20copy-2000.avif 2000w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/1772197125565%20copy-800.avif 800w, Branding%20%26%20Marketing/Packaging/1772197125565%20copy-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/1772197125565%20copy-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/1772197125565%20copy-2000.avif 2000w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Packaging/1772197125565%20copy.jpg" alt="Packaging Design" loading="lazy"></picture></picture>
+      </div>
+      <div class="pack-item">
+        <picture style="display:contents"><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3-800.avif 800w, Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3-2000.avif 2000w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3-800.avif 800w, Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3-1200.avif 1200w, Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3-1600.avif 1600w, Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3-2000.avif 2000w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Branding%20%26%20Marketing/Packaging/FILE-20251211-035138-01-3.jpg" alt="Packaging Design" loading="lazy"></picture></picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="wrap">
+    <div class="pricing-header r">
+      <div class="sec-label" style="margin-bottom:.875rem">Pricing</div>
+      <h2 class="anim-words" style="font-family:var(--ff);font-size:var(--fs-h1);font-weight:800;letter-spacing:-.025em;line-height:1.1">Scoped to your brand.<br>Quoted before we start.</h2>
+      <p class="r d1" style="font-size:var(--fs-body);color:#fff;font-weight:300;line-height:1.7;margin-top:1rem;max-width:500px">Every branding project is scoped individually. Book a call, share your brief, and we'll quote before any work begins.</p>
+    </div>
+    <div class="pricing-grid r d2" id="pricing-grid">
+      <div class="pricing-card">
+        <div class="pc-price pc-contact">Contact</div>
+        <div class="pc-per">custom scope</div>
+        <h3 class="pc-name">Branding</h3>
+        <p class="pc-desc">Full visual identity built from brief to guidelines. Color system, typography, brand mark, and every asset your team needs.</p>
+        <ul class="pc-includes">
+          <li>Category &amp; competitor research</li>
+          <li>Color &amp; typography system</li>
+          <li>Brand mark &amp; usage rules</li>
+          <li>Full brand guidelines PDF</li>
+          <li>All source files included</li>
+        </ul>
+        <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="pc-cta">Get a Quote →</a>
+      </div>
+      <div class="pricing-card pc-popular">
+        <div class="pc-badge">Most Requested</div>
+        <div class="pc-price pc-contact">Contact</div>
+        <div class="pc-per">custom scope</div>
+        <h3 class="pc-name">Logo</h3>
+        <p class="pc-desc">A mark built on geometry that scales from favicon to billboard. Delivered in every format for every application.</p>
+        <ul class="pc-includes">
+          <li>3 initial directions</li>
+          <li>Geometric construction file</li>
+          <li>SVG, EPS, PNG exports</li>
+          <li>Dark &amp; light variants</li>
+        </ul>
+        <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="pc-cta">Get a Quote →</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pc-price pc-contact">Contact</div>
+        <div class="pc-per">custom scope</div>
+        <h3 class="pc-name">Packaging</h3>
+        <p class="pc-desc">Shelf-ready packaging designed around how the eye moves at point of purchase. Built for print production from day one.</p>
+        <ul class="pc-includes">
+          <li>Structural layout design</li>
+          <li>Print-ready files (CMYK)</li>
+          <li>Dieline supplied or sourced</li>
+          <li>Front, back, side panels</li>
+        </ul>
+        <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="pc-cta">Get a Quote →</a>
+      </div>
+    </div>
+    <p class="r d3" style="text-align:center;font-size:.875rem;color:#fff;font-weight:300;margin-top:2rem">Need a full brand system across all three? <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" style="color:var(--acc);text-decoration:underline">Book a call</a> and we'll scope it together.</p>
+  </div>
+</section>
+
+<!-- 7. PROCESS -->
+<section class="process-section" id="process">
+  <div class="wrap">
+    <div class="process-head-row r">
+      <div>
+        <div class="sec-label" style="margin-bottom:1rem">How It Works</div>
+        <h2 style="font-family:var(--ff);font-size:var(--fs-h1);font-weight:800;letter-spacing:-.025em;line-height:1.1;color:#fff">Brief in. Brand out.</h2>
+      </div>
+      <p style="font-size:var(--fs-body);color:#fff;font-weight:300;line-height:1.7">One direction approved before production starts. Every asset delivered, every format covered. No guessing, no wasted rounds.</p>
+    </div>
+    <div class="process-steps-horiz" id="process-steps">
+      <div class="ph-step">
+        <div class="ph-accent"></div>
+        <div class="ph-num">01</div>
+        <div class="ph-title">Discovery</div>
+        <div class="ph-desc">Category audit, competitor analysis, and positioning strategy. We map where your brand needs to sit before we design a single element.</div>
+      </div>
+      <div class="ph-step">
+        <div class="ph-accent"></div>
+        <div class="ph-num">02</div>
+        <div class="ph-title">Concept</div>
+        <div class="ph-desc">Mood boards, visual territory, and three initial directions. You pick one path before we invest in execution.</div>
+      </div>
+      <div class="ph-step">
+        <div class="ph-accent"></div>
+        <div class="ph-num">03</div>
+        <div class="ph-title">Design</div>
+        <div class="ph-desc">Full identity system built on the approved direction. Mark, color, type, and every required asset. Two revision rounds included.</div>
+      </div>
+      <div class="ph-step">
+        <div class="ph-accent"></div>
+        <div class="ph-num">04</div>
+        <div class="ph-title">Delivery</div>
+        <div class="ph-desc">Brand guidelines PDF, all source files, every export format. Packaged into your client portal. One download, everything your team needs.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. MORE SERVICES -->
+<section class="more-section">
+  <div class="wrap">
+    <div class="more-head r">
+      <div>
+        <div class="sec-label" style="margin-bottom:.6rem">More from Dobby Ads</div>
+        <h2>The full production system.</h2>
+      </div>
+      <a href="index.html#services" class="btn-ghost">All Services</a>
+    </div>
+    <div class="more-grid r d1">
+      <a href="ecommerce-creative.html" class="more-card">
+        <div class="more-thumb"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-009-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-009.webp" alt="eCommerce Creative" loading="lazy"></picture></div>
+        <div class="more-body"><div class="more-title">eCommerce Creative</div><div class="more-desc">Main images, listing images, A+ Content, storefronts.</div></div>
+      </a>
+      <a href="video-commercials.html" class="more-card">
+        <div class="more-thumb"><video src="Video%20Commercials%20Page/Hero%20Section/hero-1.mp4" poster="Video%20Commercials%20Page/Hero%20Section/hero-1-poster.avif" preload="none" autoplay muted loop playsinline></video></div>
+        <div class="more-body"><div class="more-title">Video &amp; Commercials</div><div class="more-desc">AI product videos, brand films, and UGC.</div></div>
+      </a>
+      <a href="animation-3d.html" class="more-card">
+        <div class="more-thumb"><video src="All%20Visuals/Services/Animation%20%26%203D/3D%20Videos.mp4" poster="All%20Visuals/Services/Animation%20%26%203D/3D%20Videos-poster.avif" preload="none" autoplay muted loop playsinline></video></div>
+        <div class="more-body"><div class="more-title">Animation &amp; 3D</div><div class="more-desc">3D renders, product animations, explainer videos.</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section class="faq-section" id="faq">
+  <div class="wrap">
+    <div class="faq-inner">
+      <div class="faq-label-col r">
+        <div class="sec-label" style="margin-bottom:1.25rem">FAQ</div>
+        <p>Common questions about Branding &amp; Marketing.</p>
+      </div>
+      <div class="faq-list r d1">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><h3>What is included in a full branding project?</h3><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>A full branding project covers brand positioning, color system, typography system, logo mark and variants, usage rules, and a complete brand guidelines PDF. All source files are included at delivery: AI, EPS, SVG, and PNG across every format your team will use.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><h3>Can we get a logo without the full brand system?</h3><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>Yes. Logo design is available as a standalone service. You receive three initial directions, select one path, and we refine it to final. Delivered with a construction file, all export formats, and light and dark variants.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><h3>How long does a branding project take?</h3><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>A standalone logo takes 7 to 10 business days from brief. A full brand identity system typically runs 3 to 4 weeks depending on scope and the number of assets required. Packaging design is quoted individually based on complexity.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><h3>Do you design packaging for existing brands?</h3><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>Yes. Send your existing brand guidelines and we'll design within them. If you don't have guidelines yet, we'll build a lightweight system around the packaging first. All files are delivered print-ready in CMYK with bleed and crop marks included.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. FINAL CTA -->
+<div class="final-cta" id="contact">
+  <div class="wrap">
+    <div class="fcta-inner r">
+      <div class="sec-label" style="margin-bottom:1.5rem;justify-content:center">Ready?</div>
+      <h2 class="fcta-h2 anim-words">
+        Ready to stop<br><em>blending in?</em>
+      </h2>
+      <form class="fcta-form" id="fcta-form" onsubmit="return submitInlineForm(event)">
+        <div class="fcta-form-row">
+          <input type="text" name="name" placeholder="Your name" required class="fcta-input">
+          <input type="email" name="email" placeholder="Your email" required class="fcta-input">
+        </div>
+        <div class="fcta-form-row">
+          <input type="text" name="company" placeholder="Brand / Company name" class="fcta-input">
+          <select name="service" class="fcta-input fcta-select">
+            <option value="" disabled selected>Service you're interested in</option>
+            <option value="ecommerce-creative">eCommerce Creative</option>
+            <option value="video-commercials">Video &amp; Commercials</option>
+            <option value="animation-3d">Animation &amp; 3D</option>
+            <option value="branding-marketing">Branding &amp; Marketing</option>
+            <option value="multiple">Multiple / Not sure yet</option>
+          </select>
+        </div>
+        <textarea name="message" placeholder="Tell us about your project (optional)" rows="3" class="fcta-input fcta-textarea"></textarea>
+        <button type="submit" class="btn-primary" style="font-size:15px;padding:16px 40px;margin-top:.5rem;width:100%;justify-content:center">Send Inquiry →</button>
+        <p class="fcta-micro">We respond within 24-48 hours. No spam.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- 11. FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="/"><img src="All%20Visuals/Dobby%20Logo.webp" alt="Dobby Ads" style="height:36px;width:auto;display:block;margin-bottom:.875rem"></a>
+        <span class="foot-tagline">Where AI meets creative direction.</span>
+        <p class="foot-desc">Creative systems for e-commerce brands that refuse to look generic.</p>
+        <div class="foot-contact">
+          <div>Dobby Ads Inc</div>
+          <div>8 The Green, Dover,</div>
+          <div>Delaware, U.S. 19901</div>
+          <div style="margin-top:.6rem"><a href="tel:+15076665552">+1 507 6665552</a></div>
+          <div><a href="mailto:contact@dobbyads.com">contact@dobbyads.com</a></div>
+        </div>
+        <div style="margin-top:1.75rem">
+          <img loading="lazy" src="All%20Visuals/Synthesia.webp" alt="Synthesia Marketing Certified Partner" style="width:88px;height:88px;object-fit:contain;border-radius:10px;opacity:.88">
+        </div>
+      </div>
+      <div>
+        <div class="foot-col-label">Company</div>
+        <ul class="foot-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#work">Our Work</a></li>
+          <li><a href="https://www.dobbyads.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+          <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+          <li><a href="refunds-and-cancellations.html">Refunds and Cancellations</a></li>
+          <li><a href="cookie-notice.html">Cookie Notice</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-col-label">Social</div>
+        <ul class="foot-list">
+          <li><a href="https://www.instagram.com/dobbyads/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/dobbyads/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.facebook.com/dobbyads" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://twitter.com/DobbyAds" target="_blank" rel="noopener">X</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-col-label">Get Started</div>
+        <ul class="foot-list">
+          <li><a href="https://brand.dobbyads.com/login">Client Login</a></li>
+          <li><a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener">Book a Call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© Dobby Ads. All rights reserved.</span>
+      <span><a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms-and-conditions.html">Terms of Service</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- IMAGE LIGHTBOX -->
+<div class="gl-overlay" id="gl-overlay">
+  <button class="gl-close" id="gl-close" aria-label="Close">✕</button>
+  <div id="gl-content"></div>
+</div>
+
+<script>
+// ── Hamburger ────────────────────────────────────────────────
+const hb = document.getElementById('hb');
+const mob = document.getElementById('mob-menu');
+hb.addEventListener('click', () => {
+  hb.classList.toggle('open');
+  mob.style.display = mob.style.display === 'flex' ? 'none' : 'flex';
+  setTimeout(() => mob.classList.toggle('open'), 10);
+});
+mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  hb.classList.remove('open'); mob.classList.remove('open');
+  setTimeout(() => { mob.style.display = 'none'; }, 280);
+}));
+
+// ── Shared reveal observer ───────────────────────────────────
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); ro.unobserve(e.target); } });
+}, { threshold: 0.06 });
+document.querySelectorAll('.r, .r-fade').forEach(el => ro.observe(el));
+
+// ── Stats count-up ───────────────────────────────────────────
+function animCount(el, target, suffix, duration) {
+  const t0 = performance.now();
+  (function tick(now) {
+    const p = Math.min((now - t0) / duration, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    el.innerHTML = Math.round(ease * target) + '<span>' + suffix + '</span>';
+    if (p < 1) requestAnimationFrame(tick);
+  })(t0);
+}
+const statsObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.querySelectorAll('.sd-num[data-target]').forEach(el => {
+      animCount(el, +el.dataset.target, el.dataset.suffix || '', 1800);
+    });
+    statsObs.unobserve(e.target);
+  });
+}, { threshold: 0.5 });
+const statsDivEl = document.querySelector('.stats-divider');
+if (statsDivEl) statsObs.observe(statsDivEl);
+
+// ── Process steps stagger ────────────────────────────────────
+const stepsObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('steps-vis'); stepsObs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+const stepsEl = document.getElementById('process-steps');
+if (stepsEl) stepsObs.observe(stepsEl);
+
+// ── Pricing cards stagger ────────────────────────────────────
+const pricingObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('pricing-vis'); pricingObs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+const pricingGrid = document.getElementById('pricing-grid');
+if (pricingGrid) pricingObs.observe(pricingGrid);
+
+// ── Brand guide + logo grid stagger ─────────────────────────
+const cardsObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('sec-cards-vis'); cardsObs.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.bg-grid, .logo-grid').forEach(el => cardsObs.observe(el));
+
+// ── Word reveal ──────────────────────────────────────────────
+function wrapWords(el) {
+  const parts = el.innerHTML.split('<br>');
+  el.innerHTML = parts.map(line =>
+    line.split(' ').map(w => w.trim() ? '<span class="wr-outer"><span class="wr-inner">' + w + '</span></span>' : w).join(' ')
+  ).join('<br>');
+}
+const wo = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); wo.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.anim-words').forEach(el => { wrapWords(el); wo.observe(el); });
+
+// ── Image lightbox ───────────────────────────────────────────
+const glOverlay = document.getElementById('gl-overlay');
+const glContent = document.getElementById('gl-content');
+const glClose = document.getElementById('gl-close');
+
+function openLightbox(src) {
+  glContent.innerHTML = '<img src="' + src + '" alt="">';
+  glOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  glOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+  setTimeout(() => { glContent.innerHTML = ''; }, 250);
+}
+
+document.querySelectorAll('[data-lightbox]').forEach(item => {
+  item.addEventListener('click', function() {
+    var src = this.dataset.lightbox;
+    if (src) openLightbox(src);
+  });
+  item.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); var src = this.dataset.lightbox; if (src) openLightbox(src); }
+  });
+});
+
+glClose.addEventListener('click', closeLightbox);
+glOverlay.addEventListener('click', function(e) { if (e.target === glOverlay) closeLightbox(); });
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+
+// ── Packaging click-to-lightbox ──────────────────────────────
+document.querySelectorAll('.pack-item[data-lightbox]').forEach(item => {
+  item.style.cursor = 'pointer';
+  item.addEventListener('click', function() {
+    var src = this.dataset.lightbox;
+    if (src) openLightbox(src);
+  });
+});
+
+// ── FAQ accordion ────────────────────────────────────────────
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!open) item.classList.add('open');
+  });
+});
+
+// ── Inline CTA form submission ────────────────────────────────
+async function submitInlineForm(e) {
+  e.preventDefault();
+  const form = document.getElementById('fcta-form');
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  const API = 'https://script.google.com/a/macros/dobbyads.com/s/AKfycbxhcfCAZzhBKnd4DM9DL7pjogpwKRAnNwLbDr4rOtGUcYYiVNQrmCGItmSfoyw5n4iw/exec';
+  const params = new URLSearchParams({
+    fname: form.querySelector('[name="name"]').value,
+    lname: '',
+    email: form.querySelector('[name="email"]').value,
+    phone: '',
+    service: form.querySelector('[name="service"]').value,
+    revenue: '',
+    challenge: form.querySelector('[name="message"]').value,
+    source: 'branding-page'
+  });
+  try {
+    const res = await fetch(API + '?' + params, {redirect: 'follow'});
+    const data = await res.json();
+    if (!data.ok) throw new Error(data.error || 'Failed');
+    form.innerHTML = '<div style="text-align:center;padding:2rem 0"><div style="width:56px;height:56px;background:#111;border:1px solid rgba(255,204,51,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFCC33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><p style="font-size:1rem;font-weight:700;color:#fff;margin-bottom:.5rem">Message sent!</p><p style="font-size:.875rem;color:#fff;font-weight:300">We\'ll get back to you within 24-48 hours.</p></div>';
+  } catch (err) {
+    btn.disabled = false;
+    btn.textContent = 'Send Inquiry →';
+    alert('Something went wrong. Please try again or email contact@dobbyads.com');
+  }
+  return false;
+}
+</script>
+<script>
+/* ── Drag-to-scroll for auto-scrolling strips ── */
+(function(){
+  function dragScroll(track){
+    var cs=getComputedStyle(track);
+    var dur=parseFloat(cs.animationDuration)*1000||30000;
+    var origName=cs.animationName;
+    var isRev=/[Rr]ev/.test(origName)||cs.animationDirection==='reverse';
+    var dragging=false,sx=0,origSx=0,tx=0,moved=false,startTime=0,maxDx=0,pid=null;
+    function getX(el){return new DOMMatrix(getComputedStyle(el).transform).m41;}
+    function resume(fx){
+      var hw=track.scrollWidth/2;
+      var nx=fx%hw; if(nx>0)nx-=hw;
+      var p=isRev?(hw+nx)/hw:-nx/hw;
+      p=Math.max(0,Math.min(0.9999,p));
+      track.style.animationDelay=(-p*dur)+'ms';
+      getComputedStyle(track).animationDelay;
+      track.style.animationPlayState='running';
+      track.style.animationName=origName;
+      getComputedStyle(track).transform;
+      track.style.transform='';
+      track.style.cursor='grab';
+      requestAnimationFrame(function(){ track.style.animationPlayState=''; });
+    }
+    track.addEventListener('pointerdown',function(e){
+      if(e.button&&e.button!==0)return;
+      if(pid!==null)return;
+      pid=e.pointerId; dragging=true; moved=false;
+      startTime=Date.now(); maxDx=0;
+      origSx=e.clientX; sx=e.clientX; tx=getX(track);
+      track.style.cursor='grabbing';
+    });
+    function onMove(e){
+      if(!dragging||e.pointerId!==pid)return;
+      var tdx=Math.abs(e.clientX-origSx);
+      if(tdx>maxDx) maxDx=tdx;
+      var dx=e.clientX-sx;
+      if(!moved&&Math.abs(dx)>10){
+        moved=true;
+        tx=getX(track); sx=e.clientX;
+        /* No setPointerCapture — click events stay on child elements */
+        track.style.animationPlayState='';
+        track.style.animationName='none';
+        track.style.transform='translateX('+tx+'px)';
+      }
+      if(moved) track.style.transform='translateX('+(tx+(e.clientX-sx))+'px)';
+    }
+    function onUp(e){
+      if(!dragging||e.pointerId!==pid)return;
+      dragging=false; pid=null;
+      track.style.cursor='grab';
+      if(moved) resume(getX(track));
+    }
+    function onCancel(e){
+      if(!dragging||e.pointerId!==pid)return;
+      dragging=false; pid=null;
+      track.style.cursor='grab';
+      if(moved) resume(tx);
+    }
+    document.addEventListener('pointermove',onMove);
+    document.addEventListener('pointerup',onUp);
+    document.addEventListener('pointercancel',onCancel);
+    /* Block click only for real drags: >=15px total movement OR >=200ms elapsed.
+       Without setPointerCapture, tap clicks naturally reach child elements. */
+    track.addEventListener('click',function(e){
+      if(moved&&(maxDx>=15||Date.now()-startTime>=200)){
+        e.stopPropagation();
+        e.preventDefault();
+      }
+    },true);
+    track.addEventListener('dragstart',function(e){e.preventDefault();});
+    track.style.cursor='grab';
+    track.style.userSelect='none';
+    track.style.touchAction='pan-y';
+  }
+  document.querySelectorAll('.vss-track,.pack-track,.out-strip-track,.ois-track,.vid-strip,.img-strip,.gallery-row').forEach(dragScroll);
+})();
+</script>
+<script>
+(function(){
+  // Lazy-load + offscreen-pause for autoplay videos.
+  // Defers download until a tile nears the viewport, and pauses when it leaves.
+  var vids=document.querySelectorAll('video[autoplay]');
+  if(!vids.length)return;
+  vids.forEach(function(v){
+    var s=v.getAttribute('src');
+    if(s){v.setAttribute('data-lazy-src',s);v.removeAttribute('src');}
+    v.preload='none';
+    try{v.load();}catch(e){}
+  });
+  function load(v){
+    if(!v.getAttribute('src')){
+      var s=v.getAttribute('data-lazy-src');
+      if(s){v.src=s;}
+    }
+  }
+  if(!('IntersectionObserver' in window)){
+    vids.forEach(function(v){load(v);v.play&&v.play().catch(function(){});});
+    return;
+  }
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    var v=e.target;
+    if(e.isIntersecting){load(v);if(v.paused)v.play().catch(function(){});}
+    else{if(!v.paused)v.pause();}
+  });},{rootMargin:'300px'});
+  vids.forEach(function(v){io.observe(v);});
+})();
+</script>
+</body>
+</html>

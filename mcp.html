@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LDBEMQM3ZW"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-LDBEMQM3ZW');</script>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dobby Ads MCP: Your Agency Data Inside Claude</title>
+<meta name="description" content="Connect Dobby Ads to Claude via MCP. Check order status, track deliverables, pull invoices, and manage your production pipeline from a Claude conversation.">
+<link rel="canonical" href="https://www.dobbyads.com/mcp">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dobby Ads MCP: Your Agency Data Inside Claude">
+<meta property="og:description" content="Your production system, inside Claude. Check orders, track deliverables, pull invoices, and escalate priorities without leaving the conversation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000000;--s1:#080808;--s2:#0F0F0F;--s3:#141414;
+  --acc:#d4724a;--acc-dim:#1a0a06;--acc-bdr:rgba(212,114,74,.28);
+  --t:#ffffff;--t2:#ffffff;
+  --bdr:rgba(255,255,255,.07);--bdr2:rgba(255,255,255,.13);
+  --max:1160px;
+  --ff:'Urbanist',sans-serif;--mono:'JetBrains Mono',monospace;
+  --fs-disp:clamp(2.8rem,4.2vw,5rem);--fs-h1:clamp(1.9rem,3vw,2.8rem);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t);font-family:var(--ff);font-size:16px;line-height:1.7;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+*{-webkit-tap-highlight-color:transparent}
+a{text-decoration:none;color:inherit}
+a,button{touch-action:manipulation}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 2rem;position:relative;z-index:1}
+.logo-img{height:44px;width:auto;display:block}
+
+/* Scroll reveal */
+.r{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.r.vis{opacity:1;transform:translateY(0)}
+.r.d1{transition-delay:.1s}.r.d2{transition-delay:.2s}.r.d3{transition-delay:.3s}
+.r.d4{transition-delay:.4s}.r.d5{transition-delay:.5s}.r.d6{transition-delay:.6s}
+@media(prefers-reduced-motion:reduce){.r{opacity:1!important;transform:none!important;transition:none!important}}
+
+/* Section label — matches homepage octagon icon */
+.sec-label{font-family:var(--ff);font-size:.9375rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;line-height:1}
+.sec-label::before{content:'';width:12px;height:12px;flex-shrink:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23d4724a' fill-rule='evenodd' d='M25%2C0 L75%2C0 L100%2C25 L100%2C75 L75%2C100 L25%2C100 L0%2C75 L0%2C25 Z M36%2C22 L64%2C22 L78%2C36 L78%2C64 L64%2C78 L36%2C78 L22%2C64 L22%2C36 Z'/%3E%3C/svg%3E") center/contain no-repeat}
+.sec-label.center{justify-content:center}
+
+/* Buttons — matches homepage spec */
+.btn-primary{font-family:var(--ff);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--bg);color:var(--t);border:1.5px solid var(--t);padding:13px 28px;border-radius:5px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background .18s,color .18s,border-color .18s,transform .12s}
+.btn-primary:hover{background:var(--acc);color:#000;border-color:var(--acc);transform:translateY(-1px)}
+.btn-ghost{font-family:var(--ff);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc-bdr);padding:13px 28px;border-radius:5px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:all .18s;background:transparent}
+.btn-ghost:hover{color:#fff;border-color:rgba(255,255,255,.3);transform:translateY(-1px)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:64px;background:rgba(8,8,8,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--bdr)}
+.nav-links{display:flex;gap:.5rem;list-style:none}
+.nav-links a{font-size:14px;font-weight:500;color:var(--t2);letter-spacing:.02em;padding:6px 12px;border-radius:4px;transition:color .18s,background .18s}
+.nav-links a:hover{color:var(--t);background:rgba(255,255,255,.05)}
+.nav-right{display:flex;align-items:center;gap:.625rem}
+.nav-login{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);border:1.5px solid rgba(255,255,255,.2);padding:10px 22px;border-radius:5px;transition:all .18s}
+.nav-login:hover{color:#fff;border-color:rgba(255,255,255,.5)}
+.nav-cta{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--bg);color:#fff;border:1.5px solid #fff;padding:10px 22px;border-radius:5px;transition:all .18s}
+.nav-cta:hover{background:var(--acc);color:#000;border-color:var(--acc)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all .28s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#mob-menu{display:none;flex-direction:column;position:fixed;inset:0;background:#000;z-index:90;padding:80px 2rem 2.5rem;opacity:0;pointer-events:none;transition:opacity .28s}
+#mob-menu.open{opacity:1;pointer-events:all}
+#mob-menu a{padding:1rem 0;font-size:1.6rem;font-weight:700;color:#fff;border-bottom:1px solid var(--bdr);display:block}
+#mob-menu a:hover{color:var(--acc)}
+
+/* HERO */
+.mcp-hero{padding:160px 0 100px;text-align:center;position:relative;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(212,114,74,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(212,114,74,.018) 1px,transparent 1px);background-size:52px 52px;pointer-events:none;z-index:0}
+.hero-glow{position:absolute;top:25%;left:50%;transform:translate(-50%,-50%);width:800px;height:500px;background:radial-gradient(ellipse,rgba(212,114,74,.045) 0%,transparent 62%);pointer-events:none;z-index:0}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+.mcp-hero h1{font-family:var(--ff);font-size:var(--fs-disp);font-weight:800;line-height:1.06;letter-spacing:-.035em;margin-bottom:1.25rem}
+.mcp-hero h1 em{font-style:normal;color:var(--acc)}
+.hero-sub{font-size:1.0625rem;color:var(--t2);font-weight:300;max-width:520px;margin:0 auto 2rem;line-height:1.75}
+.hero-ctas{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hero-prompts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:860px;margin:0 auto}
+.hero-prompt{font-family:var(--mono);font-size:13.5px;color:#fff;background:rgba(212,114,74,.12);border:1px solid rgba(212,114,74,.45);border-radius:100px;padding:10px 20px;cursor:default;transition:background .2s,border-color .2s,transform .15s;white-space:nowrap}
+.hero-prompt:hover{background:rgba(212,114,74,.22);border-color:rgba(212,114,74,.7);transform:translateY(-1px)}
+.mcp-url-bar{display:inline-flex;align-items:center;gap:12px;background:var(--s1);border:1px solid var(--bdr2);border-radius:6px;padding:12px 20px;font-family:var(--mono);font-size:13px;color:var(--t2);cursor:pointer;transition:border-color .2s}
+.mcp-url-bar:hover{border-color:var(--acc-bdr)}
+.url-text{user-select:all}
+.mcp-url-copy{font-family:var(--ff);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);background:rgba(212,114,74,.08);padding:4px 12px;border-radius:3px;cursor:pointer;transition:all .15s;border:none}
+.mcp-url-copy:hover{background:var(--acc);color:#000}
+
+/* MCP FLOW DIAGRAM */
+.flow-section{padding:100px 0;border-top:1px solid var(--bdr);background:var(--s1)}
+.flow-header{text-align:center;margin-bottom:4rem}
+.flow-header h2{font-family:var(--ff);font-size:var(--fs-h1);font-weight:800;letter-spacing:-.025em;margin-bottom:.875rem}
+.flow-header p{font-size:1rem;color:var(--t2);max-width:500px;margin:0 auto;line-height:1.75}
+
+.flow-diagram{display:grid;grid-template-columns:1fr 120px 1fr 120px 1fr;align-items:center;max-width:920px;margin:0 auto 3rem}
+
+.flow-node{background:var(--bg);border:1px solid var(--bdr2);border-radius:12px;padding:2rem 1.25rem;text-align:center;transition:border-color .2s}
+.flow-node:hover{border-color:rgba(255,255,255,.2)}
+.flow-node.fn-center{background:var(--s2);border-color:var(--acc-bdr);position:relative}
+.flow-node.fn-center::before{content:'';position:absolute;top:-1px;left:15%;right:15%;height:2px;background:var(--acc);border-radius:0 0 2px 2px}
+.fn-icon{width:44px;height:44px;border-radius:10px;border:1px solid var(--bdr2);background:var(--s1);display:flex;align-items:center;justify-content:center;font-size:20px;margin:0 auto .875rem}
+.flow-node.fn-center .fn-icon{border-color:var(--acc-bdr);background:rgba(212,114,74,.06)}
+.fn-name{font-family:var(--ff);font-size:.9375rem;font-weight:700;margin-bottom:.3rem}
+.fn-sub{font-size:.8125rem;color:var(--t2);line-height:1.5}
+
+.flow-bridge{display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 8px}
+.fb-label{font-family:var(--mono);font-size:9px;letter-spacing:.06em;color:rgba(212,114,74,.45);white-space:nowrap}
+.fb-track{position:relative;width:100%;height:2px;background:var(--bdr2);border-radius:1px;overflow:hidden}
+.fb-track.rev{transform:scaleX(-1)}
+@keyframes connFlow{0%{left:-40%}100%{left:140%}}
+.fb-pulse{position:absolute;top:0;left:-40%;width:40%;height:100%;background:linear-gradient(90deg,transparent,var(--acc) 50%,transparent);animation:connFlow 1.6s linear infinite}
+.fb-track.rev .fb-pulse{background:linear-gradient(90deg,transparent,rgba(255,255,255,.3) 50%,transparent)}
+
+/* Tool call viz */
+.tool-viz{max-width:920px;margin:0 auto;background:var(--bg);border:1px solid var(--bdr2);border-radius:10px;overflow:hidden}
+.tv-bar{display:flex;align-items:center;gap:7px;padding:10px 16px;background:var(--s2);border-bottom:1px solid var(--bdr)}
+.tv-dot{width:9px;height:9px;border-radius:50%}
+.tv-dot:nth-child(1){background:#ff5f57}.tv-dot:nth-child(2){background:#febc2e}.tv-dot:nth-child(3){background:#28c840}
+.tv-title{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--t2)}
+.tv-body{padding:1.25rem 1.5rem;font-family:var(--mono);font-size:12px;line-height:1.9;display:grid;grid-template-columns:1fr 1fr;gap:0 3rem}
+.tv-col-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:.625rem;padding-bottom:.5rem;border-bottom:1px solid var(--bdr)}
+.tc-cmt{color:rgba(255,255,255,.22)}
+.tc-key{color:rgba(212,114,74,.75)}
+.tc-val{color:rgba(255,255,255,.75)}
+.tc-str{color:rgba(130,195,255,.85)}
+.tc-badge{display:inline-block;background:rgba(212,114,74,.08);border:1px solid var(--acc-bdr);border-radius:3px;padding:1px 8px;font-size:10px;color:var(--acc);margin-top:.375rem}
+
+/* DEMO — Claude.ai faithful replica */
+.demo-section{padding:100px 0;border-top:1px solid var(--bdr)}
+.demo-header{text-align:center;margin-bottom:3.5rem}
+.demo-header h2{font-family:var(--ff);font-size:var(--fs-h1);font-weight:800;letter-spacing:-.025em;margin-bottom:.875rem}
+.demo-header p{font-size:1rem;color:var(--t2);max-width:460px;margin:0 auto;line-height:1.75}
+
+.demo-chat{max-width:780px;margin:0 auto;background:#1a1a1a;border:1px solid rgba(255,255,255,.1);border-radius:14px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.7)}
+
+/* Browser chrome */
+.demo-browser{background:#111;border-bottom:1px solid rgba(255,255,255,.07);padding:9px 14px;display:flex;align-items:center;gap:10px}
+.d-wdots{display:flex;gap:5px;flex-shrink:0}
+.d-wdot{width:10px;height:10px;border-radius:50%}
+.d-wdot:nth-child(1){background:#ff5f57}.d-wdot:nth-child(2){background:#febc2e}.d-wdot:nth-child(3){background:#28c840}
+.demo-url{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:5px;padding:3px 12px;font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.32);text-align:center}
+
+/* App layout: sidebar + main */
+.demo-app{display:flex;min-height:460px}
+
+/* Sidebar */
+.demo-sidebar{width:56px;background:#0f0f0f;border-right:1px solid rgba(255,255,255,.07);display:flex;flex-direction:column;align-items:center;padding:14px 0 14px;gap:2px;flex-shrink:0}
+.demo-sb-logo{width:36px;height:36px;border-radius:10px;background:transparent;display:flex;align-items:center;justify-content:center;margin-bottom:12px;flex-shrink:0}
+.demo-sb-btn{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.28)}
+.demo-sb-divider{width:28px;height:1px;background:rgba(255,255,255,.08);margin:6px 0}
+.demo-sb-spacer{flex:1}
+.demo-sb-user{width:26px;height:26px;border-radius:50%;background:#2c2c2c;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:rgba(255,255,255,.5)}
+
+/* Main chat */
+.demo-main{flex:1;min-width:0;display:flex;flex-direction:column}
+
+/* Conversation header */
+.demo-conv-hdr{padding:10px 18px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.demo-conv-title{font-size:12.5px;font-weight:500;color:rgba(255,255,255,.55)}
+.demo-conn{display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;color:#34A853;background:rgba(52,168,83,.07);border:1px solid rgba(52,168,83,.18);border-radius:100px;padding:3px 10px;white-space:nowrap}
+.demo-conn-dot{width:5px;height:5px;border-radius:50%;background:#34A853;flex-shrink:0;animation:pulse 2.2s ease-in-out infinite}
+
+/* Messages */
+.demo-msgs{padding:20px 20px 0;display:flex;flex-direction:column;gap:20px;flex:1}
+#demoAnim{display:flex;flex-direction:column;gap:20px}
+
+/* User message */
+.dm-user{display:flex;justify-content:flex-end;align-items:flex-end;gap:9px}
+.d-bbl-u{background:#2b2b2b;border:1px solid rgba(255,255,255,.1);color:#fff;padding:11px 15px;border-radius:18px 18px 4px 18px;font-size:13.5px;line-height:1.55;max-width:76%}
+.d-av-u{width:28px;height:28px;border-radius:50%;background:#3a3a3a;border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.55);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
+
+/* Claude message — no bubble, icon + text */
+.dm-claude{display:flex;gap:11px;align-items:flex-start}
+.d-claude-av{width:26px;height:26px;border-radius:8px;background:transparent;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.dm-claude-body{flex:1;min-width:0}
+.dm-claude-name{display:block;font-size:11.5px;font-weight:700;color:rgba(255,255,255,.4);margin-bottom:5px;letter-spacing:.01em}
+.dm-claude-text{font-size:13.5px;line-height:1.65;color:rgba(255,255,255,.88)}
+
+/* Data card */
+.d-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:9px;padding:12px 14px;margin-top:9px;font-family:var(--mono);font-size:11px;line-height:1.9}
+.dc-row{display:flex;justify-content:space-between;align-items:center}
+.dc-lbl{color:rgba(255,255,255,.45)}.dc-val{color:#fff;font-weight:500}
+.s-prod{color:#d4724a}.s-ok{color:#34A853}.s-wip{color:#d4724a}
+.dc-del{display:flex;align-items:center;gap:8px;padding:1px 0}
+
+/* Thinking dots */
+.think-dots{display:flex;gap:4px;align-items:center;padding:2px 0}
+@keyframes thinkBob{0%,80%,100%{opacity:.2;transform:scale(.75)}40%{opacity:1;transform:scale(1)}}
+.think-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.45);animation:thinkBob 1.4s ease-in-out infinite}
+.think-dot:nth-child(2){animation-delay:.2s}.think-dot:nth-child(3){animation-delay:.4s}
+
+/* Animated exchange */
+.demo-animated{display:none}
+.demo-animated.active{display:flex;flex-direction:column;gap:20px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.anim-in{animation:fadeUp .4s cubic-bezier(.16,1,.3,1) forwards}
+
+/* Input */
+.demo-input-row{padding:12px 14px 16px;border-top:1px solid rgba(255,255,255,.07);margin-top:18px;flex-shrink:0}
+.demo-input-wrap{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:10px 12px;display:flex;align-items:center;gap:10px}
+.demo-add-btn{width:28px;height:28px;border-radius:7px;border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.4);display:flex;align-items:center;justify-content:center;font-size:18px;line-height:1;flex-shrink:0}
+.demo-ph{flex:1;font-size:13px;color:rgba(255,255,255,.27)}
+.demo-model-sel{display:flex;align-items:center;gap:3px;font-size:12px;color:rgba(255,255,255,.35);flex-shrink:0}
+
+/* SETUP */
+.setup-section{padding:100px 0;border-top:1px solid var(--bdr);background:var(--s1)}
+.setup-header{text-align:center;margin-bottom:3.5rem}
+.setup-header h2{font-family:var(--ff);font-size:var(--fs-h1);font-weight:800;letter-spacing:-.025em}
+.setup-layout{display:grid;grid-template-columns:1.3fr 1fr;gap:4rem;align-items:start;max-width:1060px;margin:0 auto}
+.setup-steps{display:flex;flex-direction:column}
+.setup-step{display:flex;gap:1.25rem;align-items:flex-start;padding:1.5rem 0;border-bottom:1px solid var(--bdr)}
+.setup-step:first-child{padding-top:0}
+.setup-step:last-child{border-bottom:none;padding-bottom:0}
+.step-num{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--acc);border:1px solid var(--acc-bdr);border-radius:6px;width:38px;height:38px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.step-title{font-family:var(--ff);font-size:.9375rem;font-weight:700;margin-bottom:.325rem}
+.step-desc{font-size:.875rem;color:var(--t2);line-height:1.65}
+.step-code{font-family:var(--mono);font-size:11px;color:var(--acc);background:rgba(212,114,74,.05);border:1px solid var(--acc-bdr);border-radius:4px;padding:8px 14px;margin-top:.65rem;display:flex;align-items:center;justify-content:space-between;gap:10px;word-break:break-all;user-select:all;width:100%;box-sizing:border-box}
+
+/* Setup preview panel */
+.setup-preview{background:var(--bg);border:1px solid var(--bdr2);border-radius:12px;overflow:hidden;position:sticky;top:88px}
+.sp-bar{display:flex;align-items:center;gap:7px;padding:10px 14px;background:var(--s2);border-bottom:1px solid var(--bdr)}
+.sp-dot{width:8px;height:8px;border-radius:50%}
+.sp-dot:nth-child(1){background:#ff5f57}.sp-dot:nth-child(2){background:#febc2e}.sp-dot:nth-child(3){background:#28c840}
+.sp-title{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--t2)}
+.sp-body{padding:1.25rem}
+.sp-screen{background:var(--s1);border:1px solid var(--bdr);border-radius:8px;overflow:hidden}
+.sp-heading{display:flex;align-items:center;gap:.5rem;padding:.75rem 1rem;border-bottom:1px solid var(--bdr);font-size:12px;font-weight:600;color:var(--t2)}
+.sp-heading span{color:var(--t)}
+.sp-item{display:flex;align-items:center;gap:10px;padding:.75rem 1rem;border-bottom:1px solid var(--bdr);font-size:12px}
+.sp-item-icon{width:28px;height:28px;border-radius:6px;background:var(--acc-dim);border:1px solid var(--acc-bdr);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.sp-item-name{font-weight:600;font-size:12px}
+.sp-item-url{font-family:var(--mono);font-size:10px;color:var(--t2)}
+.sp-item-status{margin-left:auto;display:flex;align-items:center;gap:5px;font-size:11px;color:#34A853;white-space:nowrap}
+.sp-status-dot{width:5px;height:5px;border-radius:50%;background:#34A853;animation:pulse 2s ease-in-out infinite}
+.sp-add{margin:.875rem;display:flex;align-items:center;justify-content:center;gap:6px;padding:.625rem;border:1.5px dashed var(--bdr2);border-radius:7px;font-size:12px;font-weight:600;color:var(--t2);cursor:pointer;transition:all .18s}
+.sp-add:hover{border-color:var(--acc-bdr);color:var(--acc)}
+.sp-note{font-size:.75rem;color:var(--t2);line-height:1.6;margin-top:1rem}
+
+/* CAPABILITIES */
+.cap-section{padding:100px 0;border-top:1px solid var(--bdr)}
+.cap-header{margin-bottom:3rem}
+.cap-header h2{font-family:var(--ff);font-size:var(--fs-h1);font-weight:800;letter-spacing:-.025em;line-height:1.1;max-width:480px;margin-bottom:.75rem}
+.cap-header p{font-size:1rem;color:var(--t2);max-width:660px;line-height:1.6}
+
+/* Two-column split: featured left, stack right */
+.cap-main{display:grid;grid-template-columns:1.2fr 1fr;gap:1.25rem;margin-bottom:1.25rem}
+.cap-featured{background:var(--s1);border:1px solid var(--acc-bdr);border-radius:14px;padding:2.25rem 2rem;position:relative;overflow:hidden;transition:transform .2s}
+.cap-featured:hover{transform:translateY(-2px)}
+.cap-featured::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--acc)}
+.cap-feat-pill{font-family:var(--ff);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);background:rgba(212,114,74,.08);border:1px solid var(--acc-bdr);border-radius:3px;padding:3px 10px;display:inline-block;margin-bottom:1.25rem}
+.cap-featured h3{font-family:var(--ff);font-size:1.3125rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.75rem}
+.cap-featured p{font-size:.9375rem;color:var(--t2);line-height:1.7}
+.cap-feat-examples{margin-top:1.5rem;display:flex;flex-direction:column;gap:.5rem}
+.cap-eg{font-family:var(--mono);font-size:11px;color:#ffffff;display:flex;gap:.4rem;align-items:flex-start}
+.cap-eg::before{content:'"';color:var(--acc);font-size:13px;line-height:1.2;flex-shrink:0}
+
+.cap-stack{display:flex;flex-direction:column;gap:1.25rem}
+.cap-card{background:var(--s1);border:1px solid var(--bdr2);border-radius:12px;padding:1.5rem;transition:border-color .2s,transform .2s}
+.cap-card:hover{border-color:rgba(255,255,255,.16);transform:translateY(-2px)}
+.cap-card h3{font-family:var(--ff);font-size:.9375rem;font-weight:700;margin-bottom:.35rem}
+.cap-card p{font-size:.875rem;color:var(--t2);line-height:1.6}
+.cap-card-ex{font-family:var(--mono);font-size:10.5px;color:rgba(255,255,255,.28);margin-top:.6rem;font-style:italic}
+
+/* Bottom row — 3 equal */
+.cap-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.cap-row-card{background:var(--s1);border:1px solid var(--bdr2);border-radius:12px;padding:1.5rem;transition:border-color .2s,transform .2s}
+.cap-row-card:hover{border-color:rgba(255,255,255,.16);transform:translateY(-2px)}
+.cap-row-card h3{font-family:var(--ff);font-size:.9375rem;font-weight:700;margin-bottom:.35rem}
+.cap-row-card p{font-size:.875rem;color:var(--t2);line-height:1.6}
+
+/* PLATFORMS */
+.plat-section{padding:72px 0;border-top:1px solid var(--bdr);background:var(--s1)}
+.plat-inner{display:flex;justify-content:space-between;align-items:center;gap:3rem}
+.plat-text h2{font-family:var(--ff);font-size:var(--fs-h1);font-weight:800;letter-spacing:-.025em;margin-bottom:.75rem}
+.plat-text p{font-size:1rem;color:var(--t2);max-width:380px;line-height:1.75}
+.plat-cards{display:flex;gap:1rem;flex-shrink:0}
+.plat-card{background:var(--bg);border:1px solid var(--bdr2);border-radius:12px;padding:1.5rem 2rem;display:flex;flex-direction:column;align-items:flex-start;gap:.5rem;min-width:176px;transition:border-color .2s,transform .2s}
+.plat-card:hover{border-color:var(--acc-bdr);transform:translateY(-2px)}
+.plat-icon{font-size:26px;opacity:.7;margin-bottom:.125rem}
+.plat-name{font-family:var(--ff);font-size:.9375rem;font-weight:700}
+.plat-note{font-size:.8125rem;color:var(--t2)}
+
+/* FAQ */
+.faq-section{padding:80px 0;border-top:1px solid var(--bdr)}
+.faq-layout{display:grid;grid-template-columns:1fr 1.65fr;gap:4.5rem;align-items:start}
+.faq-left .sec-label{margin-bottom:.75rem}
+.faq-title{font-family:var(--ff);font-size:var(--fs-h1);font-weight:800;letter-spacing:-.025em;margin-bottom:.875rem}
+.faq-sub{font-size:1rem;color:var(--t2);max-width:280px;line-height:1.75}
+.faq-list{display:flex;flex-direction:column}
+.faq-item{border-bottom:1px solid var(--bdr)}
+.faq-q{padding:1.25rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:none;text-align:left;gap:1rem}
+.faq-q h3{font-family:var(--ff);font-size:.9375rem;font-weight:600;color:#fff}
+.faq-toggle{font-size:1.2rem;color:var(--acc);transition:transform .2s;flex-shrink:0}
+.faq-item.open .faq-toggle{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease}
+.faq-item.open .faq-a{max-height:300px;padding:0 0 1.25rem}
+.faq-a p{font-size:.9rem;color:var(--t2);line-height:1.75}
+
+/* CTA */
+.final-cta{padding:120px 0;text-align:center;border-top:1px solid var(--bdr);position:relative;overflow:hidden}
+.cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(212,114,74,.038) 0%,transparent 60%);pointer-events:none}
+.final-cta h2{font-family:var(--ff);font-size:var(--fs-h1);font-weight:800;letter-spacing:-.025em;margin-bottom:1rem;position:relative;z-index:1}
+.final-cta h2 em{font-style:normal;color:var(--acc)}
+.final-cta p{font-size:1.0625rem;color:var(--t2);max-width:440px;margin:0 auto 2.5rem;position:relative;z-index:1;line-height:1.75}
+
+/* FOOTER */
+footer{border-top:1px solid var(--bdr);padding:4rem 0 0}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem}
+.foot-tagline{font-size:.875rem;color:#fff;margin-bottom:1rem;display:block}
+.foot-desc{font-size:.875rem;color:#fff;line-height:1.85;font-weight:300;max-width:280px;margin-bottom:1rem}
+.foot-contact{font-size:.875rem;color:#fff;line-height:1.85;font-weight:300}
+.foot-contact a{color:#fff;transition:color .15s}
+.foot-contact a:hover{color:var(--acc)}
+.foot-col-label{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#fff;font-weight:600;margin-bottom:1rem}
+.foot-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.foot-list a{font-size:.875rem;color:#fff;font-weight:300;transition:color .15s}
+.foot-list a:hover{color:rgba(255,255,255,.6)}
+.foot-bottom{border-top:1px solid var(--bdr);padding:1.25rem 0;display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:#fff}
+.foot-bottom a{color:#fff;transition:color .15s}
+.foot-bottom a:hover{color:rgba(255,255,255,.6)}
+.foot-certs{display:flex;align-items:flex-start;gap:.75rem;margin-top:1.75rem}
+.foot-cert-img{width:88px;height:88px;object-fit:contain;border-radius:10px;opacity:.88;display:block}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:0 1.25rem}
+  .nav-links,.nav-login,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .mcp-hero{padding:120px 0 60px}
+  .flow-diagram{grid-template-columns:1fr;gap:0}
+  .flow-bridge{flex-direction:row;padding:1rem 0;gap:8px}
+  .fb-track{width:60px}
+  .fb-label{display:none}
+  .setup-layout{grid-template-columns:1fr}
+  .setup-preview{display:none}
+  .cap-main{grid-template-columns:1fr}
+  .plat-inner{flex-direction:column;align-items:flex-start}
+  .faq-layout{grid-template-columns:1fr;gap:2rem}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:2rem}
+  .cap-row{grid-template-columns:1fr 1fr}
+  .tv-body{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .wrap{padding:0 1.1rem}
+  .hero-ctas{flex-direction:column;align-items:stretch}
+  .btn-primary,.btn-ghost{justify-content:center;width:100%}
+  .mcp-url-bar{flex-direction:column;gap:8px;font-size:12px}
+  .flow-diagram{display:flex;flex-direction:column;gap:1rem}
+  .flow-bridge{display:none}
+  .cap-row{grid-template-columns:1fr}
+  .plat-cards{flex-direction:column;width:100%}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-bottom{flex-direction:column;gap:.4rem;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://www.dobbyads.com/"><img src="All%20Visuals/Dobby%20Logo.webp" alt="Dobby Ads" class="logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="https://www.dobbyads.com/#work">Work</a></li>
+    <li><a href="https://www.dobbyads.com/#services">Services</a></li>
+    <li><a href="https://www.dobbyads.com/#engine">Engine</a></li>
+    <li><a href="https://www.dobbyads.com/#testimonials">Clients</a></li>
+    <li><a href="https://www.dobbyads.com/#awards">Awards</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="https://brand.dobbyads.com/login" class="nav-login">Login</a>
+    <a href="https://calendly.com/dobby-ads/30min" target="_blank" rel="noopener" class="nav-cta">Book a Call</a>
+    <button class="hamburger" id="hb" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div id="mob-menu">
+  <a href="https://www.dobbyads.com/#work">Work</a>
+  <a href="https://www.dobbyads.com/#services">Services</a>
+  <a href="https://www.dobbyads.com/#engine">Engine</a>
+  <a href="https://www.dobbyads.com/#testimonials">Clients</a>
+  <a href="https://www.dobbyads.com/#awards">Awards</a>
+  <a href="https://brand.dobbyads.com/login">Login</a>
+  <a href="https://calendly.com/dobby-ads/30min" target="_blank" rel="noopener" class="btn-primary" style="margin-top:2rem;justify-content:center">Book a Call</a>
+</div>
+
+<!-- ═══════════ HERO ═══════════════════════════════════════════════════ -->
+<section class="mcp-hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="wrap">
+    <h1 class="r">Your production system,<br>inside <em>Claude.</em></h1>
+    <p class="hero-sub r d2">Check your order status, track deliverables, pull invoices, escalate priorities, and send feedback to your team. All from a Claude conversation. No tab switching. No dashboard hunting.</p>
+    <div class="hero-prompts r d3">
+      <div class="hero-prompt">"What's the status of order #4521?"</div>
+      <div class="hero-prompt">"Set #4521 to urgent. Launch is in 3 days."</div>
+      <div class="hero-prompt">"Show all my open orders for Harness Lead"</div>
+      <div class="hero-prompt">"Pull invoice INV-2891"</div>
+      <div class="hero-prompt">"Book a call with my account manager"</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SETUP ══════════════════════════════════════════════════ -->
+<section class="setup-section">
+  <div class="wrap">
+    <div class="setup-header r">
+      <div class="sec-label center">Setup</div>
+      <h2>Connect in under a minute.</h2>
+    </div>
+    <div class="setup-layout">
+      <div class="setup-steps">
+        <div class="setup-step r d1">
+          <div class="step-num">01</div>
+          <div>
+            <div class="step-title">Open Claude and go to Connectors</div>
+            <p class="step-desc">On claude.ai, click your profile, then Settings, then Connectors. On Claude Desktop, click Customize in the left sidebar, then Connectors.</p>
+          </div>
+        </div>
+        <div class="setup-step r d2">
+          <div class="step-num">02</div>
+          <div>
+            <div class="step-title">Add Dobby Ads as a custom connector</div>
+            <p class="step-desc">Click +, select "Add custom connector." Enter <strong>Dobby Ads</strong> as the name and paste the MCP URL:</p>
+            <div class="step-code">
+              <span class="url-text">https://mcp.dobbyads.com/mcp</span>
+              <button class="mcp-url-copy" onclick="(function(btn){var t=btn.textContent;navigator.clipboard.writeText('https://mcp.dobbyads.com/mcp');btn.textContent='Copied!';setTimeout(function(){btn.textContent=t},1800)})(this)" title="Copy URL">Copy</button>
+            </div>
+            <div style="margin-top:1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.15);box-shadow:0 8px 32px rgba(0,0,0,.5)">
+              <picture style="display:contents"><source type="image/avif" srcset="images/mcp-embed-1-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><picture><source type="image/avif" srcset="images/mcp-embed-1-800.avif 800w" sizes="(max-width: 768px) 100vw, 50vw"><img src="images/mcp-embed-1.jpg" alt="After connecting Dobby Ads MCP in Claude Connectors" style="width:100%;display:block" loading="lazy"></picture></picture>
+            </div>
+          </div>
+        </div>
+        <div class="setup-step r d3">
+          <div class="step-num">03</div>
+          <div>
+            <div class="step-title">Sign in and start asking</div>
+            <p class="step-desc">Click Add, then Connect. Sign in with your Dobby Ads account. Every Claude conversation now has access to your agency data.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preview panel -->
+      <div class="setup-preview r d2">
+        <div class="sp-bar">
+          <span class="sp-dot"></span><span class="sp-dot"></span><span class="sp-dot"></span>
+          <span class="sp-title">Claude: Connectors</span>
+        </div>
+        <div class="sp-body">
+          <div class="sp-screen">
+            <div class="sp-heading">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5.25" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/><path d="M4 6h4M6 4v4" stroke="rgba(255,255,255,.3)" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <span>Connectors</span> <span style="color:var(--t2)">(1 active)</span>
+            </div>
+            <div class="sp-item">
+              <div class="sp-item-icon">⚡</div>
+              <div>
+                <div class="sp-item-name">Dobby Ads</div>
+                <div class="sp-item-url">mcp.dobbyads.com/mcp</div>
+              </div>
+              <div class="sp-item-status"><span class="sp-status-dot"></span>Connected</div>
+            </div>
+            <div class="sp-add">+ Add connector</div>
+          </div>
+          <p class="sp-note">Free Claude accounts support one connector. Pro, Max, Team and Enterprise plans support multiple.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ DEMO CHAT ══════════════════════════════════════════════ -->
+<section class="demo-section">
+  <div class="wrap">
+    <div class="demo-header r">
+      <div class="sec-label center">See It In Action</div>
+      <h2>One question. Instant answer.</h2>
+      <p>Ask anything your dashboard can show you. Then act on it, without leaving Claude.</p>
+    </div>
+
+    <div class="demo-chat r d2">
+      <!-- Browser chrome -->
+      <div class="demo-browser">
+        <div class="d-wdots"><span class="d-wdot"></span><span class="d-wdot"></span><span class="d-wdot"></span></div>
+        <div class="demo-url">claude.ai</div>
+      </div>
+      <!-- App layout -->
+      <div class="demo-app">
+        <!-- Sidebar -->
+        <div class="demo-sidebar">
+          <div class="demo-sb-logo" style="background:transparent;border:none;padding:0;width:36px;height:36px;overflow:hidden">
+            <picture style="display:contents"><source type="image/avif" srcset="images/mcp-embed-2-400.avif 400w, images/mcp-embed-2-800.avif 800w" sizes="(max-width:700px) 45vw, 300px"><picture><source type="image/avif" srcset="images/mcp-embed-2-400.avif 400w, images/mcp-embed-2-800.avif 800w" sizes="(max-width: 768px) 100vw, 50vw"><img src="images/mcp-embed-2.png" alt="Claude" style="width:36px;height:36px;object-fit:contain;border-radius:0;mix-blend-mode:normal" loading="lazy"></picture></picture>
+          </div>
+          <div class="demo-sb-btn"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M7.5 2v11M2 7.5h11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div class="demo-sb-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="6" cy="6" r="4.2" stroke="currentColor" stroke-width="1.4"/><path d="M9.5 9.5l2.5 2.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+          <div class="demo-sb-btn"><svg width="15" height="13" viewBox="0 0 15 13" fill="none"><rect x="1" y="1" width="13" height="8" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M4 12.5l3-3.5h4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="demo-sb-divider"></div>
+          <div class="demo-sb-spacer"></div>
+          <div class="demo-sb-user">Y</div>
+        </div>
+        <!-- Main -->
+        <div class="demo-main">
+          <div class="demo-conv-hdr">
+            <span class="demo-conv-title">Dobby Ads · MCP</span>
+            <div class="demo-conn"><span class="demo-conn-dot"></span>Dobby Ads connected</div>
+          </div>
+          <div class="demo-msgs" id="demoMsgs">
+            <div id="demoAnim"></div>
+          </div>
+          <!-- Input -->
+          <div class="demo-input-row">
+            <div class="demo-input-wrap">
+              <div class="demo-add-btn">+</div>
+              <span class="demo-ph">Write a message...</span>
+              <div class="demo-model-sel">Sonnet 4 <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 4l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CAPABILITIES ══════════════════════════════════════════ -->
+<section class="cap-section">
+  <div class="wrap">
+    <div class="cap-header r">
+      <div class="sec-label">What You Can Do</div>
+      <h2>Everything you need. In a sentence.</h2>
+      <p>Ask about your orders, deliverables, invoices, and timelines in plain English. Claude looks it up and responds instantly.</p>
+    </div>
+
+    <!-- Featured + two stacked -->
+    <div class="cap-main r d1">
+      <div class="cap-featured">
+        <div class="cap-feat-pill">Most Used</div>
+        <h3>Order Status</h3>
+        <p>Look up any order by ID or number. Filter your orders by brand, service, stage, or tag. See priority, channel, and a full deliverable breakdown. One response, no dashboard needed.</p>
+        <div class="cap-feat-examples">
+          <div class="cap-eg">What's the status of order #4521?</div>
+          <div class="cap-eg">Show all my open orders for Harness Lead</div>
+          <div class="cap-eg">Which of my orders are in review right now?</div>
+        </div>
+      </div>
+      <div class="cap-stack">
+        <div class="cap-card">
+          <h3>Update Priority</h3>
+          <p>Change any order to Regular, High, or Urgent. Useful when Prime Day, a launch, or a tight deadline shifts your timeline.</p>
+          <p class="cap-card-ex">"Set order #4521 to urgent. Launch is in 3 days."</p>
+        </div>
+        <div class="cap-card">
+          <h3>Messages and Chats</h3>
+          <p>Send messages directly into an order thread or any of your chat channels. Ask for a revision, post an approval, or check what the team has said.</p>
+          <p class="cap-card-ex">"Message order #4521: please adjust the background on the main image."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom row of three -->
+    <div class="cap-row r d2">
+      <div class="cap-row-card">
+        <h3>Invoices and Receipts</h3>
+        <p>Pull any invoice by ID or number. Check what's been charged, see payment status, and retrieve Stripe receipts.</p>
+      </div>
+      <div class="cap-row-card">
+        <h3>Deliverables</h3>
+        <p>Get all deliverables on an order. See what's approved, what's in revision, and what's pending. Pull full deliverable sets when you need the complete picture.</p>
+      </div>
+      <div class="cap-row-card">
+        <h3>Book a Call</h3>
+        <p>Request a 30-minute call with your account team directly from Claude. No email thread, no form. Just ask and it's submitted.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PLATFORMS ═════════════════════════════════════════════ -->
+<section class="plat-section">
+  <div class="wrap">
+    <div class="plat-inner r">
+      <div class="plat-text">
+        <div class="sec-label">Works With</div>
+        <h2>Claude Web and Claude Desktop.</h2>
+        <p>Works on claude.ai (any browser, including mobile Safari and Chrome) and the Claude Desktop app (macOS and Windows). The Claude iOS and Android apps do not yet support custom MCP connectors.</p>
+      </div>
+      <div class="plat-cards">
+        <div class="plat-card">
+          <div class="plat-icon">🌐</div>
+          <div class="plat-name">Claude Web</div>
+          <p class="plat-note">claude.ai, any browser</p>
+        </div>
+        <div class="plat-card">
+          <div class="plat-icon">💻</div>
+          <div class="plat-name">Claude Desktop</div>
+          <p class="plat-note">macOS and Windows</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FAQ ════════════════════════════════════════════════════ -->
+<section class="faq-section">
+  <div class="wrap">
+    <div class="faq-layout">
+      <div class="faq-left r">
+        <div class="sec-label faq-label">FAQ</div>
+        <h2 class="faq-title">Common questions.</h2>
+        <p class="faq-sub">Everything you need to know before connecting your account.</p>
+      </div>
+      <div class="faq-list r d2">
+        <div class="faq-item">
+          <button class="faq-q"><h3>What is MCP?</h3><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>Model Context Protocol is an open standard developed by Anthropic. It lets Claude connect to external tools and data sources through a secure, structured interface. No credentials or raw API access are exposed to the AI.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><h3>Do I need a paid Claude plan?</h3><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>Dobby Ads MCP works on all Claude plans including Free. Free users are limited to one custom connector. Pro, Max, Team, and Enterprise plans support multiple connectors running simultaneously.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><h3>Is my data safe?</h3><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>Yes. The connection uses OAuth authentication. Sign in with your existing Dobby Ads credentials. Claude can only access data your account has permission to view. Nothing is stored between conversations.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><h3>Can I use this on mobile?</h3><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>MCP connectors are supported on Claude Web (any browser, including mobile Safari and Chrome) and Claude Desktop (macOS and Windows). The Claude iOS and Android apps do not yet support custom connectors.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><h3>Who at my agency can use this?</h3><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>Anyone with a Dobby Ads portal account. Each person authenticates with their own credentials. They see only the data their account has access to, same as in the portal itself.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FINAL CTA ══════════════════════════════════════════════ -->
+<section class="final-cta">
+  <div class="cta-glow"></div>
+  <div class="wrap">
+    <div class="sec-label center r">Ready?</div>
+    <h2 class="r d1">Stop switching tabs.<br>Start asking <em>Claude.</em></h2>
+    <p class="r d2">Connect Dobby Ads to Claude in under 60 seconds. Your entire production pipeline, one question away.</p>
+    <div class="r d3"><a href="https://claude.ai" target="_blank" rel="noopener" class="btn-primary">Connect Now</a></div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ════════════════════════════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="https://www.dobbyads.com/"><img src="All%20Visuals/Dobby%20Logo.webp" alt="Dobby Ads" class="logo-img" style="height:36px;margin-bottom:.875rem"></a>
+        <span class="foot-tagline">Where AI meets creative direction.</span>
+        <p class="foot-desc">Creative systems for e-commerce brands that refuse to look generic.</p>
+        <div class="foot-contact"><div>Dobby Ads Inc</div><div>8 The Green, Dover,</div><div>Delaware, U.S. 19901</div><div style="margin-top:.6rem"><a href="tel:+15076665552">+1 507 6665552</a></div><div><a href="mailto:contact@dobbyads.com">contact@dobbyads.com</a></div></div>
+        <div class="foot-certs"><img loading="lazy" src="All%20Visuals/Synthesia.webp" alt="Synthesia Certified Partner" class="foot-cert-img"></div>
+      </div>
+      <div><div class="foot-col-label">Company</div><ul class="foot-list"><li><a href="https://www.dobbyads.com/">Home</a></li><li><a href="https://www.dobbyads.com/#services">Services</a></li><li><a href="https://www.dobbyads.com/#work">Our Work</a></li><li><a href="https://www.dobbyads.com/blog" target="_blank" rel="noopener">Blog</a></li><li><a href="https://www.dobbyads.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></li><li><a href="https://www.dobbyads.com/blank-1-1-1" target="_blank" rel="noopener">Accessibility</a></li><li><a href="https://www.dobbyads.com/blank-1" target="_blank" rel="noopener">Terms and Conditions</a></li><li><a href="https://www.dobbyads.com/blank-1-1-1-1" target="_blank" rel="noopener">Refunds and Cancellations</a></li><li><a href="https://www.dobbyads.com/blank-1-1-1-1-1" target="_blank" rel="noopener">Cookie Notice</a></li></ul></div>
+      <div><div class="foot-col-label">Social</div><ul class="foot-list"><li><a href="https://www.instagram.com/dobbyads/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/company/dobbyads/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://www.facebook.com/dobbyads" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://twitter.com/DobbyAds" target="_blank" rel="noopener">X</a></li></ul></div>
+      <div><div class="foot-col-label">Get Started</div><ul class="foot-list"><li><a href="https://brand.dobbyads.com/login">Client Login</a></li><li><a href="https://calendly.com/dobby-ads/30min" target="_blank" rel="noopener">Book a Call</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>&copy; Dobby Ads. All rights reserved.</span><span><a href="https://www.dobbyads.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> &middot; <a href="https://www.dobbyads.com/blank-1" target="_blank" rel="noopener">Terms of Service</a></span></div>
+  </div>
+</footer>
+
+<script>
+/* Mobile menu */
+var hb=document.getElementById('hb'),mob=document.getElementById('mob-menu');
+if(hb&&mob){mob.style.display='flex';hb.addEventListener('click',function(){var o=hb.classList.toggle('open');mob.classList.toggle('open',o);document.body.style.overflow=o?'hidden':''});mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){hb.classList.remove('open');mob.classList.remove('open');document.body.style.overflow=''})});}
+
+/* Scroll reveal */
+var ro=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vis');ro.unobserve(x.target)}})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.r').forEach(function(el){ro.observe(el)});
+
+/* FAQ */
+document.querySelectorAll('.faq-item').forEach(function(item){
+  item.querySelector('.faq-q').addEventListener('click',function(){
+    var open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open')});
+    if(!open)item.classList.add('open');
+  });
+});
+
+/* Animated chat demo */
+(function(){
+  var chatEl=document.getElementById('demoAnim');
+  var msgsEl=document.getElementById('demoMsgs');
+  var animTriggered=false;
+
+  var CLAUDE_AV='<div class="d-claude-av"><picture style="display:contents"><source type="image/avif" srcset="images/mcp-embed-3-400.avif 400w, images/mcp-embed-3-800.avif 800w" sizes="(max-width:700px) 45vw, 300px"><picture><source type="image/avif" srcset="images/mcp-embed-3-400.avif 400w, images/mcp-embed-3-800.avif 800w" sizes="(max-width: 768px) 100vw, 50vw"><img src="images/mcp-embed-3.png" alt="Claude" style="width:18px;height:18px;object-fit:contain;mix-blend-mode:normal" loading="lazy"></picture></picture></div>';
+
+  var CARD_HTML='<div class="d-card"><div class="dc-row"><span class="dc-lbl">Brand</span><span class="dc-val">Harness Lead</span></div><div class="dc-row"><span class="dc-lbl">Status</span><span class="dc-val s-prod">In Production</span></div><div class="dc-row"><span class="dc-lbl">Priority</span><span class="dc-val s-wip">High</span></div><div class="dc-row" style="margin-top:6px;padding-top:6px;border-top:1px solid rgba(255,255,255,.08)"><span class="dc-lbl">Deliverables</span><span class="dc-val">3 of 5 approved</span></div><div class="dc-del"><span class="s-ok" style="font-size:10px">✓</span> Main Image <span style="color:rgba(255,255,255,.45);margin-left:auto">Approved</span></div><div class="dc-del"><span class="s-ok" style="font-size:10px">✓</span> Listing Images <span style="color:rgba(255,255,255,.45);margin-left:auto">Approved</span></div><div class="dc-del"><span class="s-ok" style="font-size:10px">✓</span> A+ Content <span style="color:rgba(255,255,255,.45);margin-left:auto">Approved</span></div><div class="dc-del"><span class="s-wip" style="font-size:8px">●</span> Brand Story <span style="color:#d4724a;margin-left:auto">In Review</span></div><div class="dc-del"><span class="s-wip" style="font-size:8px">●</span> Storefront <span style="color:#d4724a;margin-left:auto">In Progress</span></div></div>';
+
+  var THINK_HTML='<div class="dm-claude">'+CLAUDE_AV+'<div class="dm-claude-body"><span class="dm-claude-name">Claude</span><div class="dm-claude-text"><div class="think-dots"><span class="think-dot"></span><span class="think-dot"></span><span class="think-dot"></span></div></div></div></div>';
+
+  function addEl(html,delay,cb){
+    setTimeout(function(){
+      var div=document.createElement('div');
+      div.innerHTML=html;
+      var child=div.firstChild;
+      child.style.opacity='0';
+      child.style.transform='translateY(8px)';
+      chatEl.appendChild(child);
+      if(msgsEl)msgsEl.scrollTop=msgsEl.scrollHeight;
+      requestAnimationFrame(function(){
+        child.style.transition='opacity .4s cubic-bezier(.16,1,.3,1),transform .4s cubic-bezier(.16,1,.3,1)';
+        requestAnimationFrame(function(){
+          child.style.opacity='1';
+          child.style.transform='translateY(0)';
+        });
+      });
+      if(cb)cb(child);
+    },delay);
+  }
+
+  function swapThink(thinkEl,newHtml,delay){
+    setTimeout(function(){
+      if(!thinkEl||!thinkEl.parentNode)return;
+      thinkEl.style.transition='opacity .25s ease';
+      thinkEl.style.opacity='0';
+      setTimeout(function(){
+        if(thinkEl.parentNode)thinkEl.parentNode.removeChild(thinkEl);
+        addEl(newHtml,0);
+      },260);
+    },delay);
+  }
+
+  function runDemo(){
+    /* ── Turn 1: user asks for order status ── */
+    addEl('<div class="dm-user"><div class="d-bbl-u">What\'s the status of order #4521?</div><div class="d-av-u">Y</div></div>',300);
+
+    /* Claude thinking (1) */
+    var think1El;
+    addEl(THINK_HTML,800,function(el){think1El=el;});
+
+    /* Claude response with card */
+    setTimeout(function(){
+      swapThink(think1El,'<div class="dm-claude">'+CLAUDE_AV+'<div class="dm-claude-body"><span class="dm-claude-name">Claude</span><div class="dm-claude-text">Here\'s order #4521:'+CARD_HTML+'</div></div></div>',0);
+    },1900);
+
+    /* ── Turn 2: user escalates ── */
+    addEl('<div class="dm-user"><div class="d-bbl-u">Escalate this to urgent. I need it before Prime Day.</div><div class="d-av-u">Y</div></div>',3100);
+
+    /* Claude thinking (2) */
+    var think2El;
+    addEl(THINK_HTML,3800,function(el){think2El=el;});
+
+    /* Claude final response */
+    setTimeout(function(){
+      swapThink(think2El,'<div class="dm-claude">'+CLAUDE_AV+'<div class="dm-claude-body"><span class="dm-claude-name">Claude</span><div class="dm-claude-text">Done. Order #4521 has been escalated to <strong style="color:#d4724a">Urgent</strong> priority. I\'ve notified the production team: "Priority escalated for Prime Day deadline. Brand Story and Storefront on accelerated timeline."</div></div></div>',0);
+    },5100);
+  }
+
+  var demoObs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting&&!animTriggered){
+        animTriggered=true;
+        runDemo();
+        demoObs.disconnect();
+      }
+    });
+  },{threshold:.3});
+
+  var demoSection=document.querySelector('.demo-section');
+  if(demoSection)demoObs.observe(demoSection);
+})();
+</script>
+</body>
+</html>

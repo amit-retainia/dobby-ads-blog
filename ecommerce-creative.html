@@ -1,0 +1,1241 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LDBEMQM3ZW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LDBEMQM3ZW');
+</script>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eCommerce Creative | Dobby Ads - Amazon Listing Images, A+ Content, Storefronts</title>
+<meta name="description" content="Every format Amazon and Shopify require - main images, lifestyle, infographics, A+ Content, storefronts. Five years of knowing what converts.">
+<link rel="canonical" href="https://www.dobbyads.com/ecommerce-creative">
+<meta property="og:type" content="website">
+<meta property="og:title" content="eCommerce Creative | Dobby Ads">
+<meta property="og:description" content="Every format Amazon and Shopify require - built on five years of knowing what converts.">
+<meta property="og:url" content="https://www.dobbyads.com/ecommerce-creative">
+<meta property="og:site_name" content="Dobby Ads">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+:root{
+  --bg:#000;--acc:#FFCC33;--acc-dim:rgba(255,204,51,.07);--acc-bdr:rgba(255,204,51,.25);
+  --t:#FFFFFF;--t2:#fff;--t3:#fff;--bdr:rgba(255,255,255,.06);--bdr2:rgba(255,255,255,.11);
+  --max:1160px;--ff:'Urbanist',sans-serif;--fn:'Urbanist',sans-serif;
+  --fs-title:clamp(2.8rem,4.2vw,5rem);
+  --fs-h1:clamp(2rem,3.2vw,3rem);
+  --fs-h2:1.625rem;
+  --fs-body:1.25rem;
+}
+
+body{background:var(--bg);color:var(--t);font-family:var(--ff);font-size:16px;line-height:1.7;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+*{-webkit-tap-highlight-color:transparent}
+a{text-decoration:none;color:inherit}
+a,button{touch-action:manipulation}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 2rem;position:relative;z-index:1}
+.logo-img{height:44px;width:auto;display:block}
+
+/* ── Scroll Reveal ── */
+.r{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+.r.vis{opacity:1;transform:none}
+.r.d1{transition-delay:.1s}.r.d2{transition-delay:.2s}.r.d3{transition-delay:.3s}.r.d4{transition-delay:.4s}.r.d5{transition-delay:.5s}
+.r-fade{opacity:0;transition:opacity .9s cubic-bezier(.16,1,.3,1)}
+.r-fade.vis{opacity:1}
+
+/* Output row animations - alternating slide-in */
+.out-visual{opacity:0;transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.img-left .out-visual{transform:translateX(-40px)}
+.img-right .out-visual{transform:translateX(40px)}
+.out-copy-anim{opacity:0;transform:translateY(24px);transition:opacity .75s cubic-bezier(.16,1,.3,1) .15s,transform .75s cubic-bezier(.16,1,.3,1) .15s}
+.output-row.row-vis .out-visual{opacity:1;transform:none}
+.output-row.row-vis .out-copy-anim{opacity:1;transform:none}
+
+/* Word reveal */
+.wr-outer{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.2em;margin-bottom:-.2em}
+.wr-inner{display:inline-block;transform:translateY(110%);transition:transform .68s cubic-bezier(.16,1,.3,1)}
+.anim-words.in-view .wr-inner{transform:none}
+
+/* Process steps stagger */
+.pstep{opacity:0;transform:translateY(20px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+.process-steps.steps-vis .pstep:nth-child(1){opacity:1;transform:none;transition-delay:.05s}
+.process-steps.steps-vis .pstep:nth-child(2){opacity:1;transform:none;transition-delay:.15s}
+.process-steps.steps-vis .pstep:nth-child(3){opacity:1;transform:none;transition-delay:.25s}
+.process-steps.steps-vis .pstep:nth-child(4){opacity:1;transform:none;transition-delay:.35s}
+
+
+/* Pricing cards stagger */
+.pricing-card{opacity:0;transform:translateY(24px);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1),border-color .2s,background .2s}
+.pricing-grid.pricing-vis .pricing-card:nth-child(1){opacity:1;transform:none;transition-delay:.05s}
+.pricing-grid.pricing-vis .pricing-card:nth-child(2){opacity:1;transform:none;transition-delay:.12s}
+.pricing-grid.pricing-vis .pricing-card:nth-child(3){opacity:1;transform:none;transition-delay:.19s}
+.pricing-grid.pricing-vis .pricing-card:nth-child(4){opacity:1;transform:none;transition-delay:.26s}
+.pricing-grid.pricing-vis .pricing-card:nth-child(5){opacity:1;transform:none;transition-delay:.33s}
+
+@media(prefers-reduced-motion:reduce){
+  .r,.r-fade,.out-visual,.out-copy-anim,.pstep,.deliv-item,.pricing-card{
+    opacity:1!important;transform:none!important;transition:none!important
+  }
+  .wr-inner{transform:none!important;transition:none!important}
+  .out-strip-track{animation:none!important}
+}
+
+/* ── Shared ── */
+.sec-label{font-family:var(--fn);font-size:var(--fs-body);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:10px;line-height:1}
+.sec-label::before{content:'';width:12px;height:12px;flex-shrink:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFCC33' fill-rule='evenodd' d='M25%2C0 L75%2C0 L100%2C25 L100%2C75 L75%2C100 L25%2C100 L0%2C75 L0%2C25 Z M36%2C22 L64%2C22 L78%2C36 L78%2C64 L64%2C78 L36%2C78 L22%2C64 L22%2C36 Z'/%3E%3C/svg%3E") center/contain no-repeat}
+.btn-primary{background:#000;color:#fff;border:1.5px solid #fff;padding:14px 32px;border-radius:3px;font-family:var(--fn);font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:background .18s,color .18s,border-color .18s,transform .12s}
+.btn-primary:hover{background:var(--acc);color:#000;border-color:var(--acc);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--acc);border:1px solid var(--acc-bdr);padding:12px 22px;border-radius:3px;font-family:var(--fn);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:all .15s}
+.btn-ghost:hover{border-color:rgba(255,255,255,.3);color:#fff}
+
+/* ══ NAV ═══════════════════════════════════════════════════════ */
+nav{position:sticky;top:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;background:rgba(0,0,0,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr)}
+.nav-links{display:flex;list-style:none;gap:2rem;align-items:center}
+.nav-links a{font-family:var(--fn);font-size:14px;font-weight:500;letter-spacing:.04em;color:#fff;transition:color .18s}
+.nav-links a:hover{color:var(--acc)}
+.nav-right{display:flex;align-items:center;gap:.625rem}
+.nav-cta{font-family:var(--fn);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#000;color:#fff;border:1.5px solid #fff;padding:10px 22px;border-radius:3px;transition:background .18s,color .18s,border-color .18s;text-decoration:none;display:inline-flex;align-items:center}
+.nav-cta:hover{background:var(--acc);color:#000;border-color:var(--acc)}
+.nav-login{font-family:var(--fn);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.2);padding:10px 22px;border-radius:3px;transition:all .18s;text-decoration:none;display:inline-flex;align-items:center}
+.nav-login:hover{color:#fff;border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.05)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all .28s ease}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#mob-menu{display:none;flex-direction:column;position:fixed;inset:0;background:#000;z-index:90;padding:80px 2rem 2.5rem;opacity:0;pointer-events:none;transition:opacity .28s ease}
+#mob-menu.open{opacity:1;pointer-events:all}
+#mob-menu a{padding:1rem 0;font-size:1.6rem;font-family:var(--ff);font-weight:700;color:var(--t);border-bottom:1px solid var(--bdr);transition:color .18s}
+#mob-menu a:hover{color:var(--acc)}
+#mob-menu .btn-primary{margin-top:2rem;justify-content:center}
+
+/* ══ HERO ════════════════════════════════════════════════════ */
+.svc-hero{padding:80px 0 72px;text-align:center;background:#000;overflow:hidden}
+.svc-hero-inner{max-width:var(--max);margin:0 auto;padding:0 2rem}
+.svc-hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--fn);font-size:var(--fs-body);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc-bdr);border-radius:2px;padding:6px 14px;margin-bottom:2rem;background:var(--acc-dim)}
+.svc-hero-h1{font-family:var(--ff);font-size:var(--fs-title);font-weight:800;line-height:1.05;letter-spacing:-.04em;color:#fff;margin-bottom:1.5rem}
+.svc-hero-h1 .acc{color:var(--acc)}
+.svc-hero-sub{font-size:var(--fs-body);color:#fff;font-weight:300;line-height:1.75;max-width:600px;margin:0 auto 2.25rem}
+.svc-hero-ctas{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
+
+/* Hero before/after micro-animation */
+.hero-ba{margin:0 auto 0;width:100%;max-width:460px;padding:0 2rem}
+.hero-ba-inner{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--bdr2);aspect-ratio:1/1;max-width:480px;margin:0 auto;box-shadow:0 24px 60px rgba(0,0,0,.8),0 0 0 1px rgba(255,204,51,.07)}
+.ba-layer{position:absolute;inset:0}
+.ba-layer img{width:100%;height:100%;object-fit:cover;display:block}
+.ba-after{opacity:0;transition:opacity .8s ease}
+.hero-ba-inner.show-after .ba-after{opacity:1}
+.ba-label{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-family:var(--fn);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 18px;border-radius:3px;z-index:4;transition:all .4s ease;white-space:nowrap}
+.ba-label.label-before{background:rgba(255,80,80,.15);border:1px solid rgba(255,80,80,.3);color:#ff5050}
+.ba-label.label-after{background:rgba(255,204,51,.12);border:1px solid var(--acc-bdr);color:var(--acc)}
+
+/* ══ STATS ═══════════════════════════════════════════════════ */
+.stats-divider{border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);display:grid;grid-template-columns:repeat(4,1fr)}
+.sd-stat{padding:2rem 1.5rem;text-align:center;border-right:1px solid var(--bdr)}
+.sd-stat:last-child{border-right:none}
+.sd-num{font-family:var(--ff);font-size:clamp(2.2rem,3.5vw,3rem);font-weight:800;color:var(--t);line-height:1;letter-spacing:-.04em;display:block;margin-bottom:.3rem}
+.sd-num span{color:var(--acc)}
+.sd-label{font-family:var(--fn);font-size:var(--fs-body);font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff;display:block}
+
+/* ══ OUTPUT ROWS ══════════════════════════════════════════════ */
+.output-row{display:grid;align-items:stretch;border-top:1px solid var(--bdr)}
+.output-row.img-left{grid-template-columns:55% 45%}
+.output-row.img-right{grid-template-columns:45% 55%}
+.out-visual{overflow:hidden;position:relative;flex-shrink:0}
+.out-visual img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.output-row:hover .out-visual img{transform:scale(1.03)}
+
+/* ── Strip: 2-row horizontal auto-scrolling grid ── */
+.out-strip{overflow:hidden;position:relative;height:240px;padding:8px 0}
+.out-strip-track{display:grid;grid-template-rows:1fr 1fr;grid-auto-flow:column;grid-auto-columns:130px;gap:8px;width:max-content;height:100%;animation:stripScroll 25s linear infinite}
+.out-strip-rev{animation-direction:reverse}
+.out-strip:hover .out-strip-track{animation-play-state:paused}
+.out-strip-track img{width:130px;height:108px;object-fit:cover;background:rgba(255,255,255,.04);border-radius:6px;display:block;transition:transform .3s ease;cursor:pointer}
+.out-strip-track img:hover{transform:scale(1.06);z-index:2;position:relative}
+/* strip: cancel row-level scale, let per-tile hover work at higher specificity */
+.output-row:hover .out-strip-track img{transform:none}
+.output-row:hover .out-strip-track img:hover{transform:scale(1.06)}
+@keyframes stripScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.out-strip::before,.out-strip::after{display:none}
+
+/* ── Image scroll strip (Main Images / Listing Images) ── */
+.out-img-scroll{overflow:hidden;position:relative;padding:16px;display:flex;align-items:center}
+.out-img-scroll::before,.out-img-scroll::after{display:none}
+.ois-track{display:flex;gap:10px;width:max-content;animation:oisScroll 24s linear infinite}
+.out-img-scroll:hover .ois-track{animation-play-state:paused}
+.ois-track img{width:192px;height:192px;object-fit:cover;border-radius:8px;flex-shrink:0;display:block;transition:transform .35s cubic-bezier(.16,1,.3,1);cursor:pointer}
+.ois-track img:hover{transform:scale(1.09)!important;position:relative;z-index:3}
+.output-row:hover .ois-track img{transform:none}
+.output-row:hover .ois-track img:hover{transform:scale(1.09)}
+@keyframes oisScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ── Storefront: multi-image horizontal display ── */
+.out-sf-multi{display:flex;gap:14px;padding:16px;height:450px;align-items:flex-start;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;position:relative}
+.out-sf-multi::-webkit-scrollbar{display:none}
+.out-sf-multi img{flex:1;min-width:165px;height:100%;object-fit:cover;object-position:top;border-radius:8px;display:block;transition:transform .4s ease}
+.out-sf-multi img:hover{transform:scale(1.03)}
+.output-row:hover .out-sf-multi img{transform:none}
+.output-row:hover .out-sf-multi img:hover{transform:scale(1.03)}
+
+/* ── Carousel: A+ Content auto-advancing slides ── */
+.out-carousel{position:relative;display:flex;flex-direction:column;padding:18px 12px;align-items:center;justify-content:center}
+.oc-slides{position:relative;width:100%;max-width:560px;aspect-ratio:800/495;overflow:hidden;border-radius:6px;background:#0d0d0d}
+.oc-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border-radius:6px;opacity:0;transition:opacity .6s ease}
+.oc-slide.active{opacity:1}
+.oc-dots{display:flex;justify-content:center;gap:8px;padding-top:12px;flex-shrink:0}
+.oc-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.15);border:none;cursor:pointer;transition:background .2s;padding:0;flex-shrink:0}
+.oc-dot.active{background:var(--acc)}
+.oc-dot:hover{background:rgba(255,255,255,.35)}
+.out-visual-tag{position:absolute;top:16px;left:16px;font-family:var(--fn);font-size:var(--fs-body);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);background:rgba(0,0,0,.7);border:1px solid var(--acc-bdr);padding:5px 12px;border-radius:2px;z-index:2}
+.out-copy{padding:2.5rem 3rem;display:flex;flex-direction:column;justify-content:center;background:#000;border-left:1px solid var(--bdr);align-self:center}
+.output-row.img-right .out-copy{border-left:none;border-right:1px solid var(--bdr)}
+.out-index{display:none}
+.out-title{font-family:var(--ff);font-size:var(--fs-h1);font-weight:800;line-height:1.05;letter-spacing:-.025em;color:#fff;margin-bottom:.875rem}
+.out-desc{font-size:var(--fs-body);color:#fff;font-weight:300;line-height:1.75}
+
+/* ══ GALLERY ════════════════════════════════════════════════ */
+.gallery-section{padding:72px 0;border-top:1px solid var(--bdr);overflow:hidden}
+.gallery-head{padding:0 2rem;margin-bottom:2rem;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.gallery-headline{font-family:var(--ff);font-size:var(--fs-h1);font-weight:800;letter-spacing:-.03em;line-height:1}
+.gallery-wrap{overflow:hidden;display:flex;flex-direction:column;gap:10px}
+.gallery-row{display:flex;gap:10px;width:max-content}
+.gallery-row.row-fwd{animation:scrollFwd 40s linear infinite}
+.gallery-row.row-rev{animation:scrollRev 40s linear infinite}
+.gallery-row:hover{animation-play-state:paused}
+@keyframes scrollFwd{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes scrollRev{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+.gallery-item{width:300px;height:210px;border-radius:4px;overflow:hidden;flex-shrink:0;position:relative;cursor:pointer}
+.gallery-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.gallery-item:hover .gallery-img{transform:scale(1.05)}
+.gp-tag{position:absolute;bottom:10px;left:10px;font-family:var(--fn);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.65);padding:4px 9px;border-radius:2px;border:1px solid rgba(255,255,255,.12)}
+
+/* ══ PROCESS ════════════════════════════════════════════════ */
+.process-section{padding:72px 0;border-top:1px solid var(--bdr)}
+.process-inner{display:grid;grid-template-columns:1fr 3fr;gap:4rem;align-items:start}
+.process-label-col .sec-label{margin-bottom:1.25rem}
+.process-label-col p{font-size:var(--fs-body);color:#fff;font-weight:300;line-height:1.7}
+.process-steps{display:flex;flex-direction:column}
+.pstep{display:grid;grid-template-columns:72px 1fr;gap:2rem;padding:1.75rem 0;border-bottom:1px solid var(--bdr);align-items:start}
+.pstep:first-child{border-top:1px solid var(--bdr)}
+.pstep-num{font-family:var(--ff);font-size:clamp(2rem,3vw,2.5rem);font-weight:800;color:#fff;line-height:1;letter-spacing:-.04em;padding-top:.1rem}
+.pstep-title{font-family:var(--ff);font-size:var(--fs-h2);font-weight:800;color:#fff;margin-bottom:.5rem;letter-spacing:-.02em;line-height:1.2}
+.pstep-desc{font-size:var(--fs-body);color:#fff;font-weight:300;line-height:1.65}
+/* ══ PRICING ════════════════════════════════════════════════ */
+.pricing-section{padding:80px 0;border-top:1px solid var(--bdr)}
+.pricing-header{margin-bottom:2.5rem}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.pricing-card{background:var(--bg);border:1px solid var(--bdr2);border-radius:10px;padding:2rem 1.75rem;display:flex;flex-direction:column}
+.pricing-card:hover{border-color:rgba(255,255,255,.16);background:#0a0a0a}
+.pc-popular{border-color:var(--acc-bdr);position:relative}
+.pc-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-family:var(--fn);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#000;background:var(--acc);padding:4px 14px;border-radius:20px;white-space:nowrap}
+.pc-price{font-family:var(--ff);font-size:clamp(2rem,3vw,2.5rem);font-weight:800;color:#fff;letter-spacing:-.03em;margin-bottom:.25rem}
+.pc-name{font-family:var(--ff);font-size:var(--fs-h2);font-weight:700;color:#fff;margin-bottom:.5rem;letter-spacing:-.01em}
+.pc-desc{font-size:.875rem;color:var(--t3);font-weight:300;line-height:1.65;margin-bottom:1.25rem}
+.pc-includes{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.5rem;flex:1}
+.pc-includes li{font-size:.875rem;color:#fff;font-weight:300;padding-left:1.25rem;position:relative;line-height:1.5}
+.pc-includes li::before{content:'✓';position:absolute;left:0;color:var(--acc);font-weight:700;font-size:.75rem}
+.pc-cta{font-family:var(--fn);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc-bdr);padding:10px 0;border-radius:3px;text-align:center;display:block;transition:all .18s;margin-top:auto}
+.pc-cta:hover{background:var(--acc);color:#000;border-color:var(--acc)}
+.pc-per{font-family:var(--fn);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:1rem}
+.pc-contact{font-size:clamp(1.6rem,2.5vw,2rem);letter-spacing:-.01em}
+
+/* ══ STOREFRONT FULL ═════════════════════════════════════════ */
+.out-sf-full{overflow:hidden;position:relative;height:360px}
+.out-sf-full img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .8s cubic-bezier(.16,1,.3,1)}
+.output-row:hover .out-sf-full img{transform:scale(1.03)}
+
+/* ══ MORE SERVICES ══════════════════════════════════════════ */
+.more-section{padding:64px 0;border-top:1px solid var(--bdr)}
+.more-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.75rem;flex-wrap:wrap;gap:1rem}
+.more-head h2{font-family:var(--ff);font-size:var(--fs-h2);font-weight:800;letter-spacing:-.02em}
+.more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:8px;overflow:hidden}
+.more-card{background:#000;display:block;position:relative;overflow:hidden;transition:background .2s}
+.more-card:hover{background:#0a0a0a}
+.more-thumb{aspect-ratio:16/8;overflow:hidden}
+.more-thumb img,.more-thumb video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.more-card:hover .more-thumb img,.more-card:hover .more-thumb video{transform:scale(1.05)}
+.more-body{padding:1.25rem 1.5rem 1.5rem;border-top:1px solid var(--bdr)}
+.more-title{font-family:var(--ff);font-size:var(--fs-h2);font-weight:800;color:#fff;margin-bottom:.4rem;letter-spacing:-.02em}
+.more-desc{font-size:var(--fs-body);color:#fff;font-weight:300;line-height:1.5}
+
+/* ══ FAQ ════════════════════════════════════════════════════ */
+.faq-section{padding:72px 0;border-top:1px solid var(--bdr)}
+.faq-inner{display:grid;grid-template-columns:1fr 2fr;gap:4rem;align-items:start}
+.faq-label-col .sec-label{margin-bottom:1.25rem}
+.faq-label-col p{font-size:var(--fs-body);color:#fff;font-weight:300;line-height:1.7}
+.faq-list{display:flex;flex-direction:column}
+.faq-item{border-bottom:1px solid var(--bdr)}
+.faq-item:first-child{border-top:1px solid var(--bdr)}
+.faq-q{width:100%;background:none;border:none;padding:1.25rem 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;text-align:left;gap:1rem}
+.faq-q h3{font-family:var(--ff);font-size:var(--fs-h2);font-weight:600;color:#fff;margin:0;line-height:1.4}
+.faq-toggle{font-size:1.25rem;color:var(--acc);font-weight:300;transition:transform .2s;flex-shrink:0}
+.faq-item.open .faq-toggle{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .3s ease}
+.faq-item.open .faq-a{max-height:400px;padding:0 0 1.25rem}
+.faq-a p{font-size:var(--fs-body);color:#fff;line-height:1.75;font-weight:300}
+
+/* ══ FINAL CTA ══════════════════════════════════════════════ */
+.final-cta{padding:120px 0;text-align:center;border-top:1px solid var(--bdr);position:relative;overflow:hidden;background:#000}
+.final-cta::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.final-cta::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:500px;background:radial-gradient(ellipse,rgba(255,204,51,.05) 0%,transparent 65%);pointer-events:none}
+.fcta-inner{position:relative;z-index:1;max-width:680px;margin:0 auto;padding:0 2rem;text-align:center}
+.fcta-h2{font-family:var(--ff);font-size:var(--fs-h1);font-weight:800;line-height:1.06;letter-spacing:-.03em;margin-bottom:1.25rem}
+.fcta-h2 em{font-style:normal;color:var(--acc)}
+.fcta-sub{font-size:var(--fs-body);color:#fff;font-weight:300;line-height:1.7;margin-bottom:2rem}
+.fcta-ctas{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
+.fcta-note{font-family:var(--fn);font-size:var(--fs-body);color:#fff;margin-top:1.25rem;letter-spacing:.04em}
+.fcta-form{max-width:560px;margin:2rem auto 0;display:flex;flex-direction:column;gap:.75rem}
+.fcta-form-row{display:flex;gap:.75rem}
+.fcta-input{flex:1;background:rgba(255,255,255,.04);border:1px solid var(--bdr2);border-radius:4px;padding:14px 16px;font-family:var(--fn);font-size:14px;font-weight:400;color:#fff;outline:none;transition:border-color .15s}
+.fcta-input::placeholder{color:rgba(255,255,255,.4);font-weight:300}
+.fcta-input:focus{border-color:var(--acc-bdr)}
+.fcta-select{appearance:none;-webkit-appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,.4)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-color:rgba(255,255,255,.04)}
+.fcta-select option{background:#111;color:#fff}
+.fcta-textarea{resize:vertical;min-height:80px}
+.fcta-micro{font-family:var(--fn);font-size:var(--fs-body);color:#fff;margin-top:1.25rem;letter-spacing:.04em}
+@media(max-width:640px){.fcta-form-row{flex-direction:column}}
+
+/* ══ FOOTER ═════════════════════════════════════════════════ */
+footer{border-top:1px solid var(--bdr);padding:4rem 0 0}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem}
+.foot-logo{font-family:var(--ff);font-size:1.1rem;font-weight:800;letter-spacing:-.01em;margin-bottom:.75rem;display:block}
+.foot-logo span{color:var(--acc)}
+.foot-tagline{font-family:var(--ff);font-size:.875rem;color:#fff;margin-bottom:1rem;display:block}
+.foot-desc{font-size:.875rem;color:#fff;line-height:1.85;font-weight:300;max-width:280px;margin-bottom:1rem}
+.foot-contact{font-size:.875rem;color:#fff;line-height:1.85;font-weight:300}
+.foot-contact a{color:#fff;transition:color .15s}
+.foot-contact a:hover{color:var(--acc)}
+.foot-col-label{font-family:var(--fn);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#fff;font-weight:600;margin-bottom:1rem}
+.foot-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.foot-list a{font-size:.875rem;color:#fff;font-weight:300;transition:color .15s}
+.foot-list a:hover{color:#fff}
+.foot-bottom{border-top:1px solid var(--bdr);padding:1.25rem 0;display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:#fff}
+.foot-bottom a{color:#fff;transition:color .15s}
+.foot-bottom a:hover{color:#fff}
+
+/* ══ LIGHTBOX ═══════════════════════════════════════════════ */
+.gl-overlay{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.96);display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity .22s}
+.gl-overlay.open{opacity:1;pointer-events:all}
+.gl-close{position:fixed;top:1.5rem;right:1.5rem;background:none;border:1px solid rgba(255,255,255,.2);color:#fff;width:40px;height:40px;border-radius:50%;font-size:1.4rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .15s;z-index:301}
+.gl-close:hover{border-color:var(--acc);color:var(--acc)}
+#gl-content img{max-width:90vw;max-height:88vh;object-fit:contain;border-radius:6px;display:block}
+
+/* ══ RESPONSIVE ═════════════════════════════════════════════ */
+@media(max-width:1000px){
+  .process-inner{grid-template-columns:1fr;gap:2rem}
+  .faq-inner{grid-template-columns:1fr;gap:2rem}
+  .pricing-grid{grid-template-columns:1fr 1fr;gap:1rem}
+  .pc-popular{order:-1}
+}
+@media(max-width:900px){
+  .out-squares{gap:6px;padding:6px}
+  .out-sf-tall{max-height:300px}
+  .out-sf-tall img{max-width:180px}
+  .more-grid{grid-template-columns:1fr}
+  .stats-divider{grid-template-columns:1fr 1fr}
+  .sd-stat:nth-child(2){border-right:none}
+  .sd-stat:nth-child(3){border-top:1px solid var(--bdr);border-right:1px solid var(--bdr)}
+  .sd-stat:nth-child(4){border-top:1px solid var(--bdr)}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-cta{display:none}
+  .nav-login{display:none}
+  .gallery-head{flex-direction:column;align-items:flex-start}
+  .more-head{flex-direction:column;align-items:flex-start}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media(max-width:860px){
+  /* Stack output rows - image always appears first */
+  .output-row.img-left,.output-row.img-right{grid-template-columns:1fr}
+  .output-row.img-right .out-visual{order:1}
+  .output-row.img-right .out-copy{order:2}
+  .out-copy{border-left:none!important;border-right:none!important;border-top:1px solid var(--bdr);padding:2rem 1.5rem;align-self:auto}
+  /* Pricing: single column, with clearance above for the floating badge */
+  .pricing-grid{grid-template-columns:1fr;padding-top:14px}
+  .pc-popular{order:-1}
+}
+@media(max-width:600px){
+  /* Reduce the type scale - cascades to sec-label, sd-label, out-fmt, out-desc, etc. */
+  :root{--fs-body:1rem;--fs-h2:1.375rem}
+  /* Hero */
+  .svc-hero{padding:56px 0 48px}
+  .svc-hero-h1{font-size:clamp(1.9rem,8.5vw,2.8rem)}
+  /* Stats: tighter cells on small phones */
+  .sd-stat{padding:1rem .75rem}
+  .sd-num{font-size:1.6rem}
+  .sd-label{font-size:.7rem;letter-spacing:.07em}
+  /* Output row titles */
+  .out-title{font-size:1.625rem}
+  /* Section vertical rhythm - reduce from 72-100px to more compact */
+  .pricing-section{padding:56px 0}
+  .gallery-section{padding:56px 0}
+  .process-section{padding:56px 0}
+  .faq-section{padding:56px 0}
+  .more-section{padding:48px 0}
+  .final-cta{padding:72px 0}
+  /* Process number column */
+  .pstep{grid-template-columns:44px 1fr;gap:1rem}
+  /* Pricing touch target */
+  .pc-cta{padding:14px 0}
+  /* Footer */
+  .foot-grid{grid-template-columns:1fr}
+  .foot-bottom{flex-direction:column;gap:.4rem;text-align:center}
+  /* CTAs */
+  .fcta-ctas{flex-direction:column;align-items:stretch}
+  .svc-hero-ctas{flex-direction:column;align-items:stretch}
+  .btn-primary,.btn-ghost{justify-content:center;width:100%}
+}
+@media(max-width:400px){
+  /* Very small devices - reduce side padding */
+  .wrap{padding:0 1.25rem}
+  .hero-ba{padding:0 1.25rem}
+  .out-copy{padding:1.5rem 1.25rem}
+  .sd-stat{padding:1.25rem .75rem}
+  .svc-hero-inner{padding:0 1.25rem}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "eCommerce Creative",
+  "provider": {"@type": "ProfessionalService","name": "Dobby Ads","url": "https://www.dobbyads.com"},
+  "description": "Main images, lifestyle, infographics, A+ Content, and storefronts for Amazon, Shopify, and DTC brands. Built on five years of category data.",
+  "url": "https://www.dobbyads.com/ecommerce-creative"
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html"><img src="All%20Visuals/Dobby%20Logo.webp" alt="Dobby Ads" class="logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="index.html#work">Work</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#engine">Engine</a></li>
+    <li><a href="index.html#testimonials">Clients</a></li>
+    <li><a href="index.html#awards">Awards</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="https://brand.dobbyads.com/login" class="nav-login">Login</a>
+    <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="nav-cta">Book a Call</a>
+    <button class="hamburger" id="hb" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div id="mob-menu">
+  <a href="index.html#work">Work</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#engine">Engine</a>
+  <a href="index.html#testimonials">Clients</a>
+  <a href="index.html#awards">Awards</a>
+  <a href="index.html#faq">FAQ</a>
+  <a href="https://brand.dobbyads.com/login">Login</a>
+  <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="btn-primary">Book a Call →</a>
+</div>
+
+<!-- 1. HERO -->
+<section class="svc-hero">
+  <div class="svc-hero-inner">
+    <div class="svc-hero-eyebrow r">eCommerce Creative</div>
+    <h1 class="svc-hero-h1 r d1">
+      <span class="anim-words">Creative that sells.</span><br>
+      <span class="anim-words acc">Built by the system that knows why.</span>
+    </h1>
+    <p class="svc-hero-sub r d2">20,000 listings taught us what converts. Yours is next.</p>
+    <div class="svc-hero-ctas r d3">
+      <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="btn-primary">Book a Call →</a>
+      <a href="#outputs" class="btn-ghost">See All Outputs</a>
+    </div>
+  </div>
+
+  <!-- Hero before/after - centered sequential reveal -->
+  <div class="hero-ba r d4" id="heroBA">
+    <div class="hero-ba-inner">
+      <div class="ba-layer ba-before">
+        <picture style="display:contents"><source type="image/avif" srcset="All%20Visuals/Ai%20SLop/Ai%20Slop%201-380.avif 380w" sizes="(max-width:900px) 92vw, 900px"><img src="All%20Visuals/Ai%20SLop/Ai%20Slop%201.webp" alt="Before - generic AI listing" loading="eager"></picture>
+      </div>
+      <div class="ba-layer ba-after">
+        <picture style="display:contents"><source type="image/avif" srcset="All%20Visuals/Ai%20SLop/good%201-383.avif 383w" sizes="(max-width:900px) 92vw, 900px"><img src="All%20Visuals/Ai%20SLop/good%201.webp" alt="After - Dobby creative direction" loading="eager"></picture>
+      </div>
+      <div class="ba-label" id="baLabel">AI Alone</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- 2. STATS -->
+<div class="stats-divider">
+  <div class="sd-stat r"><span class="sd-num" data-target="20" data-suffix="K+">20<span>K+</span></span><span class="sd-label">Projects Delivered</span></div>
+  <div class="sd-stat r d1"><span class="sd-num" data-target="450" data-suffix="+">450<span>+</span></span><span class="sd-label">Brands Served</span></div>
+  <div class="sd-stat r d2"><span class="sd-num">Every</span><span class="sd-label">Category Covered</span></div>
+  <div class="sd-stat r d3"><span class="sd-num">5 <span>Yrs</span></span><span class="sd-label">Category Data</span></div>
+</div>
+
+<!-- 3. OUTPUT ROWS -->
+<section id="outputs">
+
+  <div class="output-row img-left">
+    <div class="out-visual out-img-scroll">
+      <div class="ois-track">
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-009-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-009.webp" alt="Amazon main image" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-016-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-016.webp" alt="Product main image" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-002-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-002.webp" alt="Amazon product photo" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-017-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-017.webp" alt="Amazon main image" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-018-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-018.webp" alt="Product main image" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-020-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-020.webp" alt="Amazon product photo" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-009-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-009.webp" alt="" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-016-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-016.webp" alt="" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-002-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-002.webp" alt="" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-017-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-017.webp" alt="" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-018-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-018.webp" alt="" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-020-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-020.webp" alt="" loading="lazy"></picture>
+      </div>
+      <div class="out-visual-tag">01</div>
+    </div>
+    <div class="out-copy out-copy-anim">
+      <span class="out-index">01</span>
+      <h2 class="out-title">Main Images</h2>
+      <p class="out-desc">The first image decides the click. Pure product, pure white, built to the platform's exact spec and optimised for the category's visual language.</p>
+    </div>
+  </div>
+
+  <div class="output-row img-right">
+    <div class="out-copy out-copy-anim">
+      <span class="out-index">02</span>
+      <h2 class="out-title">Listing Images</h2>
+      <p class="out-desc">The images that sell after the click. Infographics, lifestyle scenes, comparison charts, feature callouts, each one built to answer a buyer question and move them closer to purchase.</p>
+    </div>
+    <div class="out-visual out-img-scroll">
+      <div class="ois-track">
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-010-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-010.webp" alt="Amazon listing" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-011-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-011.webp" alt="Product infographic" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-012-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-012.webp" alt="Listing image" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-013-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-013.webp" alt="Feature callout" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-022-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-022.webp" alt="Amazon listing" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-023-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-023.webp" alt="Product infographic" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-024-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-024.webp" alt="Listing image" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-010-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-010.webp" alt="" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-011-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-011.webp" alt="" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-012-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-012.webp" alt="" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-013-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-013.webp" alt="" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-022-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-022.webp" alt="" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-023-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-023.webp" alt="" loading="lazy"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-024-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-024.webp" alt="" loading="lazy"></picture>
+      </div>
+      <div class="out-visual-tag">02</div>
+    </div>
+  </div>
+
+  <div class="output-row img-left">
+    <div class="out-visual out-carousel" id="aplus-carousel" style="align-self:center;min-height:auto">
+      <div class="oc-slides">
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Ecommerce%20Visuals/A%2B%20content/EBC%20-1-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/Ecommerce%20Visuals/A%2B%20content/EBC%20-1.webp" alt="A+ Content module" loading="lazy" class="oc-slide active"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Ecommerce%20Visuals/A%2B%20content/EBC%20-2-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/Ecommerce%20Visuals/A%2B%20content/EBC%20-2.webp" alt="Enhanced Brand Content" loading="lazy" class="oc-slide"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Ecommerce%20Visuals/A%2B%20content/EBC%20-3-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/Ecommerce%20Visuals/A%2B%20content/EBC%20-3.webp" alt="EBC design" loading="lazy" class="oc-slide"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Ecommerce%20Visuals/A%2B%20content/img-jpg-029-640.avif 640w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/Ecommerce%20Visuals/A%2B%20content/img-jpg-029.webp" alt="A+ layout" loading="lazy" class="oc-slide"></picture>
+        <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Ecommerce%20Visuals/A%2B%20content/img-jpg-030-640.avif 640w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/Ecommerce%20Visuals/A%2B%20content/img-jpg-030.webp" alt="A+ Content" loading="lazy" class="oc-slide"></picture>
+      </div>
+      <div class="oc-dots" id="aplus-dots">
+        <button class="oc-dot active" data-idx="0"></button>
+        <button class="oc-dot" data-idx="1"></button>
+        <button class="oc-dot" data-idx="2"></button>
+        <button class="oc-dot" data-idx="3"></button>
+        <button class="oc-dot" data-idx="4"></button>
+      </div>
+      <div class="out-visual-tag">03</div>
+    </div>
+    <div class="out-copy out-copy-anim">
+      <span class="out-index">03</span>
+      <h2 class="out-title">A+ Content</h2>
+      <p class="out-desc">Full EBC layouts: modules, comparison charts, brand story. Built to Amazon's exact dimensions and structured around what converts in the category.</p>
+    </div>
+  </div>
+
+  <div class="output-row img-right">
+    <div class="out-copy out-copy-anim">
+      <span class="out-index">04</span>
+      <h2 class="out-title">Storefronts</h2>
+      <p class="out-desc">Amazon Brand Stores built to merchandise your full catalog. Custom page layouts, collection pages, and seasonal rotations structured so customers browse, not bounce.</p>
+    </div>
+    <div class="out-visual out-sf-multi">
+      <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Ecommerce%20Visuals/Storefronts/Harness%20Lead%20storefront-374.avif 374w" sizes="(max-width:700px) 45vw, 300px"><picture><source type="image/avif" srcset="Ecommerce%20Visuals/Ecommerce%20Visuals/Storefronts/Harness%20Lead%20storefront-374.avif 374w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Ecommerce%20Visuals/Ecommerce%20Visuals/Storefronts/Harness%20Lead%20storefront.jpg" alt="Amazon Brand Store" loading="lazy"></picture></picture>
+      <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Ecommerce%20Visuals/Storefronts/MyMed-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><picture><source type="image/avif" srcset="Ecommerce%20Visuals/Ecommerce%20Visuals/Storefronts/MyMed-400.avif 400w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Ecommerce%20Visuals/Ecommerce%20Visuals/Storefronts/MyMed.jpg" alt="Amazon Brand Store" loading="lazy"></picture></picture>
+      <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Ecommerce%20Visuals/Storefronts/Pacific%20pups%20storefront-373.avif 373w" sizes="(max-width:700px) 45vw, 300px"><picture><source type="image/avif" srcset="Ecommerce%20Visuals/Ecommerce%20Visuals/Storefronts/Pacific%20pups%20storefront-373.avif 373w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Ecommerce%20Visuals/Ecommerce%20Visuals/Storefronts/Pacific%20pups%20storefront.jpg" alt="Amazon Brand Store" loading="lazy"></picture></picture>
+      <picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Ecommerce%20Visuals/Storefronts/TPF-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><picture><source type="image/avif" srcset="Ecommerce%20Visuals/Ecommerce%20Visuals/Storefronts/TPF-400.avif 400w" sizes="(max-width: 768px) 100vw, 50vw"><img src="Ecommerce%20Visuals/Ecommerce%20Visuals/Storefronts/TPF.jpg" alt="Amazon Brand Store" loading="lazy"></picture></picture>
+      <div class="out-visual-tag">04</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- 4. PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="wrap">
+    <div class="pricing-header r">
+      <div class="sec-label" style="margin-bottom:.875rem">Pricing</div>
+      <h2 class="anim-words" style="font-family:var(--ff);font-size:var(--fs-h1);font-weight:800;letter-spacing:-.025em;line-height:1.1">Transparent. Per deliverable.<br>No hidden fees.</h2>
+      <p class="r d1" style="font-size:var(--fs-body);color:var(--t3);font-weight:300;line-height:1.7;margin-top:1rem;max-width:500px">Pick exactly what you need. Scale up or down anytime. Every deliverable includes revisions and production-ready files.</p>
+    </div>
+    <div class="pricing-grid r d2" id="pricing-grid">
+      <div class="pricing-card pc-popular">
+        <div class="pc-badge">Fixed Price</div>
+        <div class="pc-price">$199</div>
+        <div class="pc-per">1 main image + 5 Pi</div>
+        <h3 class="pc-name">B+ Images</h3>
+        <p class="pc-desc">Main image plus 5 listing images. Infographics, lifestyle, feature callouts — the full set for your listing.</p>
+        <ul class="pc-includes">
+          <li>1 main image (white bg)</li>
+          <li>5 product/infographic images</li>
+          <li>Category-researched layouts</li>
+          <li>2 revision rounds</li>
+        </ul>
+        <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="pc-cta">Get Started →</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pc-price pc-contact">Contact</div>
+        <div class="pc-per">custom scope</div>
+        <h3 class="pc-name">Standard A+ / EBC</h3>
+        <p class="pc-desc">6 A+ banners, full design. Brand story modules, comparison charts, and feature layouts built to spec.</p>
+        <ul class="pc-includes">
+          <li>6 A+ content banners</li>
+          <li>Full layout design</li>
+          <li>Amazon module specs</li>
+          <li>2 revision rounds</li>
+        </ul>
+        <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="pc-cta">Get a Quote →</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pc-price pc-contact">Contact</div>
+        <div class="pc-per">custom scope</div>
+        <h3 class="pc-name">Premium A+ Content</h3>
+        <p class="pc-desc">6 premium banners with advanced module selection and elevated design for flagship listings.</p>
+        <ul class="pc-includes">
+          <li>6 premium A+ banners</li>
+          <li>Advanced module selection</li>
+          <li>Elevated design quality</li>
+          <li>2 revision rounds</li>
+        </ul>
+        <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="pc-cta">Get a Quote →</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pc-price pc-contact">Contact</div>
+        <div class="pc-per">custom scope</div>
+        <h3 class="pc-name">Storefronts</h3>
+        <p class="pc-desc">Full Amazon storefront design. Navigation, hero, category pages, and brand-consistent layout throughout.</p>
+        <ul class="pc-includes">
+          <li>Full storefront build</li>
+          <li>Category page layouts</li>
+          <li>Brand-consistent design</li>
+          <li>2 revision rounds</li>
+        </ul>
+        <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="pc-cta">Get a Quote →</a>
+      </div>
+    </div>
+    <p class="r d3" style="text-align:center;font-size:.875rem;color:#fff;font-weight:300;margin-top:2rem">Need a full catalog refresh or custom scope? <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" style="color:var(--acc);text-decoration:underline">Book a call</a> and we'll scope it and quote.</p>
+  </div>
+</section>
+
+<!-- 5. GALLERY -->
+<section class="gallery-section" id="work">
+  <div class="gallery-head">
+    <div>
+      <div class="sec-label r" style="margin-bottom:.6rem">The Work</div>
+      <h2 class="gallery-headline anim-words r d1">What we've built.</h2>
+    </div>
+    <a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener" class="btn-ghost r d2">Book a Call to See More</a>
+  </div>
+  <div class="gallery-wrap">
+    <div class="gallery-row row-fwd">
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-002-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-002.webp" alt="Amazon main image" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Main Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-010-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-010.webp" alt="Amazon listing image" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Listing Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/A%2B%20content/EBC%20-1-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/A%2B%20content/EBC%20-1.webp" alt="Amazon A+ Content" class="gallery-img" loading="lazy"></picture><span class="gp-tag">A+ Content</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-017-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-017.webp" alt="Amazon main image" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Main Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-022-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-022.webp" alt="Listing infographic" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Listing Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/A%2B%20content/img-jpg-028-640.avif 640w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/A%2B%20content/img-jpg-028.webp" alt="Enhanced Brand Content" class="gallery-img" loading="lazy"></picture><span class="gp-tag">A+ Content</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-018-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-018.webp" alt="Product main image" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Main Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-013-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-013.webp" alt="Feature callout image" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Listing Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/A%2B%20content/EBC%20-2-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/A%2B%20content/EBC%20-2.webp" alt="A+ Content module" class="gallery-img" loading="lazy"></picture><span class="gp-tag">A+ Content</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-020-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-020.webp" alt="Main image hero shot" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Main Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-024-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-024.webp" alt="Amazon infographic" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Listing Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/A%2B%20content/EBC%20-3-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/A%2B%20content/EBC%20-3.webp" alt="EBC module" class="gallery-img" loading="lazy"></picture><span class="gp-tag">A+ Content</span></div>
+      <!-- duplicate for seamless loop -->
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-002-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-002.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Main Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-010-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-010.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Listing Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/A%2B%20content/EBC%20-1-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/A%2B%20content/EBC%20-1.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">A+ Content</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-017-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-017.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Main Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-022-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-022.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Listing Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/A%2B%20content/img-jpg-028-640.avif 640w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/A%2B%20content/img-jpg-028.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">A+ Content</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-018-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-018.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Main Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-013-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-013.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Listing Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/A%2B%20content/EBC%20-2-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/A%2B%20content/EBC%20-2.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">A+ Content</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-020-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-020.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Main Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-024-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-024.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Listing Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/A%2B%20content/EBC%20-3-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/A%2B%20content/EBC%20-3.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">A+ Content</span></div>
+    </div>
+    <div class="gallery-row row-rev">
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/A%2B%20content/EBC%20-3-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/A%2B%20content/EBC%20-3.webp" alt="EBC module" class="gallery-img" loading="lazy"></picture><span class="gp-tag">A+ Content</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-024-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-024.webp" alt="Amazon listing image" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Listing Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-020-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-020.webp" alt="Product main image" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Main Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/A%2B%20content/EBC%20-2-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/A%2B%20content/EBC%20-2.webp" alt="A+ Content module" class="gallery-img" loading="lazy"></picture><span class="gp-tag">A+ Content</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-013-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-013.webp" alt="Feature callout" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Listing Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-018-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-018.webp" alt="Main image" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Main Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/A%2B%20content/img-jpg-028-640.avif 640w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/A%2B%20content/img-jpg-028.webp" alt="Enhanced Brand Content" class="gallery-img" loading="lazy"></picture><span class="gp-tag">A+ Content</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-022-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-022.webp" alt="Listing infographic" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Listing Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-017-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-017.webp" alt="Amazon main image" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Main Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/A%2B%20content/EBC%20-1-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/A%2B%20content/EBC%20-1.webp" alt="Amazon A+ Content" class="gallery-img" loading="lazy"></picture><span class="gp-tag">A+ Content</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-010-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-010.webp" alt="Amazon listing image" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Listing Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-002-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-002.webp" alt="Amazon main image" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Main Image</span></div>
+      <!-- duplicate for seamless loop -->
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/A%2B%20content/EBC%20-3-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/A%2B%20content/EBC%20-3.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">A+ Content</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-024-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-024.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Listing Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-020-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-020.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Main Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/A%2B%20content/EBC%20-2-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/A%2B%20content/EBC%20-2.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">A+ Content</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-013-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-013.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Listing Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-018-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-018.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Main Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/A%2B%20content/img-jpg-028-640.avif 640w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/A%2B%20content/img-jpg-028.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">A+ Content</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-022-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-022.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Listing Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-017-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-017.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Main Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/A%2B%20content/EBC%20-1-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><img src="Ecommerce%20Visuals/A%2B%20content/EBC%20-1.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">A+ Content</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-010-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Amazon%20Listings/img-jpg-010.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Listing Image</span></div>
+      <div class="gallery-item"><picture style="display:contents"><source type="image/avif" srcset="Ecommerce%20Visuals/Main%20Images/img-jpg-002-400.avif 400w" sizes="(max-width:700px) 45vw, 300px"><img src="Ecommerce%20Visuals/Main%20Images/img-jpg-002.webp" alt="" class="gallery-img" loading="lazy"></picture><span class="gp-tag">Main Image</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. PROCESS -->
+<section class="process-section" id="process">
+  <div class="wrap">
+    <div class="process-inner">
+      <div class="process-label-col r">
+        <div class="sec-label" style="margin-bottom:1.25rem">How It Works</div>
+        <p>Brief in. Conversion creative out. The system handles the volume. The creative director handles the judgment.</p>
+      </div>
+      <div class="process-steps" id="process-steps">
+        <div class="pstep">
+          <div class="pstep-num">01</div>
+          <div>
+            <div class="pstep-title">Product & Brief</div>
+            <div class="pstep-desc">You send product images, brand files, and a brief. Even rough assets work: the system was built to handle real-world inputs, not studio-perfect files.</div>
+          </div>
+        </div>
+        <div class="pstep">
+          <div class="pstep-num">02</div>
+          <div>
+            <div class="pstep-title">AI Pipeline</div>
+            <div class="pstep-desc">40+ directions generated and run against five years of category data. The system knows what converts in your vertical before the creative director opens the file.</div>
+          </div>
+        </div>
+        <div class="pstep">
+          <div class="pstep-num">03</div>
+          <div>
+            <div class="pstep-title">Creative Direction</div>
+            <div class="pstep-desc">A human creative director selects, refines, and makes the call. Platform knowledge, category context, brand eye: this is where volume becomes intention.</div>
+          </div>
+        </div>
+        <div class="pstep">
+          <div class="pstep-num">04</div>
+          <div>
+            <div class="pstep-title">Platform-Ready Delivery</div>
+            <div class="pstep-desc">Every file spec-matched, named, and ready to upload. Seller Central, Shopify, wherever you sell, delivered through the client portal, no rework required.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. OTHER SERVICES -->
+<section class="more-section">
+  <div class="wrap">
+    <div class="more-head r">
+      <div>
+        <div class="sec-label" style="margin-bottom:.6rem">More from Dobby Ads</div>
+        <h2>The full production system.</h2>
+      </div>
+      <a href="index.html#services" class="btn-ghost">All Services</a>
+    </div>
+    <div class="more-grid r d1">
+      <a href="video-commercials.html" class="more-card">
+        <div class="more-thumb"><video src="All%20Visuals/Services/Video%20%26%20Commercials/AI%20Video%203.mp4" poster="All%20Visuals/Services/Video%20%26%20Commercials/AI%20Video%203-poster.avif" preload="none" autoplay muted loop playsinline></video></div>
+        <div class="more-body"><div class="more-title">Video & Commercials</div><div class="more-desc">Brand films, UGC, social video, TV-ready commercials.</div></div>
+      </a>
+      <a href="animation-3d.html" class="more-card">
+        <div class="more-thumb"><video src="All%20Visuals/Services/Animation%20%26%203D/3D%20Videos.mp4" poster="All%20Visuals/Services/Animation%20%26%203D/3D%20Videos-poster.avif" preload="none" autoplay muted loop playsinline></video></div>
+        <div class="more-body"><div class="more-title">Animation & 3D</div><div class="more-desc">3D renders, product animations, explainer videos.</div></div>
+      </a>
+      <a href="branding.html" class="more-card">
+        <div class="more-thumb"><picture style="display:contents"><source type="image/avif" srcset="All%20Visuals/Services/Branding%20%26%20marketing/Packaging-800.avif 800w" sizes="(max-width:900px) 92vw, 900px"><img src="All%20Visuals/Services/Branding%20%26%20marketing/Packaging.webp" alt="Branding" loading="lazy"></picture></div>
+        <div class="more-body"><div class="more-title">Branding & Marketing</div><div class="more-desc">Brand identity, packaging, Google Ads, Meta campaigns.</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 8. FAQ -->
+<section class="faq-section" id="faq">
+  <div class="wrap">
+    <div class="faq-inner">
+      <div class="faq-label-col r">
+        <div class="sec-label" style="margin-bottom:1.25rem">FAQ</div>
+        <p>Common questions about the eCommerce Creative service.</p>
+      </div>
+      <div class="faq-list r d1">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><h3>What do you need to get started?</h3><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>Product images (even rough ones) and a brief. We'll ask about your category, target customer, key features, and brand guidelines. We can work with whatever you have.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><h3>How long does a full listing set take?</h3><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>A full 7-image listing set plus A+ Content typically takes 7–14 business days from brief to delivery. Storefronts add time depending on scope. We'll confirm your timeline when you brief us.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><h3>Do you follow Amazon's image requirements?</h3><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>Yes. Every asset is delivered to Amazon's exact specifications: main image on white at 85%+ canvas fill, JPEG at 2000×2000px minimum, correct DPI and colour profile. We also follow category-specific rules and flag compliance issues before they reach your listing.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><h3>Can you handle a full catalog refresh?</h3><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>Yes. We've done single-product launches and full catalog refreshes covering 100+ SKUs. Volume doesn't degrade quality because the system scales. Tell us your scope and we'll structure the project and timeline accordingly.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><h3>Is AI-generated creative as good as traditional photography?</h3><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>Not the same process, the same result. AI-composed images are indistinguishable from traditional photography when done correctly. The advantage is speed, cost, and iteration: 40+ variations in days instead of a single shoot in weeks. And every direction is informed by five years of conversion data, not a photographer's aesthetic preference.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. FINAL CTA -->
+<section class="final-cta" id="contact">
+  <div class="fcta-inner">
+    <div class="sec-label r" style="justify-content:center;margin-bottom:1.5rem">Ready?</div>
+    <h2 class="fcta-h2 r d1">Ready to stop<br><em>blending in?</em></h2>
+    <form class="fcta-form r d2" id="fcta-form" onsubmit="return submitInlineForm(event)">
+      <div class="fcta-form-row">
+        <input type="text" name="name" placeholder="Your name" required class="fcta-input">
+        <input type="email" name="email" placeholder="Your email" required class="fcta-input">
+      </div>
+      <div class="fcta-form-row">
+        <input type="text" name="company" placeholder="Brand / Company name" class="fcta-input">
+        <select name="service" class="fcta-input fcta-select">
+          <option value="" disabled selected>Service you're interested in</option>
+          <option value="ecommerce-creative">eCommerce Creative</option>
+          <option value="video-commercials">Video &amp; Commercials</option>
+          <option value="animation-3d">Animation &amp; 3D</option>
+          <option value="branding-marketing">Branding &amp; Marketing</option>
+          <option value="multiple">Multiple / Not sure yet</option>
+        </select>
+      </div>
+      <textarea name="message" placeholder="Tell us about your project (optional)" rows="3" class="fcta-input fcta-textarea"></textarea>
+      <button type="submit" class="btn-primary" style="font-size:15px;padding:16px 40px;margin-top:.5rem;width:100%;justify-content:center">Send Inquiry →</button>
+      <p class="fcta-micro">We respond within 24-48 hours. No spam.</p>
+    </form>
+  </div>
+</section>
+
+<!-- 10. FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="/"><img src="All%20Visuals/Dobby%20Logo.webp" alt="Dobby Ads" style="height:36px;width:auto;display:block;margin-bottom:.875rem"></a>
+        <span class="foot-tagline" style="font-size:.875rem;color:#fff;margin-bottom:1rem;display:block">Where AI meets creative direction.</span>
+        <p class="foot-desc">Creative systems for e-commerce brands that refuse to look generic.</p>
+        <div class="foot-contact">
+          <div>Dobby Ads Inc</div>
+          <div>8 The Green, Dover,</div>
+          <div>Delaware, U.S. 19901</div>
+          <div style="margin-top:.6rem"><a href="tel:+15076665552">+1 507 6665552</a></div>
+          <div><a href="mailto:contact@dobbyads.com">contact@dobbyads.com</a></div>
+        </div>
+        <div style="margin-top:1.75rem">
+          <img loading="lazy" src="All%20Visuals/Synthesia.webp" alt="Synthesia Marketing Certified Partner" style="width:88px;height:88px;object-fit:contain;border-radius:10px;opacity:.88">
+        </div>
+      </div>
+      <div>
+        <div class="foot-col-label">Company</div>
+        <ul class="foot-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#work">Our Work</a></li>
+          <li><a href="https://www.dobbyads.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+          <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+          <li><a href="refunds-and-cancellations.html">Refunds and Cancellations</a></li>
+          <li><a href="cookie-notice.html">Cookie Notice</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-col-label">Social</div>
+        <ul class="foot-list">
+          <li><a href="https://www.instagram.com/dobbyads/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/dobbyads/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.facebook.com/dobbyads" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://twitter.com/DobbyAds" target="_blank" rel="noopener">X</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-col-label">Get Started</div>
+        <ul class="foot-list">
+          <li><a href="https://brand.dobbyads.com/login">Client Login</a></li>
+          <li><a href="https://calendly.com/dobby_ads_call/30min" target="_blank" rel="noopener">Book a Call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© Dobby Ads. All rights reserved.</span>
+      <span><a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms-and-conditions.html">Terms of Service</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="gl-overlay" id="gl-overlay">
+  <button class="gl-close" id="gl-close">×</button>
+  <div id="gl-content"></div>
+</div>
+
+<script>
+// ── Hamburger ────────────────────────────────────────────────
+const hb = document.getElementById('hb');
+const mob = document.getElementById('mob-menu');
+hb.addEventListener('click', () => {
+  hb.classList.toggle('open');
+  mob.style.display = mob.style.display === 'flex' ? 'none' : 'flex';
+  setTimeout(() => mob.classList.toggle('open'), 10);
+});
+mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  hb.classList.remove('open'); mob.classList.remove('open');
+  setTimeout(() => { mob.style.display = 'none'; }, 280);
+}));
+
+// ── Shared reveal observer ───────────────────────────────────
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); ro.unobserve(e.target); } });
+}, { threshold: 0.06 });
+document.querySelectorAll('.r, .r-fade').forEach(el => ro.observe(el));
+
+// ── Output rows: alternating slide-in ───────────────────────
+const rowObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('row-vis'); rowObs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.output-row').forEach(el => rowObs.observe(el));
+
+// ── Stats count-up animation ─────────────────────────────────
+function animCount(el, target, suffix, duration) {
+  const t0 = performance.now();
+  (function tick(now) {
+    const p = Math.min((now - t0) / duration, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    el.innerHTML = Math.round(ease * target) + '<span>' + suffix + '</span>';
+    if (p < 1) requestAnimationFrame(tick);
+  })(t0);
+}
+const statsObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.querySelectorAll('.sd-num[data-target]').forEach(el => {
+      animCount(el, +el.dataset.target, el.dataset.suffix || '', 1800);
+    });
+    statsObs.unobserve(e.target);
+  });
+}, { threshold: 0.5 });
+const statsDivEl = document.querySelector('.stats-divider');
+if (statsDivEl) statsObs.observe(statsDivEl);
+
+// ── Process steps stagger ────────────────────────────────────
+const stepsObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('steps-vis'); stepsObs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+const steps = document.getElementById('process-steps');
+if (steps) stepsObs.observe(steps);
+
+
+// ── Pricing cards stagger ────────────────────────────────────
+const pricingObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('pricing-vis'); pricingObs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+const pricingGrid = document.getElementById('pricing-grid');
+if (pricingGrid) pricingObs.observe(pricingGrid);
+
+// ── Word reveal ──────────────────────────────────────────────
+function wrapWords(el) {
+  const parts = el.innerHTML.split('<br>');
+  el.innerHTML = parts.map(line =>
+    line.split(' ').map(w => w.trim() ? `<span class="wr-outer"><span class="wr-inner">${w}</span></span>` : w).join(' ')
+  ).join('<br>');
+}
+const wo = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); wo.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.anim-words').forEach(el => { wrapWords(el); wo.observe(el); });
+
+// ── Before/After sequential reveal ──────────────────────────
+(function(){
+  var inner = document.querySelector('.hero-ba-inner');
+  var label = document.getElementById('baLabel');
+  if(!inner || !label) return;
+  var showingAfter = false;
+
+  label.classList.add('label-before');
+  label.textContent = 'AI Alone';
+
+  function cycle(){
+    if(!showingAfter){
+      // Show Dobby version
+      inner.classList.add('show-after');
+      label.className = 'ba-label label-after';
+      label.textContent = 'AI + Dobby';
+      showingAfter = true;
+    } else {
+      // Show AI slop
+      inner.classList.remove('show-after');
+      label.className = 'ba-label label-before';
+      label.textContent = 'AI Alone';
+      showingAfter = false;
+    }
+  }
+
+  setInterval(cycle, 3000);
+})();
+
+// ── FAQ accordion ────────────────────────────────────────────
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!open) item.classList.add('open');
+  });
+});
+
+// ── Gallery lightbox ─────────────────────────────────────────
+const glOverlay = document.getElementById('gl-overlay');
+const glContent = document.getElementById('gl-content');
+const glClose = document.getElementById('gl-close');
+document.querySelectorAll('.gallery-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const img = item.querySelector('.gallery-img');
+    glContent.innerHTML = '';
+    if (img) { const i = document.createElement('img'); i.src = img.src; i.alt = img.alt; glContent.appendChild(i); }
+    glOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+const glCloseOverlay = () => { glOverlay.classList.remove('open'); document.body.style.overflow = ''; };
+glClose.addEventListener('click', glCloseOverlay);
+glOverlay.addEventListener('click', e => { if (e.target === glOverlay) glCloseOverlay(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') glCloseOverlay(); });
+
+// ── Output strip image lightbox ──────────────────────────────
+document.querySelectorAll('.out-strip-track img, .ois-track img').forEach(img => {
+  img.addEventListener('click', function() {
+    glContent.innerHTML = '';
+    const i = document.createElement('img');
+    i.src = this.src; i.alt = this.alt;
+    glContent.appendChild(i);
+    glOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+// ── A+ Content carousel ──────────────────────────────────────
+(function(){
+  var carousel = document.getElementById('aplus-carousel');
+  if(!carousel) return;
+  var slides = carousel.querySelectorAll('.oc-slide');
+  var dots = carousel.querySelectorAll('.oc-dot');
+  var current = 0;
+  var autoTimer = null;
+  var hovered = false;
+  var userClickTimeout = null;
+  var userJustClicked = false;
+
+  function goTo(idx){
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = ((idx % slides.length) + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function stopAuto(){ clearInterval(autoTimer); autoTimer = null; }
+
+  function startAuto(){
+    stopAuto();
+    if(hovered || userJustClicked) return;
+    autoTimer = setInterval(function(){ goTo(current + 1); }, 3500);
+  }
+
+  dots.forEach(function(dot){
+    dot.addEventListener('click', function(e){
+      e.stopPropagation();
+      goTo(parseInt(this.getAttribute('data-idx')));
+      stopAuto();
+      userJustClicked = true;
+      clearTimeout(userClickTimeout);
+      userClickTimeout = setTimeout(function(){
+        userJustClicked = false;
+        if(!hovered) startAuto();
+      }, 7000);
+    });
+  });
+
+  carousel.addEventListener('mouseenter', function(){ hovered = true; stopAuto(); });
+  carousel.addEventListener('mouseleave', function(){ hovered = false; if(!userJustClicked) startAuto(); });
+
+  startAuto();
+})();
+
+// ── Contact form ─────────────────────────────────────────────
+async function submitInlineForm(e) {
+  e.preventDefault();
+  const form = document.getElementById('fcta-form');
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true; btn.textContent = 'Sending…';
+  const API = 'https://script.google.com/a/macros/dobbyads.com/s/AKfycbxhcfCAZzhBKnd4DM9DL7pjogpwKRAnNwLbDr4rOtGUcYYiVNQrmCGItmSfoyw5n4iw/exec';
+  const params = new URLSearchParams({
+    fname: form.querySelector('[name="name"]').value,
+    lname: '',
+    email: form.querySelector('[name="email"]').value,
+    phone: '',
+    service: form.querySelector('[name="service"]').value,
+    revenue: '',
+    challenge: form.querySelector('[name="message"]').value,
+    source: 'ecommerce-creative-page'
+  });
+  try {
+    const res = await fetch(API + '?' + params, { redirect: 'follow' });
+    const data = await res.json();
+    if (!data.ok) throw new Error(data.error || 'Failed');
+    form.innerHTML = `<div style="text-align:center;padding:2rem 0"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" style="margin:0 auto 1rem;display:block"><circle cx="20" cy="20" r="19" stroke="#FFCC33" stroke-width="2"/><path d="M12 20l6 6 10-12" stroke="#FFCC33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-family:var(--ff);font-size:1.1rem;font-weight:600;color:#fff;margin:0 0 .5rem">We got your message.</p><p style="font-size:.875rem;color:#fff;font-weight:300">We'll be in touch within 24-48 hours.</p></div>`;
+  } catch(err) {
+    btn.disabled = false; btn.textContent = 'Send Inquiry →';
+    alert('Something went wrong. Please try again or email contact@dobbyads.com');
+  }
+  return false;
+}
+</script>
+<script>
+/* ── Drag-to-scroll for auto-scrolling strips ── */
+(function(){
+  function dragScroll(track){
+    var cs=getComputedStyle(track);
+    var dur=parseFloat(cs.animationDuration)*1000||30000;
+    var origName=cs.animationName;
+    var isRev=/[Rr]ev/.test(origName)||cs.animationDirection==='reverse';
+    var dragging=false,sx=0,origSx=0,tx=0,moved=false,startTime=0,maxDx=0,pid=null;
+    function getX(el){return new DOMMatrix(getComputedStyle(el).transform).m41;}
+    function resume(fx){
+      var hw=track.scrollWidth/2;
+      var nx=fx%hw; if(nx>0)nx-=hw;
+      var p=isRev?(hw+nx)/hw:-nx/hw;
+      p=Math.max(0,Math.min(0.9999,p));
+      track.style.animationDelay=(-p*dur)+'ms';
+      getComputedStyle(track).animationDelay;
+      track.style.animationPlayState='running';
+      track.style.animationName=origName;
+      getComputedStyle(track).transform;
+      track.style.transform='';
+      track.style.cursor='grab';
+      requestAnimationFrame(function(){ track.style.animationPlayState=''; });
+    }
+    track.addEventListener('pointerdown',function(e){
+      if(e.button&&e.button!==0)return;
+      if(pid!==null)return;
+      pid=e.pointerId; dragging=true; moved=false;
+      startTime=Date.now(); maxDx=0;
+      origSx=e.clientX; sx=e.clientX; tx=getX(track);
+      track.style.cursor='grabbing';
+    });
+    function onMove(e){
+      if(!dragging||e.pointerId!==pid)return;
+      var tdx=Math.abs(e.clientX-origSx);
+      if(tdx>maxDx) maxDx=tdx;
+      var dx=e.clientX-sx;
+      if(!moved&&Math.abs(dx)>10){
+        moved=true;
+        tx=getX(track); sx=e.clientX;
+        /* No setPointerCapture — click events stay on child elements */
+        track.style.animationPlayState='';
+        track.style.animationName='none';
+        track.style.transform='translateX('+tx+'px)';
+      }
+      if(moved) track.style.transform='translateX('+(tx+(e.clientX-sx))+'px)';
+    }
+    function onUp(e){
+      if(!dragging||e.pointerId!==pid)return;
+      dragging=false; pid=null;
+      track.style.cursor='grab';
+      if(moved) resume(getX(track));
+    }
+    function onCancel(e){
+      if(!dragging||e.pointerId!==pid)return;
+      dragging=false; pid=null;
+      track.style.cursor='grab';
+      if(moved) resume(tx);
+    }
+    document.addEventListener('pointermove',onMove);
+    document.addEventListener('pointerup',onUp);
+    document.addEventListener('pointercancel',onCancel);
+    /* Block click only for real drags: >=15px total movement OR >=200ms elapsed.
+       Without setPointerCapture, tap clicks naturally reach child elements. */
+    track.addEventListener('click',function(e){
+      if(moved&&(maxDx>=15||Date.now()-startTime>=200)){
+        e.stopPropagation();
+        e.preventDefault();
+      }
+    },true);
+    track.addEventListener('dragstart',function(e){e.preventDefault();});
+    track.style.cursor='grab';
+    track.style.userSelect='none';
+    track.style.touchAction='pan-y';
+  }
+  document.querySelectorAll('.vss-track,.pack-track,.out-strip-track,.ois-track,.vid-strip,.img-strip,.gallery-row').forEach(dragScroll);
+})();
+</script>
+<script>
+(function(){
+  // Lazy-load + offscreen-pause for autoplay videos.
+  // Defers download until a tile nears the viewport, and pauses when it leaves.
+  var vids=document.querySelectorAll('video[autoplay]');
+  if(!vids.length)return;
+  vids.forEach(function(v){
+    var s=v.getAttribute('src');
+    if(s){v.setAttribute('data-lazy-src',s);v.removeAttribute('src');}
+    v.preload='none';
+    try{v.load();}catch(e){}
+  });
+  function load(v){
+    if(!v.getAttribute('src')){
+      var s=v.getAttribute('data-lazy-src');
+      if(s){v.src=s;}
+    }
+  }
+  if(!('IntersectionObserver' in window)){
+    vids.forEach(function(v){load(v);v.play&&v.play().catch(function(){});});
+    return;
+  }
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    var v=e.target;
+    if(e.isIntersecting){load(v);if(v.paused)v.play().catch(function(){});}
+    else{if(!v.paused)v.pause();}
+  });},{rootMargin:'300px'});
+  vids.forEach(function(v){io.observe(v);});
+})();
+</script>
+</body>
+</html>
