@@ -96,6 +96,64 @@ jobs:
             echo "state=clean" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Scan changed blog files for placeholder content
+        id: content
+        if: steps.diff.outputs.state == 'clean' || steps.diff.outputs.state == 'first-run'
+        run: |
+          set -euo pipefail
+
+          bad=""
+          changed="${{ steps.diff.outputs.changed }}"
+          # first-run has no diff output — scan every tracked blog/sitemap file instead.
+          if [ "${{ steps.diff.outputs.state }}" = "first-run" ]; then
+            changed=$(git ls-files 'blog/**' 'sitemap.xml')
+          fi
+
+          while IFS= read -r f; do
+            [ -z "$f" ] && continue
+            case "$f" in
+              blog/*|sitemap.xml) ;;
+              *) continue ;;
+            esac
+            [ -f "$f" ] || continue
+            if grep -qE '\{\{[A-Z_]+\}\}|PLACEHOLDER' -- "$f"; then
+              bad="${bad}${f}"$'\n'
+            fi
+          done <<< "$changed"
+
+          {
+            echo "bad<<BAD_EOF"
+            echo "$bad"
+            echo "BAD_EOF"
+          } >> "$GITHUB_OUTPUT"
+
+          if [ -n "$bad" ]; then
+            echo "state=content-blocked" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Stop — unfilled placeholder content
+        if: steps.content.outputs.state == 'content-blocked'
+        env:
+          BAD: ${{ steps.content.outputs.bad }}
+        run: |
+          set -euo pipefail
+          {
+            echo "## Deploy blocked"
+            echo ""
+            echo "These files still contain \`{{PLACEHOLDER}}\` tokens or the literal word \`PLACEHOLDER\`:"
+            echo ""
+            echo '```'
+            printf '%s' "$BAD"
+            echo '```'
+            echo ""
+            echo "A post is not done until every \`{{...}}\` is replaced. Fix on \`main\` and push again."
+            echo ""
+            echo "The site is untouched and still serving the last good deploy."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          echo "Blocked — unfilled placeholder content. See the job summary."
+          exit 1
+
       - name: Stop — changes outside the blog
         if: steps.diff.outputs.state == 'blocked' && inputs.force != true
         env:
@@ -134,14 +192,14 @@ jobs:
           exit 1
 
       - name: Promote main to production
-        if: steps.diff.outputs.state == 'clean' || steps.diff.outputs.state == 'first-run' || inputs.force == true
+        if: (steps.content.outputs.state != 'content-blocked' && (steps.diff.outputs.state == 'clean' || steps.diff.outputs.state == 'first-run')) || inputs.force == true
         run: |
           set -euo pipefail
           git push origin "${{ github.sha }}:refs/heads/production"
           echo "production now points at ${{ github.sha }}"
 
       - name: Tag and release
-        if: steps.diff.outputs.state == 'clean' || steps.diff.outputs.state == 'first-run' || inputs.force == true
+        if: (steps.content.outputs.state != 'content-blocked' && (steps.diff.outputs.state == 'clean' || steps.diff.outputs.state == 'first-run')) || inputs.force == true
         env:
           GH_TOKEN: ${{ github.token }}
           CHANGED: ${{ steps.diff.outputs.changed }}

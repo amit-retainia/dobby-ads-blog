@@ -301,11 +301,15 @@ Insert directly **below** `<!-- URLS:START -->`:
 
 ### 4. Commit to main
 
-**Every commit must be complete and publishable.** Never commit a stub, a placeholder, a `TODO`, or a partial file intending to fill it in afterwards.
+**Every commit must be complete and publishable. This is not optional and there is no exception for length, time pressure, or a tool-call limit.**
 
-Every push to `main` triggers a deploy. A file containing the word `PLACEHOLDER` passes the deploy gate — the gate checks *which files* changed, not what is inside them — so that text goes live. Follow-up "fix" commits do not undo the minutes it was public.
+Every push to `main` triggers a deploy. A deploy gate scans changed blog files for `{{PLACEHOLDER}}` tokens and the literal word `PLACEHOLDER` and blocks the release if it finds either — but **do not rely on the gate to catch you**. It is a backstop, not a plan. Treat every `git push` to `main` as instantly and permanently live.
 
-If a file is too long to write in one tool call, assemble the whole thing first and commit it once. Length is never a reason to commit something incomplete.
+**Never push placeholder or stub content, even for a second, even if you intend to fix it in the very next commit.** "Push placeholder, then push the real content right after" is not a valid strategy — it is the exact failure this rule exists to prevent. If a commit like that is already staged or written, stop and rewrite it before pushing; do not push it "to fix in a follow-up."
+
+If a file is too long to write in one tool call: build it in memory or in a scratch/unstaged location across as many tool calls as needed, verify it has zero `{{` and zero literal `PLACEHOLDER` text, *then* write it to its real path and commit once. Never write an intermediate incomplete version to `blog/index.html`, `sitemap.xml`, or any `blog/<slug>/index.html` and commit that as a checkpoint.
+
+Before every commit to `main`, re-read each of the three files you are about to commit in full and confirm none contains `{{` or the word `PLACEHOLDER`. Do this even when you are confident — confidence is not verification.
 
 All three files, one commit, straight to `main`:
 
@@ -325,6 +329,7 @@ Then tell the user it is on its way and will be live in about a minute.
 ## Checklist before you commit
 
 - [ ] Every file is complete — no `PLACEHOLDER`, no `TODO`, no stub to fix later
+- [ ] Re-read all three files in full, right before pushing, to confirm zero `{{` and zero `PLACEHOLDER` — do not skip this because you already wrote them correctly
 - [ ] Nothing outside `blog/**` and `sitemap.xml` was touched
 - [ ] The user saw a preview artifact and said to publish
 - [ ] No `{{` left anywhere in the new file
@@ -350,6 +355,7 @@ Then tell the user it is on its way and will be live in about a minute.
 - Never change the nav or footer in one page only. They are identical across posts by design.
 - Never rename or delete an existing post folder. The URL is indexed; breaking it loses the ranking that post earned.
 - Never generate, re-encode, or reconstruct an image file.
+- Never push a commit containing `{{placeholders}}` or stub/`PLACEHOLDER` text, planning to correct it in the next commit. Verify the file is complete *before* the push that makes it live, not after.
 
 ---
 
